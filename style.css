@@ -1,0 +1,26 @@
+:root{
+    --primary-color: rgb(240, 225, 186, 53%);
+    --main-font: 'ABeeZee', sans-serif;
+    --special-font: 'Lobster', cursive;
+}
+
+body{
+    background-color: var(--primary-color);
+    font-family: var(--main-font);
+    margin: 0px;
+}
+
+/* #seasonal_vacation_title{
+    font-family: var(--special-font);
+    font-size: 3rem;
+    text-align: center;
+    margin: 0px;
+    padding: 0px;
+} */
+
+#seasonal_vacation_title{
+    font-family: var(--special-font);
+    font-size: 3rem;
+    text-align: center;
+    margin-top: 30px;
+}
