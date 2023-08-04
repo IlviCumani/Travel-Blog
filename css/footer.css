@@ -1,0 +1,83 @@
+body{
+  margin: 0;
+}
+.shore-part{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-image:url('../Images/shore.png');
+  /* background-size: cover; */
+  height: 130px;
+  /* background-position: center; */
+}
+.sub{
+  display: flex;
+  flex-direction: column;
+  font-family: 'Roboto';
+  margin-left: 130px;
+}
+
+.sub h1{
+  font-size: 40px;
+}
+.sub p{
+  margin-top: -25px;
+  font-weight: 100px;
+  margin-left: 50px;
+}
+
+.btn{
+  margin-right: 100px;
+  color: black;
+  background-color: #E8E8E8;
+  border: 1px white solid;
+  opacity: 0.9;
+  border-radius: 3px;
+  width: 140px;
+  height: 40px;
+  font-size: large;
+  border-radius: 10px;
+}
+
+.btn:hover{
+  background-color: #d0cfcf;
+}
+
+.shore2{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-image: url("../Images/sand.jpg");
+  height: 110px;
+  background-size: cover;
+  background-position: center;
+}
+
+.shore2 ul li{
+  list-style: none;
+  display: inline;
+}
+
+.fa-brands, .fa-solid{
+  font-size:30px;
+  margin: 5px;
+}
+
+.others a:link{
+  text-decoration: none;
+  color: rgb(69, 23, 23);
+  font-weight: 600;
+  margin: 7px;
+  font-family: 'Roboto';
+}
+.others a:visited{
+  color:rgb(78, 27, 27);
+}
+.others a:hover{
+  background-color: burlywood;
+  padding: 5px;
+}
+
+.others{
+  margin-right: 40px;
+}

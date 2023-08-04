@@ -1,6 +1,6 @@
 body{
   background-image: url("../Images/seashore.jpg");
-  display: flex;
+  /* display: flex; */
   /* background-image: url("../Images/winter.jpeg"); */
   /* min-height: 100vh; */
 }
@@ -229,4 +229,54 @@ body.wintermode{
   to{
     transform: rotate(360deg);
   }
+}
+
+/* ----------------TITLE-------------------------- */
+.title p{
+  font-family: 'Lobster Two';
+  font-size: 100px;
+  color: white;
+}
+
+#sum{
+  margin-top: -20px;
+  margin-left: 300px;
+}
+.title{
+  line-height: 0;
+  margin-top: 100px;
+  display: flex;
+  align-items: center;
+  flex-direction:column;
+}
+
+/* ----------------------SEARCH-------------------------------- */
+.search-bar{
+  width: 100%;
+  background-color: rgba(255,255,255,0.4);
+  border: 1px solid rgb(169, 169, 62);
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+}
+.search-bar img{
+  width:40px;
+  height: 35px;
+}
+
+.search-bar input{
+  background: transparent;
+  flex: 1;
+  border:0;
+  outline: none;
+  padding: 4px 5px;
+  font-size: 20px;
+}
+
+.search-bar button{
+  border: 0;
+  width:40px;
+  height:40px;
+  background: transparent;
+  cursor: pointer;
 }
