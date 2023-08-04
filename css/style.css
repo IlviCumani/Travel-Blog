@@ -3,35 +3,175 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-top: 20px;
+
  }
  .featured-imgs
  {
-     height: 70%;
+     height: 80%;
      width:100%;
+     transition: height 0.3s ease-in;
+    
+     /* border-top-left-radius: 10%;
+     border-top-right-radius: 10%; */
  }
  
  .horizontal-featured-imgs{
-     height: 70%;
-     width:80%;
+     height: 100%;
+     width: 70%;
+     transition: width 0.3s ease-in;
+     /* border-radius: 10%; */
  }
  .cards{
-     width: 30%;
+    position: relative;
+     width: 20%;
      background-color: #F0E1BA;
      display: flex;
-     height: 200px;
+     height: 350px;
+     flex-direction: column;
+     flex: 0 1 23%;
+     /* border-radius: 10%; */
  }
  .horizontal-cards{
-     width: 90%;
-     height: 200px;
+     height: 150px;
      background-color: #F0E1BA;
+     display: flex;
+     position: relative;
  }
  .horizontal-cards-div{
      display: flex;
      flex-direction: column;
      width: 30%;
+     height: 350px;
+     justify-content: space-between;
+     flex: 0 1 23%;
  }
+
+ .card-p, .hidden{
+    padding: 7px;
+    font-family: 'ABeeZee', sans-serif;
+    color: #187D9D;
+    font-size: 14px;
+ }
+
+.visit{
+    position: absolute; 
+    top: 70px;
+    right: 23%; 
+    color: aliceblue; 
+    font-family: 'Lobster', cursive; 
+    font-size: 40px;
+    text-align: center;
+}
+
+.cards:hover .text-div
+{
+    height: 60%;
+}
+
+.cards:hover .plus , .horizontal-cards:hover .horizontal-plus
+{
+   transform: rotate(180deg);
+}
+
+.cards:hover .hidden
+{
+    display: block;
+}
+.horizontal-cards:hover .horizontal-text-div
+{
+    width: 50%;
+}
+
+.horizontal-cards:hover .hidden
+{
+    display: block;
+}
+
+
+.cards .text-div
+{
+    background-color:#F0E1BA;
+    position: absolute;
+    width: 100%; 
+    transition: height 0.6s ease-in;
+    height: 30%;
+    bottom: 0;
+}
+
+.horizontal-text-div{
+    background-color:#F0E1BA;
+    position: absolute;
+    width: 30%;
+    height: 100%;
+    transition: width 0.6s ease-in;
+    right: 0;
+}
+
+.plus{
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    top:-8px;
+    right: 5px;
+    background-color: #187D9D;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.6s ease;
+   
+}
+
+
+.plus p, .horizontal-plus p{
+    text-align: center;
+    color: white;
+    font-family: 'ABeeZee', sans-serif;
+    font-size: 22px;
+}
+
+.horizontal-plus{
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    background-color: #187D9D;
+    border-radius: 50%;
+    bottom: 5px;
+    right: 80%;
+    cursor: pointer;
+    transition: transform 0.6s ease;
+}
+
+.hidden{
+    display: none;
+}
+
+
+@media screen and (max-width:922px){
+.cards{
+    flex: 0 1 45%;
+    margin: 10px;
+}
+.horizontal-cards-div{
+    flex: 0 1 45%;
+    margin: 10px;
+}
+}
+
+
+@media screen and (max-width:450px) {
+    .cards{
+        flex: 0 0 100%;
+        
+    }
+    .horizontal-cards-div{
+        flex: 0 0 100%;
+        
+        
+    }
+}
 /*end*/
- 
+
 #seasonal_vacation_title{
     font-family: var(--special-font);
     font-size: 3rem;
