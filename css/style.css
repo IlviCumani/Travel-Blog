@@ -1,125 +1,13 @@
-/*featured tours*/
-.featured-tours{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    margin-top: 20px;
-
- }
- .featured-imgs
- {
-     height: 80%;
-     width:100%;
-     transition: height 0.3s ease-in;
-    
-     /* border-top-left-radius: 10%;
-     border-top-right-radius: 10%; */
- }
- 
- .horizontal-featured-imgs{
-     height: 100%;
-     width: 70%;
-     transition: width 0.3s ease-in;
-     /* border-radius: 10%; */
- }
- .cards{
-    position: relative;
-     width: 20%;
-     background-color: #F0E1BA;
-     display: flex;
-     height: 350px;
-     flex-direction: column;
-     flex: 0 1 23%;
-     /* border-radius: 10%; */
- }
- .horizontal-cards{
-     height: 150px;
-     background-color: #F0E1BA;
-     display: flex;
-     position: relative;
- }
- .horizontal-cards-div{
-     display: flex;
-     flex-direction: column;
-     width: 30%;
-     height: 350px;
-     justify-content: space-between;
-     flex: 0 1 23%;
- }
-
- .card-p, .hidden{
-    padding: 7px;
-    font-family: 'ABeeZee', sans-serif;
-    color: #187D9D;
-    font-size: 14px;
- }
-
-.visit{
-    position: absolute; 
-    top: 70px;
-    right: 23%; 
-    color: aliceblue; 
-    font-family: 'Lobster', cursive; 
-    font-size: 40px;
-    text-align: center;
+:root{
+    --primary-color: rgb(240, 225, 186, 53%);
+    --main-font: 'ABeeZee', sans-serif;
+    --special-font: 'Lobster', cursive;
 }
 
-.cards:hover .text-div
-{
-    height: 60%;
-}
-
-.cards:hover .plus , .horizontal-cards:hover .horizontal-plus
-{
-   transform: rotate(180deg);
-}
-
-.cards:hover .hidden
-{
-    display: block;
-}
-.horizontal-cards:hover .horizontal-text-div
-{
-    width: 50%;
-}
-
-.horizontal-cards:hover .hidden
-{
-    display: block;
-}
-
-
-.cards .text-div
-{
-    background-color:#F0E1BA;
-    position: absolute;
-    width: 100%; 
-    transition: height 0.6s ease-in;
-    height: 30%;
-    bottom: 0;
-}
-
-.horizontal-text-div{
-    background-color:#F0E1BA;
-    position: absolute;
-    width: 30%;
-    height: 100%;
-    transition: width 0.6s ease-in;
-    right: 0;
-}
-
-.plus{
-    height: 30px;
-    width: 30px;
-    position: absolute;
-    top:-8px;
-    right: 5px;
-    background-color: #187D9D;
-    border-radius: 50%;
-    cursor: pointer;
-    transition: transform 0.6s ease;
-   
+body{
+    background-color: var(--primary-color);
+    font-family: var(--main-font);
+    margin: 0px;
 }
 
 
@@ -172,9 +60,57 @@
 }
 /*end*/
 
+/* seasonal vacation  */
+
 #seasonal_vacation_title{
     font-family: var(--special-font);
     font-size: 3rem;
     text-align: center;
     margin-top: 30px;
+}
+
+.seasonal_vacation_card_container{
+    margin-top: 90px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.seasonal_vacation_card{
+    width: 380;
+    height: 480px;
+    background-color: #FAF2DC;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.75);;
+    border-radius: 5px;
+    transition: transform 0.5s ease-in-out;
+    position: relative;
+}
+
+.seasonal_vacation_card:hover{
+    transform: scale(1.03);
+}
+
+.seasonal_vacation_card_img_container img{
+    width: 380px;
+    height: 300px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+.seasonal_vacation_card_text{
+    text-align: center;
+    margin-top: 26px;
+    font-size: 40px;
+}
+
+.seasonal_vacation_card_text_container a{
+    position: absolute;
+    bottom: 10px;
+    right: 30px;
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
 }

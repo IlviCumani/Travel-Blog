@@ -1,0 +1,43 @@
+<section id="seasonal_vacation_section">
+        <div id="seasonal_vacation_container" class="container-fluid">
+            <div class="row justify-content-center">
+                <h1 id="seasonal_vacation_title" class="col-md-6 ">Summer Vacation</h1>
+            </div>
+            
+            <div id="seasonal_vacation_card_container">
+
+                <div class="seasonal_vacation_card">
+                    <div class="seasonal_vacation_card_img_container">
+                        <img src="../Images/HomePageImg/SeasonalVacationImg/Himare_Img.jpeg" alt="Himare">
+                    </div>
+                    <div class="seasonal_vacation_card_text_container">
+                        <h3 class="seasonal_vacation_card_text">Himare</h3>
+                        <a href="../Views/destination.php">View More...</a>
+                    </div>
+                </div>
+
+                <div class="seasonal_vacation_card">
+                    <div class="seasonal_vacation_card_img_container">
+                        <img src="../Images/HomePageImg/SeasonalVacationImg/Lumi_Shales.jpg" alt="Himare">
+                    </div>
+                    <div class="seasonal_vacation_card_text_container">
+                        <h3 class="seasonal_vacation_card_text">Lumi Shales</h3>
+                        <a href="../Views/destination.php">View More...</a>
+                    </div>
+                </div>
+
+                <div class="seasonal_vacation_card">
+                    <div class="seasonal_vacation_card_img_container">
+                        <img src="../Images/HomePageImg/SeasonalVacationImg/saranda.jpeg" alt="Himare">
+                    </div>
+                    <div class="seasonal_vacation_card_text_container">
+                        <h3 class="seasonal_vacation_card_text">Sarande</h3>
+                        <a href="../Views/destination.php">View More...</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+</section>
