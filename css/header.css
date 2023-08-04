@@ -1,5 +1,7 @@
 body{
-  background-image: url("../Images/seashore.jpg");
+  background-image: url("../Images/seashoree.jpg");
+  background-size: cover;
+  background-repeat: none;
   /* display: flex; */
   /* background-image: url("../Images/winter.jpeg"); */
   /* min-height: 100vh; */
