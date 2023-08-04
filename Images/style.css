@@ -1,35 +1,3 @@
-/*featured tours*/
-.featured-tours{
-   display: flex;
-   flex-direction: row;
-   flex-wrap: wrap;
-}
-.featured-imgs
-{
-    height: 70%;
-    width:100%;
-}
-
-.horizontal-featured-imgs{
-    height: 70%;
-    width:80%;
-}
-.cards{
-    width: 30%;
-    background-color: #F0E1BA;
-    display: flex;
-    height: 200px;
-}
-.horizontal-cards{
-    width: 90%;
-    height: 200px;
-    background-color: #F0E1BA;
-}
-.horizontal-cards-div{
-    display: flex;
-    flex-direction: column;
-    width: 30%;
-}
 
 /*end of featured tours*/
 :root{

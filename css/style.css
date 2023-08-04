@@ -1,5 +1,5 @@
 :root{
-    --primary-color: rgba(240, 213, 161, 0.6);
+    --primary-color: rgb(240, 225, 186, 53%);
     --main-font: 'ABeeZee', sans-serif;
     --special-font: 'Lobster', cursive;
 }
@@ -10,6 +10,55 @@ body{
     margin: 0px;
 }
 
+
+.plus p, .horizontal-plus p{
+    text-align: center;
+    color: white;
+    font-family: 'ABeeZee', sans-serif;
+    font-size: 22px;
+}
+
+.horizontal-plus{
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    background-color: #187D9D;
+    border-radius: 50%;
+    bottom: 5px;
+    right: 80%;
+    cursor: pointer;
+    transition: transform 0.6s ease;
+}
+
+.hidden{
+    display: none;
+}
+
+
+@media screen and (max-width:922px){
+.cards{
+    flex: 0 1 45%;
+    margin: 10px;
+}
+.horizontal-cards-div{
+    flex: 0 1 45%;
+    margin: 10px;
+}
+}
+
+
+@media screen and (max-width:450px) {
+    .cards{
+        flex: 0 0 100%;
+        
+    }
+    .horizontal-cards-div{
+        flex: 0 0 100%;
+        
+        
+    }
+}
+/*end*/
 
 /* seasonal vacation  */
 
