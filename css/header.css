@@ -4,13 +4,59 @@ body{
   background-repeat: none;
   /* display: flex; */
   /* background-image: url("../Images/winter.jpeg"); */
-  /* min-height: 100vh; */
+  min-height: 130vh;
 }
 #location{
   width: 100px;
   height: 100px;
 }
 
+.checkbtn{
+  font-size: 40px;
+  color: white;
+  float: right;
+  cursor: pointer;
+  margin-left: 40px;
+  display: none;
+}
+
+#check{
+  display: none;
+}
+
+@media screen and (max-width: 850px){
+  .elements{
+    display: none;
+  }
+  .checkbtn{
+    display: flex;
+  }
+
+}
+/* .toggle-button{
+  position: absolute;
+  top: .75rem;
+  right: 1rem;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+}
+.toggle-button .bar{
+  height: 3px;
+  width: 100%;
+  background-color: white;
+  border-radius: 10px;
+}
+@media (max-width: 400px){
+  .toggle-button{
+    display: flex;
+  }
+  .elements{
+    display: none;
+  }
+} */
 .navbar1{
   display: flex;
   align-items: center;
@@ -282,3 +328,22 @@ body.wintermode{
   background: transparent;
   cursor: pointer;
 }
+
+/* ------------------RESPONSIVE---------------- */
+@media screen and (max-width: 900px){
+    .title p{
+      font-family: 'Lobster Two';
+      font-size: 60px;
+      color: white;
+    }
+    
+    #sum{
+      margin-top: -10px;
+      margin-left: 300px;
+    }
+
+    a.active, a:hover{
+      transition: .5s;
+
+    }
+  }
