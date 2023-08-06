@@ -1,7 +1,11 @@
 const body = document.querySelector('body');
 const btn = document.querySelector('.btn');
 const icon = document.querySelector('.btn__icon');
+const sum = document.getElementById('sum');
+const imgIcon = document.getElementById('Wicon');
 
+const originalSumContent = sum.innerHTML;
+const originalImgiconContent = imgIcon.src;
 function store(value){
   localStorage.setItem('wintermode',value);
 }
@@ -15,7 +19,7 @@ function load(){
   }
   else if(wintermode == 'true'){
     body.classList.add('wintermode');
-    icon.classList.add('fa-snowflake')
+    icon.classList.add('fa-snowflake');
   }else{
     icon.classList.add('fa-sun');
   }
@@ -34,9 +38,13 @@ btn.addEventListener('click', ()=>{
   if(body.classList.contains('wintermode')){
     icon.classList.remove('fa-sun');
     icon.classList.add('fa-snowflake');
+    sum.innerHTML = 'Winter';
+    imgIcon.src = "../Images/winterIcon.png";
   }else{
     icon.classList.remove('fa-snowflake');
     icon.classList.add('fa-sun');
+    sum.innerHTML = originalSumContent;
+    imgIcon.src = originalImgiconContent;
   }
 
   setTimeout(() => {
