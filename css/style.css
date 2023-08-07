@@ -1,4 +1,7 @@
 /*featured tours*/
+p{
+    margin-top: 0;
+ }
 .featured-tours{
     display: flex;
     flex-direction: row;
@@ -7,6 +10,7 @@
     margin-top: 20px;
 
  }
+ 
  .featured-imgs
  {
      height: 80%;
@@ -202,15 +206,17 @@
 }
 
 
-@media screen and (max-width:450px) {
+@media screen and (max-width:645px) {
     .cards{
-        flex: 0 0 100%;
+        flex: 0 0 70%;
+        margin-left: 100px;
+        margin-right: 100px;
         
     }
     .horizontal-cards-div{
-        flex: 0 0 100%;
-        
-        
+        flex: 0 0 80%;
+        margin-left: 100px;
+        margin-right: 100px;
     }
 }
 /*end*/
