@@ -19,7 +19,7 @@
  
  .horizontal-featured-imgs{
      height: 100%;
-     width: 70%;
+     width: 80%;
      transition: width 0.3s ease-in;
      /* border-radius: 10%; */
  }
@@ -52,7 +52,9 @@
     padding: 7px;
     font-family: 'ABeeZee', sans-serif;
     color: #187D9D;
-    font-size: 14px;
+    font-size: 15px;
+    margin-bottom: 0;
+    overflow: hidden;
  }
 
 .visit{
@@ -77,7 +79,8 @@
 
 .cards:hover .hidden
 {
-    display: block;
+    /* display: block; */
+    opacity: 1;
 }
 .horizontal-cards:hover .horizontal-text-div
 {
@@ -86,9 +89,17 @@
 
 .horizontal-cards:hover .hidden
 {
-    display: block;
+    /* display: block; */
+    opacity: 1;
 }
 
+/* .cards:hover{
+    cursor: pointer;
+}
+
+.horizontal-cards:hover{
+    cursor: pointer;
+} */
 
 .cards .text-div
 {
@@ -103,7 +114,7 @@
 .horizontal-text-div{
     background-color:#F0E1BA;
     position: absolute;
-    width: 30%;
+    width: 40%;
     height: 100%;
     transition: width 0.6s ease-in;
     right: 0;
@@ -137,15 +148,46 @@
     background-color: #187D9D;
     border-radius: 50%;
     bottom: 5px;
-    right: 80%;
+    right: 95%;
     cursor: pointer;
     transition: transform 0.6s ease;
 }
 
 .hidden{
-    display: none;
+   opacity: 0;
+   transition: opacity 1s ease-in;
+   text-wrap: nowrap;
 }
 
+
+.italics{
+    font-style: italic;
+    padding-left: 7px;
+    padding-top: 7px;
+    font-family: 'ABeeZee', sans-serif;
+    color: #187D9D;
+    font-size: 10px;
+    margin-bottom: 0px;
+}
+
+#more-div{
+    background-color:#F0E1BA;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    cursor: pointer;
+}
+
+#more
+{
+    font-family: 'ABeeZee', sans-serif;
+    text-align: center;
+    padding: 10px;
+    font-size: 12px;
+    margin-bottom: 0px;
+
+}
 
 @media screen and (max-width:922px){
 .cards{
