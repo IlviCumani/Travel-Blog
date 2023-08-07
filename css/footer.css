@@ -6,9 +6,9 @@ body{
   justify-content: space-between;
   align-items: center;
   background-image:url('../Images/shore.png');
-  /* background-size: cover; */
+  background-size: cover;
   height: 130px;
-  /* background-position: center; */
+  background-position: center;
 }
 .sub{
   display: flex;
