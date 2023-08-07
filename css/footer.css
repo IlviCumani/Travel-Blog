@@ -5,7 +5,7 @@ body{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-image:url('../Images/shore.png');
+  /* background-image:url('../Images/shore.png'); */
   background-size: cover;
   height: 130px;
   background-position: center;
@@ -14,7 +14,7 @@ body{
   display: flex;
   flex-direction: column;
   font-family: 'Roboto';
-  margin-left: 110px;
+  margin-left: 47px;
 }
 
 .sub h1{
@@ -31,8 +31,8 @@ body{
   background-color: #E8E8E8;
   border: 1px white solid;
   opacity: 0.9;
-  width: 140px;
-  height: 40px;
+  width: 171px;
+  height: 44px;
   font-size: large;
   border-radius: 10px;
 }
@@ -62,7 +62,7 @@ body{
 }
 
 .fa-brands, .fa-solid{
-  font-size:30px !important;
+  font-size:30px ;
   margin: 10px;
 }
 .others a:link{

@@ -4,6 +4,7 @@ const icon = document.querySelector('.btnn__icon');
 const sum = document.getElementById('sum');
 const imgIcon = document.getElementById('Wicon');
 
+
 const originalSumContent = sum.innerHTML;
 const originalImgiconContent = imgIcon.src;
 function store(value){
