@@ -11,7 +11,7 @@ body{
 .navbar{
   background-color: red;
 }
-.toggle-button{
+.toggle-buttonn{
   position: absolute;
   /* top: .70rem; */
   right: 2rem;
@@ -21,7 +21,7 @@ body{
   width: 30px;
   height: 21px;
 }
-.toggle-button .bar{
+.toggle-buttonn .bar{
   height: 3px;
   width: 100%;
   background-color: white;
@@ -72,7 +72,7 @@ header{
   top:0;
   left:0;
   width: 100%;
-  display: flex;
+  display: flex !important;
   justify-content: space-between;
   align-items: center;
   z-index:100;
@@ -97,12 +97,12 @@ header{
   background: white;
   opacity: 0.7;
 }
-.lang-menu{
+.lang-menuu{
   margin-left: 20px;
   position: relative;
 }
 
-.lang-menu ul{
+.lang-menuu ul{
   background-color: white;
   padding: 6px;
   border: 1px solid #f8f8f8;
@@ -115,19 +115,19 @@ header{
   right: 0;
 }
 
-.lang-menu ul li a {
+.lang-menuu ul li a {
   width: 100px;
   display: block;
   padding: 5px;
 }
 
-.lang-menu ul li{
+.lang-menuu ul li{
   list-style: none;
   display: flex;
   justify-content: space-between;
 }
 
-.lang-menu ul li a:before{
+.lang-menuu ul li a:before{
   content: '';
   display: inline-block;
   width: 32px;
@@ -135,13 +135,13 @@ header{
   vertical-align: middle;
 }
 
-.lang-menu:hover ul{
+.lang-menuu:hover ul{
   display: block;
 }
 a{
   text-decoration: none;
 }
-.lang-menu ul li a:hover{
+.lang-menuu ul li a:hover{
   background-color: #f2f2f2;
 }
 
@@ -164,14 +164,14 @@ a{
 .en::before{
   background-image: url(https://flagsapi.com/US/flat/32.png);
 }
-.selected-lang{
+.selected-langg{
   cursor:pointer;
   display: flex;
   justify-content: space-between;
   
 }
 
-.selected-lang::before{
+.selected-langg::before{
   content:'';
   display: block;
   width:32px;
@@ -191,7 +191,7 @@ a{
   --light-color:#f7f7f7;
   --light-icon-color:#FFDE59;
 }
-.btn{
+.btnn{
   background-color: #fff;
   width:70px;
   height:33px;
@@ -206,7 +206,7 @@ a{
   cursor: pointer;
 }
 
-.btn__indicator{
+.btnn__indicator{
 
   background-color: #fff;
   width:30px;
@@ -217,7 +217,7 @@ a{
   transition: transform .3s ease;
 }
 
-.btn__icon-container{
+.btnn__icon-container{
   width: 100%;
   height: 100%;
 
@@ -226,8 +226,11 @@ a{
   align-items: center;
 }
 
-.btn__icon{
-  color: var(--light-icon-color)
+.btnn__icon{
+  color: var(--light-icon-color);
+}
+.fa-brands, .fa-solid{
+  font-size: 20px !important;
 }
 
 /*----------------------Winter mode----------------*/
@@ -235,23 +238,23 @@ body.wintermode{
   background-image: url("../Images/winter.jpeg");
 }
 
-.wintermode .btn{
+.wintermode .btnn{
   box-shadow: inset 0 8px 60px rgba(0,0,0, .3), 
               inset 8px 0  8px rgba(0,0,0, .3),
               inset 0 -4px 4px rgba(0,0,0, .3);
 }
-.wintermode .btn__indicator{
+.wintermode .btnn__indicator{
   transform: translateX(40px);
   background-color: var(--dark-color);
   box-shadow: 0 8px 40px rgba(0,0,0, .3);
 }
 
-.wintermode .btn__icon{
+.wintermode .btnn__icon{
   color:var(--dark-icon-color);
 }
 
 /* --------------ANIMATION----------------- */
-.btn__icon.animated{
+.btnn__icon.animated{
   animation: spin 0.5s;
 }
 
@@ -262,7 +265,7 @@ body.wintermode{
 }
 
 /* ----------------TITLE-------------------------- */
-.title p{
+.titlee p{
   font-family: 'Lobster Two';
   font-size: 100px;
   color: white;
@@ -272,16 +275,17 @@ body.wintermode{
   margin-top: -20px;
   margin-left: 300px;
 }
-.title{
-  line-height: 0;
-  margin-top: 100px;
+.titlee{
+  line-height: 1;
+  margin-top: 139px;
   display: flex;
   align-items: center;
   flex-direction:column;
 }
 
 /* ----------------------SEARCH-------------------------------- */
-.search-bar{
+.search-barr
+{
   width: 100%;
   background-color: rgba(255,255,255,0.4);
   border: 1px solid rgb(169, 169, 62);
@@ -289,12 +293,12 @@ body.wintermode{
   align-items: center;
   padding: 10px 20px;
 }
-.search-bar img{
+.search-barr img{
   width:40px;
   height: 35px;
 }
 
-.search-bar input{
+.search-barr input{
   background: transparent;
   flex: 1;
   border:0;
@@ -303,7 +307,7 @@ body.wintermode{
   font-size: 20px;
 }
 
-.search-bar button{
+.search-barr button{
   border: 0;
   width:40px;
   height:40px;
@@ -313,7 +317,7 @@ body.wintermode{
 
 /* ------------------RESPONSIVE---------------- */
 @media screen and (max-width: 900px){
-    .title p{
+    .titlee p{
       font-family: 'Lobster Two';
       font-size: 60px;
       color: white;
@@ -326,7 +330,7 @@ body.wintermode{
 
   }
   @media only screen and (max-width: 850px) and (min-width: 601px){
-    .toggle-button{
+    .toggle-buttonn{
       display: flex;
     }
     .elements ul{
@@ -346,7 +350,7 @@ body.wintermode{
     .elements ul li{
       padding: 15px;
     }
-    .title{
+    .titlee{
       /* margin-top: 290px; */
     }
     .elements.active{
@@ -360,12 +364,12 @@ body.wintermode{
       flex-direction: column;
       align-items: flex-start;
     }
-    .btn{
+    .btnn{
       width: 80px;
     height: 33px;
     margin-right: 400px
     }
-    .wintermode .btn__indicator{
+    .wintermode .btnn__indicator{
       transform: translateX(50px);
     }
     .booking{
@@ -373,7 +377,7 @@ body.wintermode{
       margin-left: 124px;
     }
 
-    .lang-menu{
+    .lang-menuu{
       position: absolute;
       margin-left: 311px;
     }
@@ -383,7 +387,7 @@ body.wintermode{
   }
 
   @media screen and (max-width: 600px){
-    .toggle-button{
+    .toggle-buttonn{
       display: flex;
     }
     .elements ul{
@@ -414,13 +418,13 @@ body.wintermode{
       flex-direction: column;
       align-items: flex-start;
     }
-      .btn{
+      .btnn{
         border-radius: 50%;
         width: 10px;
         height: 10px;
       }
 
-      .wintermode .btn__indicator{
+      .wintermode .btnn__indicator{
         transform: translateX(0);
         background-color: var(--dark-color);
         box-shadow: 0 8px 40px rgba(0,0,0, .3);
@@ -429,10 +433,10 @@ body.wintermode{
       .booking{
         margin-left: 30px;
         margin-right: 165px;
-        width: 140px;
+        width: 146px;
       }
       
-      .lang-menu{
+      .lang-menuu{
         position: absolute;
         margin-left: 230px;
         /* margin-left:290px; */

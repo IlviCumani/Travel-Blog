@@ -1,6 +1,6 @@
 const body = document.querySelector('body');
-const btn = document.querySelector('.btn');
-const icon = document.querySelector('.btn__icon');
+const btn = document.querySelector('.btnn');
+const icon = document.querySelector('.btnn__icon');
 const sum = document.getElementById('sum');
 const imgIcon = document.getElementById('Wicon');
 

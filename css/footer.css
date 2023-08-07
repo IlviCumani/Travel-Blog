@@ -21,8 +21,7 @@ body{
   font-size: 40px;
 }
 .sub p{
-  margin-top: -25px;
-  font-weight: 100px;
+  margin-top: -13px;
   margin-left: 50px;
 }
 
@@ -52,7 +51,7 @@ body{
   background-position: center; */
 }
 
-.container{
+.container2{
   background-image: url("../Images/sand.jpg");
   background-size: cover;
   background-position: center;
@@ -63,10 +62,9 @@ body{
 }
 
 .fa-brands, .fa-solid{
-  font-size:30px;
-  margin: 5px;
+  font-size:30px !important;
+  margin: 10px;
 }
-
 .others a:link{
   text-decoration: none;
   color: rgb(69, 23, 23);
@@ -101,17 +99,17 @@ body{
   }
 
   .sub p{
-    margin-top: -25px;
-    font-weight: 50px;
+    margin-top: -13px !important;
     margin-left: 50px;
   }
   .btn{
-    margin-right: 80px;
+    margin-right: 70px;
     color: black;
     background-color: #E8E8E8;
     border: 1px white solid;
     opacity: 0.9;
-    width: 80px;
+    text-align: center;
+    width: 90px;
     height: 40px;
     font-size: medium;
     border-radius: 10px;
