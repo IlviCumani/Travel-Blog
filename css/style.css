@@ -73,7 +73,7 @@ p{
 
 .cards:hover .text-div
 {
-    height: 60%;
+    height: 45%;
 }
 
 .cards:hover .plus , .horizontal-cards:hover .horizontal-plus
@@ -88,7 +88,7 @@ p{
 }
 .horizontal-cards:hover .horizontal-text-div
 {
-    width: 50%;
+    width: 60%;
 }
 
 .horizontal-cards:hover .hidden
@@ -203,6 +203,9 @@ p{
     flex: 0 1 45%;
     margin: 10px;
 }
+.hidden{
+    font-size: 15px!important;
+}
 }
 
 
@@ -217,5 +220,12 @@ p{
         flex: 0 0 80%;
         margin-left: 100px;
         margin-right: 100px;
+    }
+
+}
+
+@media screen and (max-width:1030px) {
+    .hidden{
+        font-size: 12px;
     }
 }
