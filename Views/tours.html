@@ -4,17 +4,70 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TravAl Tours</title>
     <link rel="stylesheet" href="../css/tours.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/footer.css">
+
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=ABeeZee&family=Lobster&display=swap" rel="stylesheet">
 </head>
 <body>
     <img id="main-img" src="../Images/summer-tours.jpg" alt="main image">
-    <p id="main-p">Spend an unforgettable summer with TravAl!</p>
-    <p id="browse-p">Browse the collection of summer tours that we offer</p>
-    <div>
+    <div class="container1">
+        <header class="header">
+        <nav class="navbar1">
+          <div class="brand-titlee"> <a href="#"><img src="../Images/location.png" id="location" alt="location"></a></div>
+          <div class="elements">
+            <ul>
+        <li><a href="./index.html" class="l">Home</a></li>
+        <li><a href="#" class="l">Tours</a></li>
+        <li><a href="#" class="l">About Us</a></li>
+        <li><a href="#" class="l">Contacts</a></li>
+      </ul>
+      </div>
+      </nav>
+      <nav class="navbar2">
+        <div class="btnn">
+          <div class="btnn__indicator">
+            <div class="btnn__icon-container">
+              <i class="btnn__icon fa-solid"></i>
+            </div>
+          </div>
+        </div>
+        <button class="booking">Book a Tour</button>
+      
+        <div class="lang-menuu">
+          <div class="selected-langg">
+          </div>
+          <ul>
+            <li><a class="de" href="">German</a></li>
+            <li><a class="it" href="">Italian</a></li>
+            <li><a class="fr" href="">French</a></li>
+            <li><a class="es" href="">Espanol</a></li>
+            <li><a class="en" href="">English</a></li>
+          </ul>
+        </div>
+        <a href="" class="toggle-buttonn">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </a>
+      </nav>
+      </header>
+      <div class="titlee">
+        <p id="main-p">Spend an unforgettable summer with TravAl!</p>
+        <p id="browse-p">Browse the collection of summer tours that we offer</p>
+        </div>
+    </div>
+      <!-- </div> -->
+      <!-- ---------------------------------HEADER FINISHED---------------------------- -->
+
+    
+    <!-- <div class="search-div">
         <img src="../Images/search.png" alt="search" width="20px" height="20px">
         Search
-    </div>
+    </div> -->
+
+    
     <div class="div-cards">
         <div class="card">
             <div class="inner">
@@ -149,6 +202,35 @@
        
     </div>
 
-    
+    <!-------------------------------------footer------------------------------>
+    <div class="container2" id="c2">
+        <div class="shore-part">
+          <div class="sub">
+            <h1>Subscribe</h1>
+            <p>be the first who knows</p>
+          </div>
+          <button class="btn">Subscribe</button>
+        </div>
+        <div class="shore2">
+          <div class="socials">
+          <ul>
+            <li><i class="fa-brands fa-square-facebook"></i></li>
+            <li><i class="fa-brands fa-square-instagram" style="color: #7a4b81;"></i></li>
+            <li><i class="fa-solid fa-envelope"></i></li>
+            <li><i class="fa-brands fa-linkedin" style="color: #1a3d7a;"></i></li>
+          </ul>
+        </div>
+        <div class="others">
+          <a href="">FAQs</a>
+          <a href="">Terms of Service</a>
+          <a href="">Privacy Policy</a>
+        </div>
+        </div>
+        <hr style="border:1px solid rgb(255, 255, 255); width:100%;">
+        <p class="cop">@copyright2023</p>
+      </div>
+
+<script src="../Controlls/main-for-navbar.js"></script>
+<script src="../Controlls/header-script.js"></script>  
 </body>
 </html>

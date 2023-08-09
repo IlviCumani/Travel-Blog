@@ -1,6 +1,7 @@
 body{
     background-color: #F0E1BA;
     margin: 0px;
+    background-image: none!important;
 }
 #main-img{
     height:580px;
@@ -43,16 +44,16 @@ body{
     position: relative;
     display: flex;
     flex-wrap: wrap;
-  
+    margin-bottom: 50px;
 
 }
 
 .card-img{
     
-    height: 88%;
-    width: 273px;
-    padding: 11px;
-   
+    height: 100%;
+    width: 100%;
+    /* padding: 11px; */
+   filter: brightness(70%);
 }
 
 .card{
@@ -73,7 +74,7 @@ body{
     text-align: center;
     transition: transform 0.8s;
     transform-style: preserve-3d;
-    
+    box-shadow:4px 4px 6px gray;
 }
 
 .card:hover .inner{
@@ -100,11 +101,15 @@ body{
 
 .front-p{
     position: absolute;
-    color: black;
+    color: white;
     -webkit-text-stroke:0.6px rgb(128, 70, 29);
     top: 0;
     right: 20px;
     font-family: 'Lobster', cursive;
     font-size: 21px;
     /* background-color: whitesmoke; */
+}
+
+.titlee{
+    margin-top: 0!important;
 }
