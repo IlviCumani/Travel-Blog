@@ -1,15 +1,10 @@
 const body = document.querySelector('body');
 const btn = document.querySelector('.btnn');
 const icon = document.querySelector('.btnn__icon');
-const sum = document.getElementById('sum');
-const imgIcon = document.getElementById('Wicon');
-const originalSumContent = sum.innerHTML;
-const originalImgiconContent = imgIcon.src;
 const container2 = document.getElementById('c2');
-const vac = document.getElementById('seasonal_vacation');
+const div = document.getElementById('headWrap');
+const originalImgContent = div.style.backgroundImage;
 const originalWFooterImgContent = container2.style.backgroundImage;
-const originalVac = vac.style.backgroundColor;
-
 function store(value){
   localStorage.setItem('wintermode',value);
 }
@@ -31,8 +26,9 @@ function load(){
 
 load();
 
-btn.addEventListener('click', ()=>{
+btn.addEventListener('click', (event)=>{
 
+  // event.preventDefault();
   body.classList.toggle('wintermode');
   icon.classList.add('animated');
 
@@ -42,20 +38,18 @@ btn.addEventListener('click', ()=>{
   if(body.classList.contains('wintermode')){
     icon.classList.remove('fa-sun');
     icon.classList.add('fa-snowflake');
-    sum.innerHTML = 'Winter';
-    imgIcon.src = "../Images/winterIcon.png";
+    if(window.location.href == "http://127.0.0.1:5500/Views/aboutUs.html"){
+      div.style.backgroundImage = "url(../Images/aboutUsWinter.jpg)";
+      div.style.filter = "brightness(70%)"
+      // body.style.backgroundImage = none;
+    }
     container2.style.backgroundImage = "url(../Images/snow.jpg)";
-    vac.style.backgroundColor = "rgb(214, 212, 212)"
-
   }else{
     icon.classList.remove('fa-snowflake');
     icon.classList.add('fa-sun');
-    sum.innerHTML = originalSumContent;
-    imgIcon.src = originalImgiconContent;
+    div.style.backgroundImage = originalImgContent;
     container2.style.backgroundImage = originalWFooterImgContent;
-    vac.style.backgroundColor = originalVac;
   }
-
   setTimeout(() => {
     icon.classList.remove('animated');
   }, 500);
