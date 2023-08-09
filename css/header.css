@@ -73,7 +73,7 @@ header{
   left:0;
   width: 100%;
   display: flex !important;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   z-index:100;
 }
