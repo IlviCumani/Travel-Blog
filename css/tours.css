@@ -6,7 +6,6 @@ body{
     height:580px;
     width:100%;
     filter: brightness(65%);
-    position: absolute;
     margin: 0;
 }
 
@@ -42,7 +41,6 @@ body{
 
 .div-cards{
     position: relative;
-    top: 590px;
     display: flex;
     flex-wrap: wrap;
   
