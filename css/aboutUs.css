@@ -1,0 +1,134 @@
+body{
+  margin: 0;
+  padding: 0;
+  min-height: 70vh;
+}
+.aboutTravAl{
+  background-color: #A59B8D;
+}
+
+.header{
+  /* height: 500px; */
+  align-items:flex-start;
+}
+.headWrap{
+  height: 500px;
+  margin: 0;
+}
+.titlee{
+  position: absolute;
+  left: 0; 
+  right: 0; 
+  margin-left: auto; 
+  margin-right: auto; 
+  /* margin-top: 0 !important; */
+}
+.navbar2{
+  margin-top: 35px;
+}
+
+.ourMission{
+  background-color: #A59B8D;
+  padding: 30px;
+  margin: 40px;
+}
+
+.title{
+  font-family: 'Lato';
+  text-align: center;
+  color: white;
+  font-weight:500;
+  font-size: 35px;
+}
+.content{
+  font-family: 'Lato';
+  color: white;
+  font-weight: 100;
+}
+
+.shortNav{
+  background-color: #d6d6d6;
+  margin: 0;
+}
+
+.shortNav ul{
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 15px;
+  color: #68654e;
+  margin: 0;
+}
+
+.shortNav ul li a{
+  color: #68654e;
+  text-decoration: none;
+  font-weight: 600;
+  font-family: 'Lato';
+}
+
+.travAlCards{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  /* margin: 40px; */
+}
+
+.ourCompany, .ourGoal{
+  background-color: #D9D9D9;
+  padding: 30px;
+  margin: 40px;
+}
+.ourCompany h1{
+  text-align: center;
+  color: #083f7f;
+}
+.ourGoal h1{
+  text-align: center;
+  color: rgb(120, 18, 18);
+}
+
+.ourCompany p, .ourGoal p{
+  font-family: 'Lato';
+  color: rgb(3, 40, 80);
+}
+
+.welcome{
+  background-color: #296C81;
+  margin-left: 40px;
+  margin-right: 40px;
+  margin-bottom: 40px;
+  padding: 20px;
+}
+.text{
+  font-family: 'Lato';
+  text-align: center;
+  color: white;
+  font-size: larger;
+}
+
+.welcomeText{
+  font-family: 'Lobster two';
+  text-align: center;
+  color: white;
+  font-size: 40px;
+}
+
+@media screen and (max-width:670px){
+  .travAlCards{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    /* margin: 40px; */
+  }
+  .ourCompany, .ourGoal{
+    background-color: #D9D9D9;
+    padding: 30px;
+    margin-right: 40px;
+    margin-left: 40px;
+  }
+  .ourCompany{
+    margin-bottom: 0;
+  }
+}
