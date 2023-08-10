@@ -112,4 +112,158 @@ body{
 
 .titlee{
     margin-top: 0!important;
+    margin-bottom: 0!important;
 }
+
+
+#closing-x
+{
+    margin-top:-4px;
+    margin-right: -2px;
+    cursor: pointer;
+    height:30px;
+    width:30px;
+}
+
+#side-filter{
+background-color: #3b7971;
+box-shadow: 3px 2px 5px #343939d4;
+display: inline-flex;
+position: relative;
+top:-16px;
+left: -9px;
+transition: left 0.7s ease;
+
+}
+#filter-img{
+    padding: 10px;
+    max-height: 55px;
+}
+
+#side-filter:hover{
+    left: 0px;
+}
+#filter-div{
+     display: none;
+     flex-direction: column;
+    /*flex-direction: row;
+    background-color: #115f223f; 
+    box-shadow: 5px 5px 5px #527c527d;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 10px; */
+}
+.filter-p{
+   font-family: 'ABeeZee', sans-serif;
+}
+
+.initial-div{
+    display: flex;
+    justify-content: space-between;
+}
+
+#categories-form{
+    padding: 5px;
+}
+/* 
+
+#filter-categories{
+    margin: 16px;
+}*/
+
+.price-form{
+    display: none;
+    flex-direction: row;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button{
+    appearance: none;
+}
+
+.slider{
+    height: 5px;
+    border-radius: 5px;
+    background-color: #ddd;
+    width: 70%;
+    position: relative;
+}
+
+.slider .progress{
+    height: 5px;
+    position: absolute;
+    border-radius: 5px;
+    background:red;
+    left: 25%;
+    right: 25%;
+}
+
+.range-input{
+    position: relative;
+}
+
+.range-input input{
+    position: absolute;
+    top: -5px;
+    height: 5px;
+    background: none;
+    appearance: none;
+    pointer-events: none;
+}
+
+input[type="range"]::-webkit-slider-thumb{
+    height: 17px;
+    width: 17px;
+    border-radius: 5px;
+    appearance: none;
+    pointer-events: auto;
+    
+}
+/*
+
+#categories-form{
+    color: #187D9D;
+    position: relative;
+    align-items: center
+}
+*/
+.radio-bt{
+    /* -webkit-appearance: none; */
+    appearance: none;
+    margin: 10px;
+    width: 20px;
+    height: 20px;
+    border-radius:12px;
+    cursor:pointer;
+    vertical-align: middle;
+    box-shadow: hsla(0,0%,100%,.15) 0 1px 1px, inset hsla(0,0%,0%,.5) 0 0 0 1px;
+    background-color:hsla(0,0%,0%,.2);
+    background-image: radial-gradient( hsla(200,100%,90%,1) 0%, hsla(200,100%,70%,1) 15%, hsla(200,100%,60%,.3) 28%, hsla(200,100%,30%,0) 70% );
+    background-repeat: no-repeat;
+    transition: background-position .15s cubic-bezier(.8, 0, 1, 1),
+    transform .25s cubic-bezier(.8, 0, 1, 1);
+  outline: none;
+}
+
+
+.radio-bt:checked{
+    transition: background-position .2s .15s cubic-bezier(0, 0, .2, 1),
+    transform .25s cubic-bezier(0, 0, .2, 1);
+    background-position: 0 0;
+}
+
+.radio-bt:active{
+   transform: scale(1.5);
+ transition: transform .1s cubic-bezier(0, 0, .2, 1);
+}
+
+.radio-bt,
+.radio-bt:active{
+    background-position: 0 24px;
+}
+
+
+.radio-bt:checked ~ .radio-bt,
+.radio-bt:checked ~ .radio-bt:active{
+    background-position: 0 -24px;
+} 
