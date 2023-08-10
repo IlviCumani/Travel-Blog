@@ -1,0 +1,100 @@
+body{
+    margin: 0;
+    background-image: none!important;
+    background-color: bisque;
+}
+
+
+.titlee{
+    margin-top: 0px!important;
+    margin-bottom: 0px!important;
+}
+
+#main-img{
+    width: 100%;
+    height: 550px;
+    filter: brightness(70%);
+}
+
+#main-p{
+    font-family: 'Lobster', cursive;
+    position: absolute;
+    color: rgb(200, 192, 192);
+    font-size: 64px;
+    text-align: center;
+    margin: 0%;
+    top: 30%;
+    width: 100%;
+}
+
+#small-descr{
+    position: absolute;
+    color: rgb(255, 255, 255);
+    font-size: 41px;
+    text-align: center;
+    margin: 0%;
+    top: 60%;
+    width: 100%;
+    animation-name: fly;
+    animation-duration: 2s;
+}
+
+
+@keyframes fly{
+    0% {opacity: 0; top:100%}
+    100% {opacity: 1;}
+}
+
+
+.main-content{
+    display: flex;
+    margin-bottom: 20px;
+}
+
+main{
+    flex: 0 0 60%;
+    padding: 10px 50px;
+}
+
+aside{
+    flex:0 0 40%;
+    background-color: antiquewhite;
+    display: flex;
+    flex-direction: column;
+}
+
+
+h5{
+    font-family: 'ABeeZee',sans-serif;
+    padding-left: 15px;
+    text-align: center;
+}
+
+
+.input-div{
+    display: grid;
+    grid-template-columns: 190px 113px;
+    grid-template-rows: 31px 32px;
+    padding: 6%;
+    border: 2px solid  #6396b4;
+    width: 375px;
+    box-shadow: 2px 2px #88b2da;
+    align-self: center;
+}
+
+
+label , input
+{
+    margin-bottom: 10px;
+    font-family: 'ABeeZee',sans-serif;
+    font-size: 13px;
+}
+
+
+input[type="submit"]
+{
+    width: 100px;
+    height: 30px;
+    border: 2px solid #3f76ce;
+    border-radius: 10px;
+}

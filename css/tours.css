@@ -155,6 +155,8 @@ transition: left 0.7s ease;
 }
 .filter-p{
    font-family: 'ABeeZee', sans-serif;
+   text-align: center;
+   margin-bottom: 0;
 }
 
 .initial-div{
@@ -173,7 +175,38 @@ transition: left 0.7s ease;
 
 .price-form{
     display: none;
-    flex-direction: row;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    height: 100px;
+}
+
+.range{
+height: 39px;
+border-radius: 30px;
+border: 2px solid #f0e1ba;
+display: flex;
+justify-content: space-around;
+width: 92%;
+flex-wrap: wrap;
+align-content: center;
+}
+
+input[type="range"]
+{
+    accent-color:#f0e1ba;
+}
+
+.value{
+    font-family: 'ABeeZee',sans-serif;
+    background-color: #f0e1ba;
+    line-height: 19px;
+    padding: 4px;
+    border-radius: 9px;
+}
+
+.field{
+    width: 30%;
 }
 
 input[type="number"]::-webkit-outer-spin-button,
@@ -200,15 +233,18 @@ input[type="number"]::-webkit-inner-spin-button{
 
 .range-input{
     position: relative;
+    width: 90%;
 }
 
 .range-input input{
     position: absolute;
-    top: -5px;
+    top: -24px;
     height: 5px;
+    right: 0px;
+    width: 100%;
     background: none;
-    appearance: none;
-    pointer-events: none;
+    -webkit-appearance: none;
+    /* pointer-events: none; */
 }
 
 input[type="range"]::-webkit-slider-thumb{
@@ -216,8 +252,19 @@ input[type="range"]::-webkit-slider-thumb{
     width: 17px;
     border-radius: 5px;
     appearance: none;
-    pointer-events: auto;
-    
+    pointer-events: auto;   
+}
+
+span{
+    font-family: 'ABeeZee', sans-serif;
+}
+
+.input-min{
+    width: 45%;
+}
+
+.input-max{
+    width: 45%;
 }
 /*
 
@@ -267,3 +314,4 @@ input[type="range"]::-webkit-slider-thumb{
 .radio-bt:checked ~ .radio-bt:active{
     background-position: 0 -24px;
 } 
+
