@@ -20,8 +20,8 @@ body{
 .sub h1{
   font-size: 40px;
 }
-.sub p{
-  margin-top: -15px;
+.sub p {
+  margin-top: -18px;
   margin-left: 50px;
 }
 
@@ -61,7 +61,7 @@ body{
   display: inline;
 }
 
-.fa-brands, .fa-solid{
+.footer__icons{
   font-size:30px ;
   margin: 10px;
 }
@@ -76,8 +76,10 @@ body{
   color:rgb(78, 27, 27);
 }
 .others a:hover{
-  background-color: burlywood;
-  padding: 5px;
+  background-color: rgb(128, 100, 66);
+  border-radius: 10px;
+  padding: 7px;
+  color: white;
 }
 
 .others{
@@ -93,18 +95,20 @@ body{
   margin-bottom: 0;
 }
 
-@media screen and (max-width: 700px){
+@media screen and (max-width: 588px){
   
   .sub h1{
     font-size: 30px;
   }
 
-  .sub p{
-    margin-top: -13px !important;
-    margin-left: 50px;
+  .sub p {
+    margin-top: -17px;
+    margin-left: 27px;
+    font-size: 14px;
   }
-  .btn{
-    margin-right: 70px;
+
+  .btn {
+    margin-right: 25px;
     color: black;
     background-color: #E8E8E8;
     border: 1px white solid;

@@ -2,7 +2,6 @@
 const body = document.querySelector('body');
 const btn = document.querySelector('.btnn');
 const icon = document.querySelector('.btnn__icon');
-// const imgIcon = document.getElementById('Wicon');
 
 function store(value){
   localStorage.setItem('wintermode',value);
@@ -41,16 +40,27 @@ btn.addEventListener('click', ()=>{
   if(body.classList.contains('wintermode')){
     icon.classList.remove('fa-sun');
     icon.classList.add('fa-snowflake');
+    document.getElementById('c2').style.backgroundImage = "url(../Images/snow.jpg)";
     if(window.location.href == "http://127.0.0.1:5500/Views/aboutUs1.html"){
       document.getElementById('t').style.backgroundImage = "url(../Images/aboutUsWinter.jpg)";
     }
-    // imgIcon.src = "../Images/winterIcon.png";
+    if(window.location.href == "http://127.0.0.1:5500/Views/index.html"){
+      document.getElementById('sum').innerText = 'Winter';
+      document.getElementById('Wicon').src = "../Images/winterIcon.png";
+      document.getElementById('i').style.backgroundImage = "url(../Images/winter.jpeg)";
+    }
   }else if(window.location.href == "http://127.0.0.1:5500/Views/aboutUs1.html" && body.classList.contains('wintermode')==false){
     document.getElementById('t').style.backgroundImage = "url(../Images/aboutUsImg.jpeg)";
+    document.getElementById('c2').style.backgroundImage = "url(../Images/sand.jpg)";
+  }else if(window.location.href == "http://127.0.0.1:5500/Views/index.html" && body.classList.contains('wintermode')==false){
+    document.getElementById('i').style.backgroundImage = "url('../Images/seashoree.jpg')";
+    document.getElementById('Wicon').src = "../Images/beach.png";
+    document.getElementById('sum').innerText = 'Summer';
+    document.getElementById('c2').style.backgroundImage = "url(../Images/sand.jpg)";
   }else{
+    document.getElementById('c2').style.backgroundImage = "url(../Images/sand.jpg)";
     icon.classList.remove('fa-snowflake');
     icon.classList.add('fa-sun');
-    // imgIcon.src = originalImgiconContent;
   }
 
   setTimeout(() => {
@@ -69,3 +79,17 @@ toggleButton.addEventListener('click', (event) =>{
   selectedLang.classList.toggle('active');
   btnn.classList.toggle('active');
 });
+
+// ----------------------------CHANGE BG-COLOR----------------
+const header = document.querySelector('.header');
+const scrollTrigger = 200;
+
+window.addEventListener('scroll', ()=>{
+  if(window.scrollY >= scrollTrigger){
+    header.classList.add('scrolled');
+    header.style.backgroundColor = "#00000087";
+  }else{
+    header.classList.remove('scrolled');
+    header.style.backgroundColor = "#0000003b";
+  }
+})
