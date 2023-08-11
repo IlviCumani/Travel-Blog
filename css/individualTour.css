@@ -98,3 +98,8 @@ input[type="submit"]
     border: 2px solid #3f76ce;
     border-radius: 10px;
 }
+
+
+.headWrap{
+    height: 550px;
+}

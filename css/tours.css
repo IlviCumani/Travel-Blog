@@ -146,6 +146,7 @@ transition: left 0.7s ease;
 #filter-div{
      display: none;
      flex-direction: column;
+     color: #F0E1BA;
     /*flex-direction: row;
     background-color: #115f223f; 
     box-shadow: 5px 5px 5px #527c527d;
