@@ -15,6 +15,7 @@ body{
   height: 500px;
   margin: 0;
 }
+
 .titlee{
   position: absolute;
   left: 0; 
@@ -28,22 +29,29 @@ body{
 }
 
 .ourMission{
-  background-color: #A59B8D;
+  /* background-color: #A59B8D;
+  padding: 30px;
+  margin: 40px; */
   padding: 30px;
   margin: 40px;
+  box-shadow: 0 8px 20px rgb(22 35 49 / 40%)
 }
 
 .title{
   font-family: 'Lato';
   text-align: center;
-  color: white;
-  font-weight:500;
-  font-size: 35px;
+  /* color: #68654e; */
+  color: rgb(120, 18, 18);
+  font-weight:600;
+  font-size: 40px;
 }
 .content{
   font-family: 'Lato';
-  color: white;
-  font-weight: 100;
+  /* color: white; */
+  color: #68654e;
+  font-weight: 400;
+  font-size: 17px;
+  text-align: center;
 }
 
 .shortNav{
@@ -80,9 +88,12 @@ body{
   padding: 30px;
   margin: 40px;
 }
+.ourCompany:hover, .ourGoal:hover{
+  box-shadow: 0 8px 20px rgb(22 35 49 / 40%)
+}
 .ourCompany h1{
   text-align: center;
-  color: #083f7f;
+  color: #296C81;
 }
 .ourGoal h1{
   text-align: center;
@@ -92,6 +103,7 @@ body{
 .ourCompany p, .ourGoal p{
   font-family: 'Lato';
   color: rgb(3, 40, 80);
+  margin: 0;
 }
 
 .welcome{
@@ -100,6 +112,7 @@ body{
   margin-right: 40px;
   margin-bottom: 40px;
   padding: 20px;
+  box-shadow: rgb(22 24 36 / 50%) 0px 8px 20px;
 }
 .text{
   font-family: 'Lato';
@@ -115,7 +128,10 @@ body{
   font-size: 40px;
 }
 
-@media screen and (max-width:670px){
+.inIcon{
+  font-size: 50px !important;
+}
+@media screen and (max-width:789px){
   .travAlCards{
     display: flex;
     flex-direction: column;
@@ -131,4 +147,35 @@ body{
   .ourCompany{
     margin-bottom: 0;
   }
+  #t1, #t2{
+    left: 20px;
+    right: 20px;
+    /* margin-left: -10vw;
+	margin-right: -10vw; */
+  }
+}
+.t{
+  display: flex;
+  justify-content: right;
+  margin-top: 5px;
+  margin-bottom: 0;
+}
+.h1__icon{
+  font-size:30px !important;
+}
+#t1, #t2{
+  width: 280px;
+  display: flex;
+  justify-content: right;
+  position: relative;
+  overflow: visible;
+  /* position: absolute;
+  margin-left: 250px; */
+  /* left: 10px; */
+	margin-left: -5vw;
+	margin-right: -5vw;
+	/* max-width: 100vw; */
+	position: relative;
+	/* right: 10px; */
+	/* width: 100vw; */
 }

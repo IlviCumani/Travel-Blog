@@ -73,7 +73,8 @@ header{
   left:0;
   width: 100%;
   display: flex !important;
-  justify-content: space-between;
+  justify-content: space-around;
+  /* justify-content: space-between; */
   align-items: center;
   z-index:100;
 }
@@ -384,12 +385,15 @@ body.wintermode{
     }
     .booking{
       position: absolute;
-      margin-left: 124px;
+      margin-left: 124px; 
+      /* margin-left: -179px; */
+      /* margin-left: -390px; */
     }
 
     .lang-menuu{
       position: absolute;
       margin-left: 311px;
+      /* margin-left: -200px; */
     }
     #sum{
       margin-left: 120px;
