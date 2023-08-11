@@ -9,6 +9,6 @@ toggleButton.addEventListener('click', (event) =>{
   elementsActive = !elementsActive;
   if(elementsActive)
     document.getElementsByClassName('titlee')[0].style.marginTop = "290px";
-  else
-  document.getElementsByClassName('titlee')[0].style.marginTop = "100px";
+  else if(!elementsActive)
+  document.getElementsByClassName('titlee')[0].style.marginTop = "130px";
 });
