@@ -1,9 +1,4 @@
-body{
-  background-image: url("../Images/seashoree.jpg");
-  background-size: cover;
-  background-repeat: none;
-  min-height: 130vh;
-}
+/* -----------------------HEADER--------------------- */
 #location{
   width: 100px;
   height: 100px;
@@ -78,10 +73,7 @@ header{
   align-items: center;
   z-index:100;
 }
-/* 
-.elements{
-  display: flex;
-} */
+
 .booking{
   background: white;
   color: black;
@@ -180,8 +172,7 @@ a{
   background-image: url(https://flagsapi.com/US/flat/32.png);
 }
 *{
-  /* margin: 0;
-  padding: 0; */
+  
   box-sizing: border-box;
 }
 
@@ -230,9 +221,7 @@ a{
 .btnn__icon{
   color: var(--light-icon-color);
 }
-/* .fa-brands, .fa-solid{
-  font-size: 20px !important;
-} */
+
 .btnn__icon{
   font-size: 20px !important;
 }
@@ -242,7 +231,7 @@ a{
 }
 /*----------------------Winter mode----------------*/
 body.wintermode{
-  background-image: url("../Images/winter.jpeg");
+  /* background-image: url("../Images/winter.jpeg"); */
 }
 
 .lang-menuu ul li a {
@@ -274,25 +263,7 @@ body.wintermode{
   }
 }
 
-/* ----------------TITLE-------------------------- */
-.titlee p{
-  font-family: 'Lobster Two';
-  font-size: 100px;
-  color: white;
-}
 
-#sum{
-  margin-top: -20px;
-  margin-left: 300px;
-}
-.titlee{
-  line-height: 1;
-  margin-top: 160px;
-  display: flex;
-  align-items: center;
-  flex-direction:column;
-  margin-bottom:50px;
-}
 
 /* ----------------------SEARCH-------------------------------- */
 .search-barr
@@ -327,19 +298,6 @@ body.wintermode{
 }
 
 /* ------------------RESPONSIVE---------------- */
-@media screen and (max-width: 900px){
-    .titlee p{
-      font-family: 'Lobster Two';
-      font-size: 60px;
-      color: white;
-    }
-    
-    #sum{
-      margin-top: -10px;
-      margin-left: 300px;
-    }
-
-  }
   @media only screen and (max-width: 850px) and (min-width: 601px){
     .toggle-buttonn{
       display: flex;
@@ -351,7 +309,8 @@ body.wintermode{
       width:100%;
       text-align: center;
       padding-left: 0;
-      background-color: rgba(134, 198, 202, 0.5);
+      margin: 0;
+      background-color: rgb(71 120 124 / 91%);
     }
 
     .elements ul li:hover{
@@ -360,9 +319,6 @@ body.wintermode{
     }
     .elements ul li{
       padding: 15px;
-    }
-    .titlee{
-      /* margin-top: 290px; */
     }
     .elements.active{
       display: flex;
@@ -386,17 +342,11 @@ body.wintermode{
     .booking{
       position: absolute;
       margin-left: 124px; 
-      /* margin-left: -179px; */
-      /* margin-left: -390px; */
     }
 
     .lang-menuu{
       position: absolute;
       margin-left: 311px;
-      /* margin-left: -200px; */
-    }
-    #sum{
-      margin-left: 120px;
     }
   }
 
@@ -409,10 +359,11 @@ body.wintermode{
       display: flex;
       flex-direction: column;
       width:100%;
-      height: 240px;
+      /* height: 202px; */
       text-align: center;
       padding-left: 0;
-      background-color: rgba(134, 198, 202, 0.5);
+      margin: 0;
+      background-color: rgb(71 120 124 / 91%);
     }
 
     .elements ul li:hover{
@@ -463,7 +414,7 @@ body.wintermode{
       margin-right: 0;
     }
     .btnn{
-      margin-top: 552px;
+      margin-top: 511px;
       display: none;
     }
     .btnn.active{
@@ -473,7 +424,7 @@ body.wintermode{
     .lang-menuu{
       margin-left: 0;
       position: absolute;
-      margin-top: 570px;
+      margin-top: 532px;
       margin-left: 0;
       display: none
     }
@@ -488,8 +439,11 @@ body.wintermode{
       width: 109px;
       margin-left: 0;
     }
+    .elements ul{
+      height: 244px;
+    }
   }
-  @media only screen and (max-width: 500px) and (min-width: 390px){
+  @media only screen and (max-width: 500px) and (min-width: 391px){
     .booking{
       margin-right: 0;
     }
@@ -497,7 +451,7 @@ body.wintermode{
     .lang-menuu{
       margin-left: 0;
       position: absolute;
-      margin-top: 570px;
+      margin-top: 532px;
       margin-left: 0;
       display: none
     }
@@ -511,4 +465,367 @@ body.wintermode{
     .booking{
       width: 132px;
     }
+    .elements ul{
+      height: 244px;
+    }
   }
+
+/* -----------------------------ABOUT US------------------------------- */
+.titlee{
+  background-image: url('../Images/aboutUsImg.jpeg');
+  height: 500px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.titlee p{
+  font-family: 'Lobster Two';
+  font-size: 100px;
+  color: white;
+  margin-top: 0;
+  padding-top: 200px;
+  text-align: center;
+}
+
+body{
+  margin: 0;
+  padding: 0;
+  min-height: 70vh;
+}
+.aboutTravAl{
+  background-color: #A59B8D;
+}
+
+.titlee{
+  left: 0; 
+  right: 0; 
+  margin-left: auto; 
+  margin-right: auto; 
+}
+.ourMission{
+  padding: 30px;
+  margin: 40px;
+  box-shadow: 0 8px 20px rgb(22 35 49 / 40%)
+}
+
+.title{
+  font-family: 'Lato';
+  text-align: center;
+  /* color: #68654e; */
+  color: rgb(120, 18, 18);
+  font-weight:600;
+  font-size: 40px;
+}
+.content{
+  font-family: 'Lato';
+  /* color: white; */
+  color: #68654e;
+  font-weight: 400;
+  font-size: 17px;
+  text-align: center;
+}
+
+.shortNav{
+  background-color: #d6d6d6;
+  margin: 0;
+}
+
+.shortNav ul{
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 15px;
+  color: #68654e;
+  margin: 0;
+}
+
+.shortNav ul li a{
+  color: #68654e;
+  text-decoration: none;
+  font-weight: 600;
+  font-family: 'Lato';
+}
+
+.travAlCards{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  /* margin: 40px; */
+}
+
+.ourCompany, .ourGoal{
+  background-color: #D9D9D9;
+  padding: 30px;
+  margin: 40px;
+}
+.ourCompany:hover, .ourGoal:hover{
+  box-shadow: 0 8px 20px rgb(22 35 49 / 40%)
+}
+.ourCompany h1{
+  text-align: center;
+  color: #296C81;
+}
+.ourGoal h1{
+  text-align: center;
+  color: rgb(120, 18, 18);
+}
+
+.ourCompany p, .ourGoal p{
+  font-family: 'Lato';
+  color: rgb(3, 40, 80);
+  margin: 0;
+}
+
+.welcome{
+  background-color: #296C81;
+  margin-left: 40px;
+  margin-right: 40px;
+  margin-bottom: 40px;
+  padding: 20px;
+  box-shadow: rgb(22 24 36 / 50%) 0px 8px 20px;
+}
+.text{
+  font-family: 'Lato';
+  text-align: center;
+  color: white;
+  font-size: larger;
+}
+
+.welcomeText{
+  font-family: 'Lobster two';
+  text-align: center;
+  color: white;
+  font-size: 40px;
+}
+
+.inIcon{
+  font-size: 50px !important;
+}
+@media screen and (max-width:789px){
+  .travAlCards{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    /* margin: 40px; */
+  }
+  .ourCompany, .ourGoal{
+    background-color: #D9D9D9;
+    padding: 30px;
+    margin-right: 40px;
+    margin-left: 40px;
+  }
+  .ourCompany{
+    margin-bottom: 0;
+  }
+  #t1, #t2{
+    left: 20px;
+    right: 20px;
+  }
+}
+.t{
+  display: flex;
+  justify-content: right;
+  margin-top: 5px;
+  margin-bottom: 0;
+}
+.h1__icon{
+  font-size:30px !important;
+}
+#t1, #t2{
+  width: 280px;
+  display: flex;
+  justify-content: right;
+  position: relative;
+  overflow: visible;
+	margin-left: -5vw;
+	margin-right: -5vw;
+	position: relative;
+}
+
+
+
+/* ------------------------------------------OUR STAFF-------------------------------------- */
+body{
+  background-color: #dbdbdb;
+}
+
+#meetAndGreet{
+  text-align: center;
+  font-size: 35px;
+  font-family: 'Lato';
+  color: #063456;
+  font-weight: 600;
+}
+.staff-background-cards{
+  height: 220px;
+  margin-top: 130px;
+  background-color: #063456;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-bottom: 200px;
+}
+
+
+.staff-body-cards{
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 300px;
+  height: 340px;
+  bottom: 70px;
+  /* object-fit: cover;  */
+  background-position: center; 
+  background-size: cover;
+  overflow: hidden; 
+  transition: transform 0.3s;
+}
+.StaffTitle{
+  background-image: url(../Images/staff.jpg);
+  height: 500px;
+  background-size: cover;
+  background-repeat: no-repeat; 
+  background-position: center;
+}
+.StaffTitle::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 500px;
+  background-color: rgba(0, 0, 0, 0.5); 
+  opacity: 0.7; 
+}
+.StaffTitle p {
+  position: relative;
+  text-align: center;
+  align-items: center;
+  font-family: 'Lato';
+  color: white;
+  margin: 0;
+  font-size: 90px;
+  padding-top: 200px;
+}
+.staff-body-cards::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  background-color: rgba(0,0,0,0.25);
+}
+
+.staff-body-cards:hover {
+  transform: translateY(-20px); /* Move card up on hover */
+}
+.social-ribon{
+  position: relative;
+  width: 40px;
+  height: 340px;
+  background-color: #9FAFBB; 
+}
+.social__icon{
+  font-size: 20px !important;
+}
+.social-ribon ul{
+  list-style: none;
+  display: inline-block;
+  padding-left: 0;
+  margin-top: 62px;
+  /* padding-right: 3px; */
+}
+.social-ribon ul li a{
+  text-decoration: none;
+  color: white;
+}
+.social-ribon ul li{
+  padding-bottom: 20px;
+}
+.btnn.disabled{
+  pointer-events: none;
+  opacity: 0.5;
+}
+.name{
+  /* position: absolute; */
+  margin-left: 43px;
+  font-family: 'Lato';
+  font-weight: bolder;
+  color: white;
+  position: relative;
+  margin-top: 165px;
+  font-size: 26px;
+}
+.profession{
+  margin-left: 43px;
+  font-family: 'Lato';
+  font-weight: bolder;
+  color: white;
+  position: relative;
+  font-weight: 100;
+  font-size: 19px;
+  margin-top: -25px;
+}
+.info{
+  color: white;
+  position: relative;
+  font-family: 'Lato';
+  padding: 10px;
+  visibility: hidden;
+  /* opacity: 0; */
+  transition: opacity 0.3s, visibility 0s 0.3s; 
+}
+
+.staff-body-cards:hover .info {
+  visibility: visible;
+  /* opacity: 1; */
+  transition-delay: 0s;
+}
+
+@media screen and (max-width:700px){
+  .StaffTitle p {
+    font-size: 60px;
+  }
+}
+
+@media screen and (max-width:975px){
+  .staff-background-cards{
+    color:#dbdbdb;
+    flex-direction: column;
+    align-items: center; 
+    height: auto;
+    /* margin-top: 100px;
+    margin-bottom: 100px; */
+    row-gap: 70px;
+    margin-bottom: 110px;
+  }
+
+  .staff-body-cards{
+    display: flex;
+    flex-direction: column;
+    overflow: visible;
+  }
+
+  .social-ribon{
+    width: 300px;
+    height: 40px;
+  }
+  .staff-body-cards:hover {
+    transform: translateY(-20px); 
+  }
+
+  .social-ribon ul{
+    display: flex;
+    flex-direction: row;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 67px;
+    
+  }
+  .social-ribon ul li{
+    padding-bottom: 0;
+  }
+}

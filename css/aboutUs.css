@@ -6,10 +6,9 @@ body{
 .aboutTravAl{
   background-color: #A59B8D;
 }
-.header{
-  /* height: 500px; */
+.header{ 
   align-items:flex-start;
-}
+} 
 .headWrap{
   height: 500px;
   margin: 0;
