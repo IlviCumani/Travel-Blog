@@ -213,6 +213,9 @@ option{
     
 }
 
+.headWrap{
+    height: 600px!important;
+}
 
 .filter-selections{
     flex: 0 0 60%;
