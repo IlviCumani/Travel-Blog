@@ -162,6 +162,7 @@ transition: left 0.7s ease;
 .initial-div{
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 #categories-form{
@@ -173,6 +174,19 @@ transition: left 0.7s ease;
     margin: 16px;
 }*/
 
+.days-form{
+display: none;
+flex-direction: column;
+align-items: center;
+}
+
+
+label[for="numDays"]
+{
+    font-family: 'ABeeZee', sans-serif;
+    text-align: center;
+}
+
 .price-form{
     display: none;
     flex-direction: column;
@@ -181,6 +195,41 @@ transition: left 0.7s ease;
     height: 100px;
 }
 
+#numDays{
+    margin-top: 6px;
+    width: 30%;
+    height: 22px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    box-shadow: 2px 2px 2px #201c1c;
+    border: 2px solid #F0E1BA;
+    background-color: #F0E1BA;
+}
+
+option{
+    text-align: center;
+    color: #3b7971;
+    font-family: 'ABeeZee',sans-serif;
+    
+}
+
+
+.filter-selections{
+    flex: 0 0 60%;
+    font-family: 'ABeeZee',sans-serif;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#filter-btn{
+    background-color: #F0E1BA;
+    height: 26px;
+    border-radius: 10px;
+    font-family: 'ABeeZee',sans-serif;
+    font-size: 16px;
+}
 .range{
 height: 39px;
 border-radius: 30px;
@@ -205,67 +254,7 @@ input[type="range"]
     border-radius: 9px;
 }
 
-.field{
-    width: 30%;
-}
 
-input[type="number"]::-webkit-outer-spin-button,
-input[type="number"]::-webkit-inner-spin-button{
-    appearance: none;
-}
-
-.slider{
-    height: 5px;
-    border-radius: 5px;
-    background-color: #ddd;
-    width: 70%;
-    position: relative;
-}
-
-.slider .progress{
-    height: 5px;
-    position: absolute;
-    border-radius: 5px;
-    background:red;
-    left: 25%;
-    right: 25%;
-}
-
-.range-input{
-    position: relative;
-    width: 90%;
-}
-
-.range-input input{
-    position: absolute;
-    top: -24px;
-    height: 5px;
-    right: 0px;
-    width: 100%;
-    background: none;
-    -webkit-appearance: none;
-    /* pointer-events: none; */
-}
-
-input[type="range"]::-webkit-slider-thumb{
-    height: 17px;
-    width: 17px;
-    border-radius: 5px;
-    appearance: none;
-    pointer-events: auto;   
-}
-
-span{
-    font-family: 'ABeeZee', sans-serif;
-}
-
-.input-min{
-    width: 45%;
-}
-
-.input-max{
-    width: 45%;
-}
 /*
 
 #categories-form{

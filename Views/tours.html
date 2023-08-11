@@ -72,6 +72,13 @@
             <input class="radio-bt" type="radio" name="criteria" id="numberOfDays"><label class="filter-p" for="numberOfDays">Number of days</label>
         </form>
         <img id="closing-x" src="../Images/X.png" alt="">
+        <div class="filter-selections">
+            <div>
+        <p id="maxPrice">Max price: -- </p>
+        <p id="p-numDays">Num of days: -- </p>
+        </div>
+        <input type="submit" id="filter-btn" value="Filter">
+        </div>
         </div> 
         <div class="price-form">
             <p class="filter-p">Slide or input the maximum price:</p>
@@ -82,7 +89,18 @@
         </div>
 
         <div class="days-form">
-          
+            <label for="numDays">
+                Select the number of days: 
+            </label>
+          <select name="numDays" id="numDays">
+            <option value="1">1 day</option>
+            <option value="2">2 days</option>
+            <option value="3">3 days</option>
+            <option value="4">4 days</option>
+            <option value="5">5 days</option>
+            <option value="6">6 days</option>
+            <option value="7">7 days</option>
+          </select>
         </div>
     </div>
    
