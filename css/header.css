@@ -69,6 +69,7 @@ body{
 header{
   position:fixed;
   background: transparent;
+  background-color: #0000003b;
   top:0;
   left:0;
   width: 100%;
@@ -452,12 +453,12 @@ body.wintermode{
       
       .lang-menuu{
         position: absolute;
-        margin-left: 230px;
+        margin-left: 244px;
         /* margin-left:290px; */
       }
   }
 
-  @media screen and (max-width:380px){
+  @media screen and (max-width:390px){
     .booking{
       margin-right: 0;
     }
@@ -508,6 +509,6 @@ body.wintermode{
       margin-right: 94px;
     }
     .booking{
-      width: 109px;
+      width: 132px;
     }
   }
