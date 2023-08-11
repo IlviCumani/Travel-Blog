@@ -59,12 +59,15 @@ btn.addEventListener('click', (event)=>{
     }
     container2.style.backgroundImage = "url(../Images/snow.jpg)";
   }else{
+    if(window.location.href=="http://127.0.0.1:5500/Views/tours.html"){
+       al.innerText = "Spend an unforgettable summer with TravAL"
+    document.getElementsByTagName("body")[0].style.backgroundColor = "#F0E1BA";
+    }
     icon.classList.remove('fa-snowflake');
     icon.classList.add('fa-sun');
     div.style.backgroundImage = originalImgContent;
     container2.style.backgroundImage = originalWFooterImgContent;
-    al.innerText = "Spend an unforgettable summer with TravAL"
-    document.getElementsByTagName("body")[0].style.backgroundColor = "#F0E1BA";
+   
   }
   setTimeout(() => {
     icon.classList.remove('animated');

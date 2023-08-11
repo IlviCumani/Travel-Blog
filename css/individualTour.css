@@ -16,6 +16,15 @@ body{
     filter: brightness(70%);
 }
 
+.headWrap{
+    background-image: url('../Images/ksamil.jpg');
+     background-size: cover;
+      background-repeat: none;
+       background-position: center;
+        height: 500px;
+         filter:brightness(90%);
+}
+
 #main-p{
     font-family: 'Lobster', cursive;
     position: absolute;
@@ -48,12 +57,13 @@ body{
 
 .main-content{
     display: flex;
-    margin-bottom: 20px;
 }
 
 main{
     flex: 0 0 60%;
     padding: 10px 50px;
+    font-family: 'ABeeZee',sans-serif;
+    line-height: 25px;
 }
 
 aside{
@@ -63,7 +73,14 @@ aside{
     flex-direction: column;
 }
 
+#calendar-i, #itinerary-i, #arrow-i{
+height: 15px;
+width: 15px;
+}
 
+h4{
+    display: inline ;
+}
 h5{
     font-family: 'ABeeZee',sans-serif;
     padding-left: 15px;
