@@ -1,0 +1,17 @@
+@import "./contactHero.css";
+@import "./contactCard.css";
+@import "./contactForm.css";
+
+body {
+    font-family: "ABeeZee", sans-serif;
+    
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+    
+/* .error-input{
+    border: 2px solid red;
+} */
+
