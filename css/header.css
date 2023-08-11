@@ -73,7 +73,8 @@ header{
   left:0;
   width: 100%;
   display: flex !important;
-  justify-content: space-between;
+  justify-content: space-around;
+  /* justify-content: space-between; */
   align-items: center;
   z-index:100;
 }
@@ -229,15 +230,24 @@ a{
 .btnn__icon{
   color: var(--light-icon-color);
 }
-.fa-brands, .fa-solid{
+/* .fa-brands, .fa-solid{
+  font-size: 20px !important;
+} */
+.btnn__icon{
   font-size: 20px !important;
 }
-
+.elements ul li a{
+  text-decoration: none;
+  color: white;
+}
 /*----------------------Winter mode----------------*/
 body.wintermode{
   background-image: url("../Images/winter.jpeg");
 }
 
+.lang-menuu ul li a {
+  text-decoration: none;
+}
 .wintermode .btnn{
   box-shadow: inset 0 8px 60px rgba(0,0,0, .3), 
               inset 8px 0  8px rgba(0,0,0, .3),
@@ -277,10 +287,11 @@ body.wintermode{
 }
 .titlee{
   line-height: 1;
-  margin-top: 139px;
+  margin-top: 160px;
   display: flex;
   align-items: center;
   flex-direction:column;
+  margin-bottom:50px;
 }
 
 /* ----------------------SEARCH-------------------------------- */
@@ -374,12 +385,15 @@ body.wintermode{
     }
     .booking{
       position: absolute;
-      margin-left: 124px;
+      margin-left: 124px; 
+      /* margin-left: -179px; */
+      /* margin-left: -390px; */
     }
 
     .lang-menuu{
       position: absolute;
       margin-left: 311px;
+      /* margin-left: -200px; */
     }
     #sum{
       margin-left: 120px;
@@ -442,3 +456,10 @@ body.wintermode{
         /* margin-left:290px; */
       }
   }
+  /* @media screen and (max-width:414px){
+    .lang-menuu.active {
+      position: relative;
+      display: flex;
+      flex-direction: column
+  }
+} */
