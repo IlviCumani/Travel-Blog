@@ -110,12 +110,58 @@ body{
     /* background-color: whitesmoke; */
 }
 
+.tag{
+    font-family: 'ABeeZee',sans-serif;
+    font-style: italic;
+    font-size: 12px;
+}
+
+.back-p{
+    font-family: 'ABeeZee',sans-serif;
+    margin-bottom: 1px;
+}
+
+hr{
+    width: 60%;
+}
 .titlee{
     margin-top: 0!important;
     margin-bottom: 0!important;
 }
 
+.price{
+font-family: 'ABeeZee',sans-serif;
+display: inline;
+color: #187D9D;
+position: absolute;
+left: 40px;
+bottom: 10px;
+}
 
+#price-tag{
+    position: relative;
+    width: 70px;
+    height: 70px;
+}
+
+.back-card:hover{
+    cursor: pointer;
+}
+.price-div{
+    width: 120px;
+    height: 70px;
+    bottom: 0px;
+    position: relative;
+    /* display: flex;
+    height: 38px;
+    width: 53px;
+    background-color: aliceblue;
+   
+    border-radius: 50%;
+    flex-direction: row;
+    margin-right: 0; */
+
+}
 #closing-x
 {
     margin-top:-4px;
@@ -227,13 +273,23 @@ option{
     justify-content: space-between;
 }
 
-#filter-btn{
+#filter-btn, #remove-filter{
     background-color: #F0E1BA;
     height: 26px;
     border-radius: 10px;
     font-family: 'ABeeZee',sans-serif;
     font-size: 16px;
+    cursor: pointer;
+    box-shadow: 1px 1px 1px #3b392b;
+   
 }
+
+
+
+.active:hover{
+    box-shadow: 1px 2px 11px #3b392b;
+}
+
 .range{
 height: 39px;
 border-radius: 30px;
