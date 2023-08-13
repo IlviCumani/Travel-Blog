@@ -40,6 +40,10 @@ body{
     100% {opacity: 1;}
 }
 
+.more{
+    position: relative;
+}
+
 .div-cards{
     position: relative;
     display: flex;
@@ -130,12 +134,12 @@ hr{
 }
 
 .price{
-font-family: 'ABeeZee',sans-serif;
-display: inline;
-color: #187D9D;
-position: absolute;
-left: 40px;
-bottom: 10px;
+    font-family: 'ABeeZee',sans-serif;
+    display: inline;
+    color: #187D9D;
+    position: absolute;
+    left: 40px;
+    bottom: -3px;
 }
 
 #price-tag{
@@ -144,12 +148,22 @@ bottom: 10px;
     height: 70px;
 }
 
+.tap-more{
+    margin: 0; font-size: 10px;
+}
+
+
 .back-card:hover{
     cursor: pointer;
 }
 .price-div{
-    width: 120px;
+    /* width: 120px;
     height: 70px;
+    bottom: 0px;
+    position: relative; */
+    
+    width: 120px;
+    height: 57px;
     bottom: 0px;
     position: relative;
     /* display: flex;

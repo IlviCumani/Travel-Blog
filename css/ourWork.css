@@ -1,0 +1,12 @@
+body{
+    margin: 0;
+    background-image: none!important;
+    background-color: rgba(67, 68, 72, 1);
+}
+
+.headWrap{
+    height: 580px;
+}
+.work-card{
+    background-color: (186, 186, 186, 0.81);
+}
