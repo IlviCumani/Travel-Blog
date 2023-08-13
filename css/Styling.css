@@ -422,6 +422,12 @@ body.wintermode{
       font-size: 13px;
       height: 42px;
     }
+    #sum{
+      margin-left: 43px !important;
+    }
+    .IndexTitle p{
+        font-size: 70px !important;
+    }
     .btnn{
       margin-top: 511px;
       display: none;
@@ -455,9 +461,11 @@ body.wintermode{
   @media only screen and (max-width: 500px) and (min-width: 391px){
     .booking{
       margin-right: 0;
-      font-size: 13px
+      font-size: 13px;
     }
-
+    #sum{
+      margin-left: 100px !important;
+    }
     .lang-menuu{
       margin-left: 0;
       position: absolute;
@@ -1047,7 +1055,7 @@ body{
 }
 
 
-@media screen and (max-width:450px) {
+@media screen and (max-width:450px ) {
   .cards{
       flex: 0 0 100%;
       
