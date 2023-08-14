@@ -18,16 +18,25 @@ function enableSubmitButton() {
   submitButton.classList.add("enabled");
 }
 
+function validateEmail(email) {
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return emailRegex.test(email.value);
+}
+
+function isPDF(file) {
+    const fileRegex = /^.*\.pdf$/;
+    return fileRegex.test(file.value);
+}
+
 function validateInputs() {
   let formIsValid = true;
+
   requiredInputs.forEach((input) => {
     if (!input.value) {
-        formIsValid = false;
-        input.classList.remove("super-sexy");
-        input.classList.add("error");
-    } else {
-        input.classList.remove("error");
-        input.classList.add("super-sexy");
+      formIsValid = false;
+    } 
+    if (input.type === "email" && !validateEmail(input)) {
+      formIsValid = false;
     }
   });
   return formIsValid;
@@ -42,13 +51,12 @@ function handleClickOutside(event) {
 }
 
 function handleInputChange() {
-  if (requiredInputs[0].value && requiredInputs[1].value && requiredInputs[2].value && requiredInputs[3].value) {
+  if (validateInputs()) {
     enableSubmitButton();
   } else {
     if(clickedOutofForm){
         disableSubmitButton();
     }
-    // disableSubmitButton();
   }
 }
 
@@ -57,7 +65,6 @@ contactForm.addEventListener("click", () => {
     console.log("Clicked form for the first time");
   }
   hasClickedForm = true;
-//   enableSubmitButton();
 });
 
 document.addEventListener('click', handleClickOutside);

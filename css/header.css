@@ -69,6 +69,7 @@ body{
 header{
   position:fixed;
   background: transparent;
+  background-color: #0000003b;
   top:0;
   left:0;
   width: 100%;
@@ -377,7 +378,7 @@ body.wintermode{
     .btnn{
       width: 80px;
     height: 33px;
-    margin-right: 400px
+    margin-right: 367px
     }
     .wintermode .btnn__indicator{
       transform: translateX(50px);
@@ -452,12 +453,12 @@ body.wintermode{
       
       .lang-menuu{
         position: absolute;
-        margin-left: 230px;
+        margin-left: 244px;
         /* margin-left:290px; */
       }
   }
 
-  @media screen and (max-width:380px){
+  @media screen and (max-width:390px){
     .booking{
       margin-right: 0;
     }
@@ -502,12 +503,12 @@ body.wintermode{
     }
     .lang-menuu.active{
       display: block;
-      margin-left: 59px;
+      margin-left: 90px;
     }
     .navbar2{
-      margin-right: 94px;
+      margin-right: 131px;
     }
     .booking{
-      width: 109px;
+      width: 132px;
     }
   }
