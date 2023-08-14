@@ -1385,5 +1385,18 @@ body{
   .others{
     margin: 0;
   }
-  
+}
+
+/* ---------------------------------MAP-------------------------------- */
+.circle{
+  /* border-radius: 50%; */
+  background-color: transparent;
+  /* width: 56px;
+  height: 56px; */
+  /* margin-left: 200px;
+  margin-top: 140px; */
+  position: absolute;
+}
+.map{
+  display: flex;
 }
