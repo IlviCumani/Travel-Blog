@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About TravAl</title>
   <link rel="stylesheet" href="../css/Styling.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
    <!-- -------------------------------HEADER---------------------- -->
@@ -17,7 +18,7 @@
     <li><a href="./index.html" class="l">Home</a></li>
     <li><a href="#" class="l">Tours</a></li>
     <li><a href="./aboutUs1.html" class="l">About Us</a></li>
-    <li><a href="#" class="l">Contacts</a></li>
+    <li><a href="./contact.html" class="l">Contacts</a></li>
   </ul>
   </div>
   </nav>
@@ -63,7 +64,7 @@
     <ul>
       <li><i class="fa-solid fa-people-group fa-bounce"></i> <a href="#">Our staff</a></li>
       <li><i class="fa-solid fa-briefcase fa-bounce"></i>  <a href="">Our work</a></li>
-      <li><i class="fa-solid fa-person-circle-plus fa-bounce"></i>  <a href="">Join us</a></li>
+      <li id="join-us-icon"><i class="fa-solid fa-person-circle-plus fa-bounce"></i> Join Us</li>
     </ul>
   </div>
   <div class="travAlCards">
@@ -83,7 +84,7 @@
     <p class="text">Choose TravAl for unforgettable Albanian vacations.</p>
     <p class="welcomeText">Mirësevini</p>
   </div>
-
+  
   <!-- -----------------------FOOTER------------------ -->
   <div class="container2" id="c2">
     <div class="shore-part">
@@ -111,7 +112,9 @@
     <hr style="border:1px solid rgb(255, 255, 255);">
     <p class="cop">@copyright2023</p>
   </div>
+  <div id="join-us-popup-container"></div>
   
   <script src="../Controlls/script.js"></script>
+  <script src="../Controlls/load-join-us.js"></script>
 </body>
 </html>

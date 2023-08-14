@@ -1,6 +1,6 @@
 $(document).ready(function() {
-    const showPopupButton = $('#temp-btn-for-test');
-    const popupContainer = $('#popup-container-temp');
+    const showPopupButton = $('#join-us-icon');
+    const popupContainer = $('#join-us-popup-container');
     console.log(showPopupButton);
     console.log(popupContainer);
     let popupLoaded = false;
@@ -8,7 +8,7 @@ $(document).ready(function() {
     showPopupButton.click(function() {
         if (!popupLoaded) {
 
-            $.get('../Components/JoinUs.html', function(data) {
+            $.get('./Components/JoinUs.html', function(data) {
                 
                 popupContainer.html(data);
                 popupLoaded = true;
