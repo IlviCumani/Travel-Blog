@@ -1,4 +1,7 @@
 /*featured tours*/
+p{
+    margin-top: 0;
+ }
 .featured-tours{
     display: flex;
     flex-direction: row;
@@ -7,6 +10,7 @@
     margin-top: 38px;
 
  }
+ 
  .featured-imgs
  {
      height: 80%;
@@ -69,7 +73,7 @@
 
 .cards:hover .text-div
 {
-    height: 60%;
+    height: 45%;
 }
 
 .cards:hover .plus , .horizontal-cards:hover .horizontal-plus
@@ -84,7 +88,7 @@
 }
 .horizontal-cards:hover .horizontal-text-div
 {
-    width: 50%;
+    width: 60%;
 }
 
 .horizontal-cards:hover .hidden
@@ -199,17 +203,29 @@
     flex: 0 1 45%;
     margin: 10px;
 }
+.hidden{
+    font-size: 15px!important;
+}
 }
 
 
-@media screen and (max-width:450px) {
+@media screen and (max-width:645px) {
     .cards{
-        flex: 0 0 100%;
+        flex: 0 0 70%;
+        margin-left: 100px;
+        margin-right: 100px;
         
     }
     .horizontal-cards-div{
-        flex: 0 0 100%;
-        
-        
+        flex: 0 0 80%;
+        margin-left: 100px;
+        margin-right: 100px;
+    }
+
+}
+
+@media screen and (max-width:1030px) {
+    .hidden{
+        font-size: 12px;
     }
 }
