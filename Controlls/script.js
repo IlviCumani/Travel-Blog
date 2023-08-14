@@ -58,9 +58,9 @@ btn.addEventListener('click', ()=>{
     document.getElementById('sum').innerText = 'Summer';
     document.getElementById('c2').style.backgroundImage = "url(../Images/sand.jpg)";
   }else{
-    document.getElementById('c2').style.backgroundImage = "url(../Images/sand.jpg)";
     icon.classList.remove('fa-snowflake');
     icon.classList.add('fa-sun');
+    document.getElementById('c2').style.backgroundImage = "url(../Images/sand.jpg)";
   }
 
   setTimeout(() => {
