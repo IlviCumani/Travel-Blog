@@ -11,8 +11,52 @@ body{
     background-repeat: none;
     background-position: center;
 }
+
+.div-main{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+    position: absolute;
+    bottom: -150px;
+    animation-name:fly-div;
+    animation-duration: 2s;
+}
+
 .work-card{
-    background-color: (186, 186, 186, 0.81);
+    background-color: rgba(186, 186, 186, 0.81);
+    flex:0 0 25%; 
+    display: flex; 
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 10px;
+}
+
+.work-card-p
+{
+    text-align: center;
+    padding: 10px;
+    color: rgba(45, 96, 153, 1);
+    font-family: 'ABeeZee',sans-serif;
+    font-size: 18px;
+    margin-top: 0px;
+}
+
+
+.work-card-middle{
+    flex: 0 0 25%;
+    background-color: rgba(45, 96, 153, 0.81);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 10px; 
+    position: relative;
+}
+.work-icon{
+    height: 40px;
+    width: 40px;
 }
 
 .titlee{
@@ -25,8 +69,126 @@ body{
     top: 160px;
     font-size: 64px!important;
     animation-name: fly-work;
+    animation-duration: 2s;
 }
 
 @keyframes fly-work{
+    0%{opacity: 0; top: 500px;}
+    100%{opacity: 1;}
+}
+
+@keyframes fly-div{
+    0%{opacity: 0; bottom: -200px;}
+    100%{opacity: 1;}
+}
+
+.work-card-h2{
+    font-family: 'ABeeZee',sans-serif;
+    font-size: 24px;
+    color: rgba(45, 96, 153, 1);
+    margin-bottom: 5px;
+}
+
+.middle-p{
+    font-family: 'Lobster',sans-serif;
+    font-size: 35px;
+    color: rgba(186, 186, 186, 1);
+    padding: 30px;
+    text-align: center;
+    margin: 0;
+}
+
+
+.middle-contact{
+    background-color: rgba(186, 186, 186, 1);
+   
+}
+
+
+#pointer{
+    position: absolute;
+    animation-name: pointer-anim;
+    animation-iteration-count: infinite;
+    animation-duration: 1s;
+}
+
+@keyframes pointer-anim{
+    0%{bottom: 0px;}
+    100%{bottom: 20px;}
     
+}
+.middle-a{
+    color: rgba(45, 96, 153, 1);
+    padding: 6px;
+    text-align: center;
+    display: block;
+    font-family: 'ABeeZee',sans-serif;
+}
+
+.work-carousel-div{
+    width: 80%;
+    position: relative;
+    top: 200px;
+    margin-left: 10%;
+    background-color: #a4a4a5;
+    border-radius: 48px;
+    height: 400px;
+}
+
+#carousel-p{
+    font-family: 'ABeeZee',sans-serif;
+    text-align: center;
+    color: rgba(45, 96, 153, 1);
+    font-size: 24px;
+    margin-top: 10px;
+}
+
+.carousel-img{
+    height: 80%;
+    width: 90%;
+    position: absolute;
+    top: -18px;
+    transition: top 0.7s ease-out;
+
+}
+
+.inner-carousel{
+    position: absolute;
+    top: 900px;
+    border-radius: 48px;
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+    
+}
+
+.carousel-card{
+    flex: 0 0 30%;
+    height: 200px;
+    background-color: rgb(217, 217, 217);
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+
+.arrows{
+    height: 30px;
+    cursor: pointer;
+    flex: 0 0 1%;
+}
+
+.carousel-card-p{
+    position: relative;
+    top: 80%;
+    font-family: 'ABeeZee',sans-serif;
+    color: rgba(45, 96, 153, 1);
+    margin: 0;
+    font-size: 20px;
+}
+
+.carousel-img:hover{
+    top: -80px;
 }
