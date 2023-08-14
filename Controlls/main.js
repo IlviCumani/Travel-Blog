@@ -1,14 +1,14 @@
 const body = document.querySelector('body');
 const btn = document.querySelector('.btnn');
 const icon = document.querySelector('.btnn__icon');
-const sum = document.getElementById('sum');
+// const sum = document.getElementById('sum');
 const imgIcon = document.getElementById('Wicon');
-const originalSumContent = sum.innerHTML;
-const originalImgiconContent = imgIcon.src;
-const container2 = document.getElementById('c2');
+// const originalSumContent = sum.innerHTML;
+// const originalImgiconContent = imgIcon.src;
+// const container2 = document.getElementById('c2');
 const vac = document.getElementById('seasonal_vacation');
-const originalWFooterImgContent = container2.style.backgroundImage;
-const originalVac = vac.style.backgroundColor;
+// const originalWFooterImgContent = container2.style.backgroundImage;
+// const originalVac = vac.style.backgroundColor;
 
 function store(value){
   localStorage.setItem('wintermode',value);
