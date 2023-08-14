@@ -19,7 +19,20 @@ function load(){
   else if(wintermode == 'true'){
     body.classList.add('wintermode');
     icon.classList.add('fa-snowflake');
+    if(window.location.href != "http://127.0.0.1:5501/Travel-Blog/Views/ourStaff1.html"){
+      document.getElementById('c2').style.backgroundImage = "url(../Images/snow.jpg)";
+    }
+    if(window.location.href == "http://127.0.0.1:5501/Travel-Blog/Views/index.html"){
+      document.getElementById('sum').innerText = 'Winter';
+      document.getElementById('Wicon').src = "../Images/winterIcon.png";
+      document.getElementById('i').style.backgroundImage = "url(../Images/winter.jpeg)";
+    }
+    if(window.location.href == "http://127.0.0.1:5501/Travel-Blog/Views/aboutUs1.html"){
+      document.getElementById('t').style.backgroundImage = "url(../Images/aboutUsWinter.jpg)";
+    }
+
   }else{
+    // icon.classList.remove('fa-snowflake');
     icon.classList.add('fa-sun');
   }
 }
@@ -40,26 +53,26 @@ btn.addEventListener('click', ()=>{
     if(window.location.href != "http://127.0.0.1:5501/Travel-Blog/Views/ourStaff1.html"){
       document.getElementById('c2').style.backgroundImage = "url(../Images/snow.jpg)";
     }
-    if(window.location.href == "http://127.0.0.1:5500/Views/aboutUs1.html"){
+    if(window.location.href == "http://127.0.0.1:5501/Travel-Blog/Views/aboutUs1.html"){
       document.getElementById('t').style.backgroundImage = "url(../Images/aboutUsWinter.jpg)";
     }
-    if(window.location.href == "http://127.0.0.1:5500/Views/index.html"){
+    if(window.location.href == "http://127.0.0.1:5501/Travel-Blog/Views/index.html"){
       document.getElementById('sum').innerText = 'Winter';
       document.getElementById('Wicon').src = "../Images/winterIcon.png";
       document.getElementById('i').style.backgroundImage = "url(../Images/winter.jpeg)";
     }
-  }else if(window.location.href == "http://127.0.0.1:5500/Views/aboutUs1.html" && body.classList.contains('wintermode')==false){
+  }else if(window.location.href == "http://127.0.0.1:5501/Travel-Blog/Views/aboutUs1.html" && body.classList.contains('wintermode')==false){
+    icon.classList.remove('fa-snowflake');
+    icon.classList.add('fa-sun');
     document.getElementById('t').style.backgroundImage = "url(../Images/aboutUsImg.jpeg)";
-    if(window.location.href != "http://127.0.0.1:5501/Travel-Blog/Views/ourStaff1.html"){
-      document.getElementById('c2').style.backgroundImage = "url(../Images/sand.jpg)";
-    }
-  }else if(window.location.href == "http://127.0.0.1:5500/Views/index.html" && body.classList.contains('wintermode')==false){
+    document.getElementById('c2').style.backgroundImage = "url(../Images/sand.jpg)";
+  }else if(window.location.href == "http://127.0.0.1:5501/Travel-Blog/Views/index.html" && body.classList.contains('wintermode')==false){
+    icon.classList.remove('fa-snowflake');
+    icon.classList.add('fa-sun');
     document.getElementById('i').style.backgroundImage = "url('../Images/seashoree.jpg')";
     document.getElementById('Wicon').src = "../Images/beach.png";
     document.getElementById('sum').innerText = 'Summer';
-    if(window.location.href != "http://127.0.0.1:5501/Travel-Blog/Views/ourStaff1.html"){
-      document.getElementById('c2').style.backgroundImage = "url(../Images/sand.jpg)";
-    }
+    document.getElementById('c2').style.backgroundImage = "url(../Images/sand.jpg)";
   }else{
     icon.classList.remove('fa-snowflake');
     icon.classList.add('fa-sun');
