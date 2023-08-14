@@ -64,15 +64,33 @@ btn.addEventListener('click', ()=>{
   }else if(window.location.href == "http://127.0.0.1:5501/Travel-Blog/Views/aboutUs1.html" && body.classList.contains('wintermode')==false){
     icon.classList.remove('fa-snowflake');
     icon.classList.add('fa-sun');
-    document.getElementById('t').style.backgroundImage = "url(../Images/aboutUsImg.jpeg)";
+     document.getElementById('t').style.backgroundImage = "url(../Images/aboutUsImg.jpeg)";
     document.getElementById('c2').style.backgroundImage = "url(../Images/sand.jpg)";
-  }else if(window.location.href == "http://127.0.0.1:5501/Travel-Blog/Views/index.html" && body.classList.contains('wintermode')==false){
+  }
+    else if(window.location.href == "http://127.0.0.1:5500/Views/contact.html"){
+      document.querySelector('.contact-hero').classList.remove('summer-mode');
+      document.querySelector('.contact-hero').classList.add('winter-mode');
+      document.getElementById('contact-method-section').classList.remove('summer-mode');
+      document.getElementById('contact-method-section').classList.add('winter-mode');
+      document.querySelector('.form-container').classList.remove('summer-mode');
+      document.querySelector('.form-container').classList.add('winter-mode');
+    }
+  else if(window.location.href == "http://127.0.0.1:5501/Travel-Blog/Views/index.html" && body.classList.contains('wintermode')==false){
     icon.classList.remove('fa-snowflake');
     icon.classList.add('fa-sun');
     document.getElementById('i').style.backgroundImage = "url('../Images/seashoree.jpg')";
     document.getElementById('Wicon').src = "../Images/beach.png";
     document.getElementById('sum').innerText = 'Summer';
     document.getElementById('c2').style.backgroundImage = "url(../Images/sand.jpg)";
+  }else if(window.location.href == "http://127.0.0.1:5500/Views/contact.html" && body.classList.contains('wintermode')==false){
+    icon.classList.remove('fa-snowflake');
+    icon.classList.add('fa-sun');
+    document.querySelector('.contact-hero').classList.remove('winter-mode');
+    document.querySelector('.contact-hero').classList.add('summer-mode');
+    document.getElementById('contact-method-section').classList.remove('winter-mode');
+    document.getElementById('contact-method-section').classList.add('summer-mode');
+    document.querySelector('.form-container').classList.remove('winter-mode');
+    document.querySelector('.form-container').classList.add('summer-mode');
   }else{
     icon.classList.remove('fa-snowflake');
     icon.classList.add('fa-sun');

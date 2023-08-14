@@ -35,7 +35,6 @@
 }
 
 .contact-hero{
-    background-image: url("../../Images/ContactPageImg/palm\ trees.jpeg");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -43,8 +42,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    border-bottom: 5px solid #000;
 }
+
 
 @media screen and (max-width: 1148px) {
     .contact-msg-container{
