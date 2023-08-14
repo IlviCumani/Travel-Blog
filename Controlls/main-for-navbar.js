@@ -5,6 +5,8 @@ const container2 = document.getElementById('c2');
 const div = document.getElementById('headWrap');
 const originalImgContent = div.style.backgroundImage;
 const originalWFooterImgContent = container2.style.backgroundImage;
+const al = document.getElementsByClassName("al")[0];
+
 function store(value){
   localStorage.setItem('wintermode',value);
 }
@@ -43,12 +45,29 @@ btn.addEventListener('click', (event)=>{
       div.style.filter = "brightness(70%)"
       // body.style.backgroundImage = none;
     }
+    if(window.location.href=="http://127.0.0.1:5500/Views/tours.html")
+    {
+      div.style.backgroundImage = "url(../Images/albanianWinter.jpg)";
+      div.style.filter = "brightness(70%)";
+      al.innerText = "Spend an unforgettable winter with TravAL";
+      document.getElementsByTagName("body")[0].style.backgroundColor = "#c8dde2";
+    }
+    if(window.location.href=="http://127.0.0.1:5500/Views/index.html")
+    {
+      
+      document.getElementsByClassName("text-div")[0].style.backgroundColor = "#cac2db";
+    }
     container2.style.backgroundImage = "url(../Images/snow.jpg)";
   }else{
+    if(window.location.href=="http://127.0.0.1:5500/Views/tours.html"){
+       al.innerText = "Spend an unforgettable summer with TravAL"
+    document.getElementsByTagName("body")[0].style.backgroundColor = "#F0E1BA";
+    }
     icon.classList.remove('fa-snowflake');
     icon.classList.add('fa-sun');
     div.style.backgroundImage = originalImgContent;
     container2.style.backgroundImage = originalWFooterImgContent;
+   
   }
   setTimeout(() => {
     icon.classList.remove('animated');
