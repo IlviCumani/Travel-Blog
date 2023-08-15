@@ -138,10 +138,7 @@
     .carousel .thumb-content {
         padding: 5px;
     }
-    
-   
-    
-    
+
 }
 
 @media screen and (max-width: 400px) {
@@ -160,7 +157,7 @@
         margin-bottom: 0px;
     }
 
-    .carousel .carousel-item .btn {
+    .carousel .carousel-item .more-btn {
         margin-top: 5px;
         font-size: 10px;
         padding: 5px;

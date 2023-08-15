@@ -1,5 +1,5 @@
 const carouselContainer = document.getElementById("carousel-container");
-  fetch("swiper.html")
+  fetch("Components/swiper.html")
       .then(response => response.text())
       .then(data => {
           carouselContainer.innerHTML = data;
