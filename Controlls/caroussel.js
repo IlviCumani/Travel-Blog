@@ -1,3 +1,10 @@
+const carouselContainer = document.getElementById("carousel-container");
+  fetch("swiper.html")
+      .then(response => response.text())
+      .then(data => {
+          carouselContainer.innerHTML = data;
+});
+
 $(document).ready(function () {
     $('#myCarousel').carousel();
 
