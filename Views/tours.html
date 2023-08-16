@@ -4,8 +4,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>TravAl Tours</title>
         <link rel="stylesheet" href="../css/tours.css">
-        <link rel="stylesheet" href="../css/header.css">
-        <link rel="stylesheet" href="../css/footer.css">
+        <link rel="stylesheet" href="../css/Styling.css">
         <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;400&family=Lobster+Two&family=Montserrat:wght@400;600&family=Roboto:wght@100;400&family=Ubuntu&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=ABeeZee&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=ABeeZee&family=Lobster&display=swap" rel="stylesheet">
@@ -15,19 +14,16 @@
         <link href="https://fonts.googleapis.com/css2?family=ABeeZee&family=Lobster&display=swap" rel="stylesheet">
     </head>
     <body>
-        <!-- <img id="main-img" src="../Images/summer-tours.jpg" alt="main image"> -->
+        <img id="main-img" src="../Images/summer-tours.jpg" alt="main image">
         <div class="container1">
-            <div class="headWrap" id="headWrap" style="background-image: url('../Images/summer-tours.jpg'); background-size: cover;
-            background-repeat: none; filter: brightness(70%);">
             <header class="header">
             <nav class="navbar1">
               <div class="brand-titlee"> <a href="#"><img src="../Images/location.png" id="location" alt="location"></a></div>
               <div class="elements">
                 <ul>
-            <li><a href="./index.html" class="l">Home</a></li>
-            <li><a href="#" class="l">Tours</a></li>
-            <li><a href="./aboutUs1.html" class="l">About Us</a></li>
-            <li><a href="./contact.html" class="l">Contacts</a></li>
+            <li><a href="#" class="l" id="l1">Tours</a></li>
+            <li><a href="./aboutUs1.html" class="l" id="l2">About Us</a></li>
+            <li><a href="./contact.html" class="l" id="l3">Contacts</a></li>
           </ul>
           </div>
           </nav>
@@ -45,11 +41,11 @@
               <div class="selected-langg">
               </div>
               <ul>
-                <li><a class="de" href="">German</a></li>
-                <li><a class="it" href="">Italian</a></li>
-                <li><a class="fr" href="">French</a></li>
-                <li><a class="es" href="">Espanol</a></li>
-                <li><a class="en" href="">English</a></li>
+                <li><a id="en" class="lang-btn active" href="" language="english" >English</a></li>
+                <li><a id="de" class="lang-btn" href="" language="german">German</a></li>
+                <li><a id="it" class="lang-btn" href="" language="italian">Italian</a></li>
+                <li><a id="fr" class="lang-btn" href="" language="french">French</a></li>
+                <li><a id="es" class="lang-btn" href="" language="espanol">Espanol</a></li>
               </ul>
             </div>
             <a href="" class="toggle-buttonn">
@@ -59,7 +55,8 @@
             </a>
           </nav>
           </header>
-          <div class="titlee">
+          </div>
+          <div class="title">
             <p class="al" id="main-p">Spend an unforgettable summer with TravAl!</p>
        
 
@@ -361,8 +358,7 @@
         <p class="cop">@copyright2023</p>
       </div>
 
-<script src="../Controlls/main-for-navbar.js"></script>
-<script src="../Controlls/header-script.js"></script>  
+<script src="../Controlls/script.js"></script>
 <script src="../Controlls/filter.js"></script>
 </body>
 </html>
