@@ -161,7 +161,6 @@ body{
     width: 100%;
     justify-content: space-evenly;
     align-items: center;
-    
 }
 
 .carousel-card{
@@ -171,6 +170,7 @@ body{
     display: flex;
     justify-content: center;
     position: relative;
+    
 }
 
 
