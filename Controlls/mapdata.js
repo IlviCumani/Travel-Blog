@@ -122,3 +122,22 @@ var simplemaps_countrymap_mapdata={
   },
   regions: {}
 };
+
+// Loop through each property in the state_specific object and print the names
+// for (var key in simplemaps_countrymap_mapdata.state_specific) {
+//   if (simplemaps_countrymap_mapdata.state_specific.hasOwnProperty(key)) {
+//     var cityName = simplemaps_countrymap_mapdata.state_specific[key].name;
+//     console.log("City name:", cityName);
+//   }
+// }
+
+var locations = document.getElementsByClassName("simplemaps-marker");
+
+for (var i = 0; i < locations.length; i++) {
+  locations[i].addEventListener("click", function(event) {
+    var locationId = event.target.id;
+    var cityName = simplemaps_countrymap_mapdata.state_specific[locationId].name;
+
+    console.log("Clicked city:", cityName);
+  });
+}
