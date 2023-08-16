@@ -215,7 +215,17 @@ img[alt='right-arrow']
 .containerS{
     position: relative;
     top: 250px;
-    background-color: #a4a4a5;
+   
+}
+
+
+.our-work{
+     background-color: #a4a4a5!important;
+}
+
+.our-work-sub
+{
+    background-color: #325b8a!important;
 }
 
 
@@ -255,7 +265,5 @@ img[alt='right-arrow']
     .intro-title{
         font-size: 25px;
     }
-
-
-    
+  
 }
