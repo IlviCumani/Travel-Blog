@@ -67,3 +67,9 @@ window.addEventListener('scroll', ()=>{
     header.style.backgroundColor = "#0000003b";
   }
 })
+
+
+// --------------------------DISABLE BUTTON------------------
+if(window.location.href == "http://127.0.0.1:5500/Views/ourStaff1.html"){
+  summerWinterTogglebtn.classList.add('disabled');
+}
