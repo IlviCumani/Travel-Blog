@@ -17,8 +17,10 @@
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Roboto:wght@100;400&family=Ubuntu&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 <link rel="stylesheet" href="../css/Styling.css">
+<link rel="stylesheet" href="../css/seasonalVacation.css">
 
-<link rel="stylesheet" href="../css/ContactPageStyles/contact.css">
+
+<!-- <link rel="stylesheet" href="../css/ContactPageStyles/contact.css"> -->
   <title>TravAl</title>
 </head>
 <body>
@@ -161,7 +163,110 @@
 
 
     <!-- --------------------------------swiper------------------------------------ -->
-    <div id="carousel-container" class="summer-mode"></div>
+    <!-- <div id="carousel-container" class="summer-mode"></div> -->
+    <section id="seasonal_vacation" class="summer-mode">
+      <div class="container-fluid">
+        <div class="row mx-1">
+      <div class="col-md-12">
+            <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="0">
+                <!-- Carousel indicators -->
+                <ol class="carousel-indicators">
+                  <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                  <li data-target="#myCarousel" data-slide-to="1"></li>
+                  <!-- <li data-target="#myCarousel" data-slide-to="2"></li> -->
+                </ol>   
+                <!-- Wrapper for carousel items -->
+                <div class="carousel-inner">
+                      
+                  <div class="carousel-item active">
+                              <h1 class="seasonal_vacation_heading">Summer Vacation</h1>
+                    <div class="row justify-content-center">
+                      <div class="col-lg-4 col-md-6 ">
+                        <div class="thumb-wrapper">
+                          <div class="img-box">
+                            <img src="../Images/HomePageImg/SeasonalVacationImg/Himare_Img.jpeg" class="img-fluid" alt="">
+                          </div>
+                          <div class="thumb-content">
+                            <h4>Himare</h4>
+                            <a href="#" class="more-btn">More <i class="fa fa-angle-right"></i></a>
+                          </div>						
+                        </div>
+                      </div>
+                      <div class="col-lg-4 col-md-6 ">
+                        <div class="thumb-wrapper">
+                          <div class="img-box">
+                            <img src="../Images/HomePageImg/SeasonalVacationImg/Lumi_Shales.jpg" class="img-fluid" alt="">
+                          </div>
+                          <div class="thumb-content">
+                            <h4>Lumi Shales</h4>
+                            <a href="#" class="more-btn">More <i class="fa fa-angle-right"></i></a>
+                          </div>						
+                        </div>
+                      </div>				
+                      <div class="col-lg-4 col-md-6 ">
+                        <div class="thumb-wrapper">
+                          <div class="img-box">
+                            <img src="../Images/HomePageImg/SeasonalVacationImg/saranda.jpeg" class="img-fluid" alt="">
+                          </div>
+                          <div class="thumb-content">
+                            <h4>Sarande</h4>
+                            <a href="#" class="more-btn">More <i class="fa fa-angle-right"></i></a>
+                          </div>						
+                        </div>					
+                      </div>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                              <h1 class="seasonal_vacation_heading">Winter Vacation</h1>
+                    <div class="row justify-content-center">
+                      <div class="col-lg-4 col-md-6 ">
+                        <div class="thumb-wrapper">
+                          <div class="img-box">
+                            <img src="../Images/HomePageImg/SeasonalVacationImg/dardhe.jpeg" class="img-fluid" alt="">
+                          </div>
+                          <div class="thumb-content">
+                            <h4>Dardhe</h4>
+                            <a href="#" class=" more-btn">More <i class="fa fa-angle-right"></i></a>
+                          </div>						
+                        </div>
+                      </div>
+                      <div class="col-lg-4 col-md-6 ">
+                        <div class="thumb-wrapper">
+                          <div class="img-box">
+                            <img src="../Images/HomePageImg/SeasonalVacationImg/Valbona.jpeg" class="img-fluid" alt="">
+                          </div>
+                          <div class="thumb-content">
+                            <h4>Lugina Valbones</h4>
+                            <a href="#" class="more-btn">More <i class="fa fa-angle-right"></i></a>
+                          </div>						
+                        </div>
+                      </div>
+                      <div class="col-lg-4 col-md-6">
+                        <div class="thumb-wrapper">
+                          <div class="img-box">
+                            <img src="../Images/HomePageImg/SeasonalVacationImg/Theth.webp" class="img-fluid" alt="">
+                          </div>
+                          <div class="thumb-content">
+                            <h4>Theth</h4>
+                            <a href="#" class="more-btn">More <i class="fa fa-angle-right"></i></a>
+                          </div>						
+                        </div>					
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Carousel controls -->
+                <a class="carousel-control-prev" href="#myCarousel" data-slide="prev">
+                          <i class="fa fa-angle-left"></i>
+                      </a>
+                      <a class="carousel-control-next" href="#myCarousel" data-slide="next">
+                          <i class="fa fa-angle-right"></i>
+                      </a>
+              </div>
+      </div>
+        </div>
+      </div>
+  </section>
 
 <!-- ----------------------------------------FOOTER---------------------------- -->
 <div class="container2" id="c2">
@@ -194,13 +299,13 @@
 <script src="../Controlls/script.js"></script>
 <script src="../Controlls/caroussel.js"></script>
 <script src="../Controlls/temp.js"></script>
-<script>
+<!-- <script>
   const logo = document.querySelector("#location");
 
   logo.addEventListener("click", () => {
     window.location.href = "./mapSelect.html";
   });
-</script>
+</script> -->
 <!-- <script src="../Controlls/translation.js"></script> -->
 </body>
 </html>
