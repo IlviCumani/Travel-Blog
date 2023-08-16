@@ -40,3 +40,30 @@ function load() {
   updateIcon(wintermode === 'true');
 }
 load();
+
+
+// ----------------------HEAD-SCRIPT---------------------
+const toggleButton = document.getElementsByClassName('toggle-buttonn')[0];
+const elements = document.getElementsByClassName('elements')[0];
+const btnn = document.getElementsByClassName('btnn')[0];
+const selectedLang = document.getElementsByClassName('lang-menuu')[0];
+toggleButton.addEventListener('click', (event) =>{
+  event.preventDefault();
+  elements.classList.toggle('active');
+  selectedLang.classList.toggle('active');
+  btnn.classList.toggle('active');
+});
+
+// ----------------------------CHANGE BG-COLOR----------------
+const header = document.querySelector('.header');
+const scrollTrigger = 200;
+
+window.addEventListener('scroll', ()=>{
+  if(window.scrollY >= scrollTrigger){
+    header.classList.add('scrolled');
+    header.style.backgroundColor = "#00000087";
+  }else{
+    header.classList.remove('scrolled');
+    header.style.backgroundColor = "#0000003b";
+  }
+})
