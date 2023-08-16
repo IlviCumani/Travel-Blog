@@ -23,11 +23,6 @@ function validateEmail(email) {
   return emailRegex.test(email.value);
 }
 
-function isPDF(file) {
-    const fileRegex = /^.*\.pdf$/;
-    return fileRegex.test(file.value);
-}
-
 function validateInputs() {
   let formIsValid = true;
 
