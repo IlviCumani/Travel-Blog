@@ -1270,38 +1270,48 @@ body{
   align-items: center;
   /* background-image:url('../Images/shore.png'); */
   background-size: cover;
-  height: 170px;
+  /* height: 170px; */
   background-position: center;
 }
 .sub{
   display: flex;
     flex-direction: column;
-    font-family: 'Roboto';
-    margin-left: 47px;
-    background-color: #e1c8a5a8;
+    font-family: 'Lato';
+    /* color: #6d4727; */
+    margin: 47px;
+    width: 500px;
+    background-color: #dfd5c7a8;
     padding-top: 9px;
     padding-bottom: 9px;
     padding-left: 20px;
     padding-right: 20px;
     border-radius: 16px;
+    align-items: center;
 }
 
 .sub h1{
-  font-size: 40px;
+  font-size: 55px;
+  font-weight: bold;
+  color: #523517;
+  margin: 0;
 }
 .sub p {
-  margin-top: -18px;
-  margin-left: 50px;
+  margin-top: -13px;
+  margin-left: 70px;
+  font-size: 22px;
+  color: #523517;
+  font-weight: 600;
 }
 
 .btn{
   margin-right: 100px;
-  color: black;
+  color: #5a432c;
+  font-family: fantasy;
   background-color: #E8E8E8;
   border: 1px white solid;
   opacity: 0.9;
   width: 171px;
-  height: 44px;
+  height: 60px;
   font-size: large;
   border-radius: 10px;
 }
@@ -1323,7 +1333,7 @@ body{
 .container2{
   background-image: url("../Images/sand.jpg");
   background-size: cover;
-  background-position: center;
+  background-position:center;
 }
 .shore2 ul li{
   list-style: none;
@@ -1336,10 +1346,11 @@ body{
 }
 .others a:link{
   text-decoration: none;
-  color: rgb(69, 23, 23);
+  color: rgb(78 27 27);
   font-weight: 600;
   margin: 7px;
-  font-family: 'Roboto';
+  font-size: 20px;
+  font-family: 'Lato';
 }
 .others a:visited{
   color:rgb(78, 27, 27);
@@ -1359,21 +1370,28 @@ body{
   font-family: 'Roboto';
   color: #fff;
   text-align: center;
-  margin-top: -5px;
-  font-weight: 600px;
+  margin-top: -2px;
+  font-weight: 600;
+  color: rgb(78, 27, 27);
   margin-bottom: 0;
 }
 
+.fa-square-facebook{
+  color: #1a3d7a;
+}
+.fa-envelope{
+  color:rgb(96, 43, 43);
+}
 @media screen and (max-width: 700px){
   
   .sub h1{
-    font-size: 30px;
+    font-size: 35px;
   }
 
   .sub p {
-    margin-top: -17px;
-    margin-left: 27px;
-    font-size: 14px;
+    margin-top: -4px;
+    margin-left: 60px;
+    font-size: 15px;
   }
 
   .btn {
@@ -1404,12 +1422,22 @@ body{
     text-align: center;
     row-gap: 10px;
   }
-
+  .others a:link{
+    font-size: 18px;
+  }
   .others{
     margin: 0;
   }
 }
-
+@media screen and (max-width:500px){
+  .sub h1{
+    font-size: 30px;
+  }
+  .sub p {
+    margin-left: 30px;
+    font-size: 14px;
+  }
+}
 /* ---------------------------------MAP-------------------------------- */
 .circle{
   /* border-radius: 50%; */
