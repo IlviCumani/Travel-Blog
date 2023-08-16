@@ -1,6 +1,6 @@
-// ---------------------INDEX PAGE TRANSLATION---------------
+// if(window.location.href == "http://127.0.0.1:5501/Travel-Blog/Views/index.html"){
 const langMenu = document.querySelector('.lang-menuu');
-const buttons = document.querySelectorAll('a');
+const buttons = document.querySelectorAll('.lang-btn');
 const headLink1A = document.getElementById('l1');
 const headLink2A = document.getElementById('l2');
 const headLink3A = document.getElementById('l3');
@@ -35,6 +35,18 @@ buttons.forEach(button =>{
     button.classList.add('active');
 
     const attr = button.getAttribute('language');
+    console.log(attr);
+    if(attr == "german"){
+      document.querySelector(".selected-langg").style.backgroundImage = "url('https://flagsapi.com/BE/flat/32.png')";
+    }else if(attr=="italian"){
+      document.querySelector(".selected-langg").style.backgroundImage = "url(https://flagsapi.com/IT/flat/32.png)";
+    }else if(attr=="french"){
+      document.querySelector(".selected-langg").style.backgroundImage = "url(https://flagsapi.com/FR/flat/32.png)";
+    }else if(attr=="espanol"){
+      document.querySelector(".selected-langg").style.backgroundImage = "url(https://flagsapi.com/ES/flat/32.png)";
+    }else{
+      document.querySelector(".selected-langg").style.backgroundImage = "url(https://flagsapi.com/US/flat/32.png)";
+    }
     headLink1A.textContent = data[attr].headLink1;
     headLink2A.textContent = data[attr].headLink2;
     headLink3A.textContent = data[attr].headLink3;
@@ -204,3 +216,5 @@ const data = {
     "copyrights": "@derechos de autor2023"
   }
 }
+
+// }
