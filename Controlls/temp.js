@@ -11,7 +11,6 @@ function changeMode() {
   updateIcon(wintermode);
 }
 
-
 function updateIcon(wintermode) {
   if (wintermode) {
     icon.classList.remove('fa-sun');
