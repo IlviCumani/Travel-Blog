@@ -35,6 +35,7 @@
 }
 
 .contact-hero{
+    background-image: url("../../Images/ContactPageImg/palm\ trees.jpeg");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;

@@ -1,9 +1,9 @@
 const carouselContainer = document.getElementById("carousel-container");
   fetch("Components/swiper.html")
-      .then(response => response.text())
-      .then(data => {
-          carouselContainer.innerHTML = data;
-});
+    .then(response => response.text())
+    .then(data => {
+        carouselContainer.innerHTML = data;
+    });
 
 $(document).ready(function () {
     $('#myCarousel').carousel();

@@ -17,6 +17,8 @@
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Roboto:wght@100;400&family=Ubuntu&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 <link rel="stylesheet" href="../css/Styling.css">
+
+<link rel="stylesheet" href="../css/ContactPageStyles/contact.css">
   <title>TravAl</title>
 </head>
 <body>
@@ -63,7 +65,7 @@
   </header>
   </div>
 
-  <div class="IndexTitle" id="i">
+  <div class="IndexTitle summer-mode" id="i">
     <p id="al">Albanian</p>
     <p id="sum">Summer</p>
 
@@ -160,7 +162,7 @@
 
     <!-- --------------------------------swiper------------------------------------ -->
 
-    <div id="carousel-container"></div>
+    <div id="carousel-container" class="summer-mode"></div>
 
 <!-- ----------------------------------------FOOTER---------------------------- -->
 <div class="container2" id="c2">
@@ -192,5 +194,13 @@
 
 <script src="../Controlls/script.js"></script>
 <script src="../Controlls/caroussel.js"></script>
+<script src="../Controlls/temp.js"></script>
+<script>
+  const logo = document.querySelector("#location");
+
+  logo.addEventListener("click", () => {
+    window.location.href = "./mapSelect.html";
+  });
+</script>
 </body>
 </html>

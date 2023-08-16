@@ -5,7 +5,7 @@
 }
 
 .form-container{
-    /* background-image: url("../../Images/ContactPageImg/camping.jpeg"); */
+    background-image: url("../../Images/ContactPageImg/camping.jpeg");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
