@@ -12,6 +12,7 @@
     /* position: relative; */
     /* z-index: -1; */
     padding-top: 85px;
+    padding-bottom: 85px;
 }
 
 .contact-form-title{
@@ -69,14 +70,6 @@
     color: rgba(161, 158, 158, 1);
     font-size: 25px;
     font-family: "ABeeZee", sans-serif;
-}
-
-.super-sexy{
-    border: none;
-}
-
-.error{
-    border: 2px solid red;
 }
 
 .disabled{

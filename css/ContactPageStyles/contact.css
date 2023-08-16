@@ -10,8 +10,63 @@ body {
 ::-webkit-scrollbar {
     display: none;
 }
-    
-/* .error-input{
-    border: 2px solid red;
-} */
+
+/* .summer-mode{ */
+    /* &&.contact-hero{
+        background-image: url("../../Images/ContactPageImg/palm\ trees.jpeg");
+    } */
+    /* &&#contact-method-section{
+        background: linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 1) 35%,
+            rgba(13, 46, 79, 1)90%,
+            rgba(48, 66, 96, 0)100%
+        );
+    } */
+    /* &&.form-container{
+        background-image: url("../../Images/ContactPageImg/camping.jpeg");
+    } */
+
+    /* &&.enabled{
+        background-color: rgba(218, 137, 16, 0.48);
+        cursor: pointer;
+    } */
+
+    /* &&#carousel-container #seasonal_vacation{
+        background-color: rgba(218, 137, 16, 0.48);
+        cursor: pointer;
+    } */
+/* } */
+
+.winter-mode{
+    &&.contact-hero{
+        background-image: url("../../Images/ContactPageImg/WinterForest.jpg");
+    }
+
+    &&#contact-method-section{
+        background: linear-gradient(
+            to bottom,
+            rgba(153, 164, 220, 1) 40%,
+            rgba(37, 46, 88, 1) 70%,
+            rgba(20, 23, 38, 1)95%,
+            rgba(20, 23, 38, 0.17)
+        );
+    }
+
+    &&.form-container{
+        background-image: url("../../Images/ContactPageImg/WinterCAMPING.jpeg");
+    }
+
+    &&#carousel-container #seasonal_vacation{
+        background-color: rgba(153, 164, 220, 0.7);
+        cursor: pointer;
+    }
+
+    && .enabled{
+        background-color: rgba(153, 164, 220, 0.7);
+        cursor: pointer;
+    }
+   
+}
+
 

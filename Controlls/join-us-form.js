@@ -10,10 +10,15 @@ window.addEventListener('click', handlePopupEvent);
 window.addEventListener('keydown', handlePopupEvent);
 
 
+
+
+
+
 //Experiment
 const joinUsForm = document.getElementById("join-us-form");
 const JoinUsSubmitButton = document.getElementById("join-submit-button");
 const requiredInputs = joinUsForm.querySelectorAll("[required]");
+let hasSubmitedOnce = false;
 
 console.log(joinUsForm);
 console.log(JoinUsSubmitButton);
@@ -21,23 +26,29 @@ console.log(requiredInputs);
 
 function disableSubmitButton() {
     JoinUsSubmitButton.disabled = true;
-    JoinUsSubmitButton.style.backgroundColor = "red";
-    // JoinUsSubmitButton.hover = false;
-    // JoinUsSubmitButton.classList.add("disabled");
-    // JoinUsSubmitButton.classList.remove("enabled");
+    
+   
+    JoinUsSubmitButton.classList.add("inactive-join-us-btn");
+    JoinUsSubmitButton.classList.remove("active-join-us-btn");
 }
 
 function enableSubmitButton() {
     JoinUsSubmitButton.disabled = false;
-    JoinUsSubmitButton.style.backgroundColor = "green";
-    // JoinUsSubmitButton.classList.remove("disabled");
-    // JoinUsSubmitButton.classList.add("enabled");
+  
+    JoinUsSubmitButton.classList.remove("inactive-join-us-btn");
+    JoinUsSubmitButton.classList.add("active-join-us-btn");
 }
 
 function validateEmail(email) {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return emailRegex.test(email.value);
 }
+
+function isPDFFile(file) {
+    const fileRegex = /.*\.pdf$/;
+    return fileRegex.test(file.value);
+}
+
 
 function validateInputs() {
     let formIsValid = true;
@@ -47,16 +58,38 @@ function validateInputs() {
             formIsValid = false;
         }
         if (input.type === "email" && !validateEmail(input)) {
+            console.log('email is not valid');
+            formIsValid = false;
+        }
+        if (input.type === "file" && !isPDFFile(input)) {
+            console.log('file is not valid');
             formIsValid = false;
         }
     });
     return formIsValid;
 }
 
+function handleInputChange() {
+    if (validateInputs()) {
+      enableSubmitButton();
+    }else{
+        if(hasSubmitedOnce){
+            disableSubmitButton();
+        }
+    }
+  }
 
-JoinUsSubmitButton.addEventListener("click", () => {
-    console.log("clicked");
-});
+  joinUsForm.addEventListener("submit", function (event) {
+    event.preventDefault();
+    
+    if (validateInputs()) {
+        joinUsForm.submit();
+    } else {
+      disableSubmitButton();
+      hasSubmitedOnce = true;
+    }
+  });
 
-disableSubmitButton();
-enableSubmitButton();
+  requiredInputs.forEach(input => {
+    input.addEventListener("input", handleInputChange);
+  });

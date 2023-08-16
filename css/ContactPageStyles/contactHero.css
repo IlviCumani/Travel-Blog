@@ -43,8 +43,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    border-bottom: 5px solid #000;
 }
+
 
 @media screen and (max-width: 1148px) {
     .contact-msg-container{

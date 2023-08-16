@@ -66,7 +66,6 @@
 }
 
 #join-submit-button{
-    background-color: #296C81;
     color: #E8E8E8;
     width: 100%;
     height: 70px;
@@ -77,7 +76,7 @@
 }
 
 #join-submit-button:hover{
-    background-color: rgba(26, 81, 100, 1);
+    
     box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
     transition: 0.5s;
 }
@@ -103,6 +102,24 @@
 .inactive-popup{
     display: none;
 }
+
+.active-join-us-btn{
+    background-color: #296C81;
+
+    &&:hover{
+        background-color: rgba(26, 81, 100, 1);
+    }
+}
+
+.inactive-join-us-btn{
+    background-color: #ccc;
+    cursor: not-allowed;
+
+    &&:hover{
+        background-color: #ccc;
+    }
+}
+
 
 /* #join-us-popup {
     transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
