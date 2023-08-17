@@ -9,39 +9,12 @@ const faqs = document.getElementById('f1');
 const termsOfService = document.getElementById('f2');
 const privacyPolicy = document.getElementById('f3');
 const copyrights = document.querySelector('.cop');
+const subscribe = document.querySelector('#subscribe');
+const subscribeText = document.querySelector('#subscribeText');
 
-buttons.forEach(button =>{
-  button.addEventListener("click", (event)=>{
-    event.preventDefault();
-    langMenu.querySelector('.active').classList.remove('active');
-    button.classList.add('active');
+const storedLanguage = localStorage.getItem('selectedLanguage') || 'english';
+const storedFlag = localStorage.getItem('selectedFlag') || "url(https://flagsapi.com/US/flat/32.png)";
 
-    const attr = button.getAttribute('language');
-    console.log(attr);
-    if(attr == "german"){
-      document.querySelector(".selected-langg").style.backgroundImage = "url('https://flagsapi.com/BE/flat/32.png')";
-    }else if(attr=="italian"){
-      document.querySelector(".selected-langg").style.backgroundImage = "url(https://flagsapi.com/IT/flat/32.png)";
-    }else if(attr=="french"){
-      document.querySelector(".selected-langg").style.backgroundImage = "url(https://flagsapi.com/FR/flat/32.png)";
-    }else if(attr=="espanol"){
-      document.querySelector(".selected-langg").style.backgroundImage = "url(https://flagsapi.com/ES/flat/32.png)";
-    }else{
-      document.querySelector(".selected-langg").style.backgroundImage = "url(https://flagsapi.com/US/flat/32.png)";
-    }
-    headLink1A.textContent = data[attr].headLink1;
-    headLink2A.textContent = data[attr].headLink2;
-    headLink3A.textContent = data[attr].headLink3;
-    bookingButtonA.textContent = data[attr].bookingButton;
-    subscribe.textContent = data[attr].subscribe;
-    subscribeText.textContent = data[attr].subscribeText;
-    subscribeBtn.textContent = data[attr].subscribe;
-    faqs.textContent = data[attr].faqs;
-    termsOfService.textContent = data[attr].termsOfService;
-    privacyPolicy.textContent = data[attr].privacyPolicy;
-    copyrights.textContent = data[attr].copyrights;
-  });
-});
 
 const data = {
   "english" :{
@@ -54,7 +27,7 @@ const data = {
     "faqs" : "FAQs",
     "termsOfService" : "Terms Of Service",
     "privacyPolicy" : "Privacy Policy",
-    "copyrights" : "@copyright2023"
+    "copyrights" : "@copyright2023",
   },
   "german" :{
     "headLink1": "Touren",
@@ -66,7 +39,7 @@ const data = {
     "faqs" : "FAQs",
     "termsOfService" : "Nutzungsbedingungen",
     "privacyPolicy" : "Datenschutzrichtlinie", 
-    "copyrights" : "@Urheberrecht2023"
+    "copyrights" : "@Urheberrecht2023",
   },
   "italian":{
     "headLink1": "Tour",
@@ -106,3 +79,45 @@ const data = {
     "copyrights": "@derechos de autor2023"
   }
 }
+
+function updateContent(selectedLanguage, selectedFlag){
+  headLink1A.textContent = data[selectedLanguage].headLink1;
+  headLink2A.textContent = data[selectedLanguage].headLink2;
+  headLink3A.textContent = data[selectedLanguage].headLink3;
+  bookingButtonA.textContent = data[selectedLanguage].bookingButton;
+  subscribe.textContent = data[selectedLanguage].subscribe;
+  subscribeText.textContent = data[selectedLanguage].subscribeText;
+  subscribeBtn.textContent = data[selectedLanguage].subscribe;
+  faqs.textContent = data[selectedLanguage].faqs;
+  termsOfService.textContent = data[selectedLanguage].termsOfService;
+  privacyPolicy.textContent = data[selectedLanguage].privacyPolicy;
+  copyrights.textContent = data[selectedLanguage].copyrights;
+  localStorage.setItem('selectedLanguage', selectedLanguage);
+  localStorage.setItem('selectedFlag', selectedFlag);
+}
+
+document.querySelector(".selected-langg").style.backgroundImage = storedFlag;
+updateContent(storedLanguage, storedFlag);
+
+buttons.forEach(button =>{
+  button.addEventListener("click", (event)=>{
+    event.preventDefault();
+    langMenu.querySelector('.active').classList.remove('active');
+    button.classList.add('active');
+
+    const selectedLanguage = button.getAttribute('language');
+    let selectedFlag = ""
+    console.log(selectedLanguage);
+    if(selectedLanguage == "german"){
+      selectedFlag = "url('https://flagsapi.com/BE/flat/32.png')";
+    }else if(selectedLanguage=="italian"){
+      selectedFlag = "url(https://flagsapi.com/IT/flat/32.png)";
+    }else if(selectedLanguage=="french"){
+      selectedFlag = "url(https://flagsapi.com/FR/flat/32.png)";
+    }else if(selectedLanguage=="espanol"){
+      selectedFlag = "url(https://flagsapi.com/ES/flat/32.png)";
+    }
+    document.querySelector(".selected-langg").style.backgroundImage = selectedFlag;
+    updateContent(selectedLanguage, selectedFlag);
+  });
+});

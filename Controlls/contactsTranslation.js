@@ -16,48 +16,6 @@ const email = document.querySelector('#email');
 const phoneNum = document.querySelector('#phoneNum');
 const message = document.querySelector('#message');
 
-
-buttons.forEach(button =>{
-  button.addEventListener('click', (event)=>{
-    event.preventDefault();
-    langMenu.querySelector('.active').classList.remove('active');
-    button.classList.add('active');
-
-    const attr = button.getAttribute('language');
-  console.log(attr);
-  if(attr == "german"){
-    document.querySelector(".selected-langg").style.backgroundImage = "url('https://flagsapi.com/BE/flat/32.png')";
-  }else if(attr=="italian"){
-    document.querySelector(".selected-langg").style.backgroundImage = "url(https://flagsapi.com/IT/flat/32.png)";
-  }else if(attr=="french"){
-    document.querySelector(".selected-langg").style.backgroundImage = "url(https://flagsapi.com/FR/flat/32.png)";
-  }else if(attr=="espanol"){
-    document.querySelector(".selected-langg").style.backgroundImage = "url(https://flagsapi.com/ES/flat/32.png)";
-  }else{
-    document.querySelector(".selected-langg").style.backgroundImage = "url(https://flagsapi.com/US/flat/32.png)";
-  }
-
-  h1.textContent = contactsData[attr].h1;
-  span.textContent = contactsData[attr].span;
-  text1.textContent = contactsData[attr].text1;
-  locationn.textContent = contactsData[attr].locationn;
-  text2.textContent = contactsData[attr].text2;
-  call.textContent = contactsData[attr].call;
-  text3.textContent = contactsData[attr].text3;
-  mail.textContent = contactsData[attr].mail;
-  text4.textContent = contactsData[attr].text4;
-  question.textContent = contactsData[attr].question;
-  write.textContent = contactsData[attr].write;
-  submitButtonn.textContent = contactsData[attr].submitButtonn; 
-  firstName.placeholder = `${contactsData[attr].firstName}`;
-  lastName.placeholder = `${contactsData[attr].lastName}`;
-  email.placeholder = `${contactsData[attr].email}`;
-  phoneNum.placeholder = `${contactsData[attr].phoneNum}`;
-  message.placeholder = `${contactsData[attr].message}`;
-  });
-})
-
-
 const contactsData = {
   "english" :{
     "h1": "Get in touch",
@@ -156,3 +114,56 @@ const contactsData = {
     "message": "Mensaje"
   }
 }
+
+function updateContactsContent(selectedLanguage, selectedFlag){
+  
+  h1.textContent = contactsData[selectedLanguage].h1;
+  span.textContent = contactsData[selectedLanguage].span;
+  text1.textContent = contactsData[selectedLanguage].text1;
+  locationn.textContent = contactsData[selectedLanguage].locationn;
+  text2.textContent = contactsData[selectedLanguage].text2;
+  call.textContent = contactsData[selectedLanguage].call;
+  text3.textContent = contactsData[selectedLanguage].text3;
+  mail.textContent = contactsData[selectedLanguage].mail;
+  text4.textContent = contactsData[selectedLanguage].text4;
+  question.textContent = contactsData[selectedLanguage].question;
+  write.textContent = contactsData[selectedLanguage].write;
+  submitButtonn.textContent = contactsData[selectedLanguage].submitButtonn; 
+  firstName.placeholder = `${contactsData[selectedLanguage].firstName}`;
+  lastName.placeholder = `${contactsData[selectedLanguage].lastName}`;
+  email.placeholder = `${contactsData[selectedLanguage].email}`;
+  phoneNum.placeholder = `${contactsData[selectedLanguage].phoneNum}`;
+  message.placeholder = `${contactsData[selectedLanguage].message}`;
+
+  localStorage.setItem('selectedLanguage', selectedLanguage);
+  localStorage.setItem('selectedFlag', selectedFlag);
+}
+
+document.querySelector('.selected-langg').style.backgroundImage = storedFlag;
+updateContactsContent(storedLanguage, storedFlag);
+
+
+buttons.forEach(button =>{
+  button.addEventListener('click', (event)=>{
+    event.preventDefault();
+    langMenu.querySelector('.active').classList.remove('active');
+    button.classList.add('active');
+
+    const selectedLanguage = button.getAttribute('language');
+  console.log(selectedLanguage);
+  if(selectedLanguage == "german"){
+    selectedFlag = "url('https://flagsapi.com/BE/flat/32.png')";
+  }else if(selectedLanguage=="italian"){
+    selectedFlag = "url(https://flagsapi.com/IT/flat/32.png)";
+  }else if(selectedLanguage=="french"){
+    selectedFlag = "url(https://flagsapi.com/FR/flat/32.png)";
+  }else if(selectedLanguage=="espanol"){
+    selectedFlag = "url(https://flagsapi.com/ES/flat/32.png)";
+  }else{
+    selectedFlag = "url(https://flagsapi.com/US/flat/32.png)";
+  }
+
+  document.querySelector('.selected-langg').style.backgroundImage = selectedLanguage;
+  updateContactsContent(selectedLanguage, selectedFlag);
+  });
+})

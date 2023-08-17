@@ -11,40 +11,6 @@ const rating = document.querySelector('#rating');
 const avg = document.querySelector('.avg');
 const value = document.querySelector('#value');
 
-buttons.forEach(button =>{
-  button.addEventListener('click', (event)=>{
-    event.preventDefault();
-    langMenu.querySelector('.active').classList.remove('active');
-    button.classList.add('active');
-
-    const attr = button.getAttribute('language');
-  console.log(attr);
-  if(attr == "german"){
-    document.querySelector(".selected-langg").style.backgroundImage = "url('https://flagsapi.com/BE/flat/32.png')";
-  }else if(attr=="italian"){
-    document.querySelector(".selected-langg").style.backgroundImage = "url(https://flagsapi.com/IT/flat/32.png)";
-  }else if(attr=="french"){
-    document.querySelector(".selected-langg").style.backgroundImage = "url(https://flagsapi.com/FR/flat/32.png)";
-  }else if(attr=="espanol"){
-    document.querySelector(".selected-langg").style.backgroundImage = "url(https://flagsapi.com/ES/flat/32.png)";
-  }else{
-    document.querySelector(".selected-langg").style.backgroundImage = "url(https://flagsapi.com/US/flat/32.png)";
-  }
-
-  main.textContent = indTourData[attr].main;
-  small.textContent = indTourData[attr].small;
-  descr.textContent = indTourData[attr].descr;
-  nextDates.textContent = indTourData[attr].nextDates;
-  itinerary.textContent = indTourData[attr].itinerary;
-  paragraph.textContent = indTourData[attr].paragraph;
-  bookTour.textContent = indTourData[attr].bookTour;
-  date.textContent = indTourData[attr].date;
-  numOfPeople.textContent = indTourData[attr].numOfPeople;
-  rating.textContent = indTourData[attr].rating;
-  avg.textContent = indTourData[attr].avg;
-  value.value = indTourData[attr].value
-  });
-})
 
 const indTourData = {
   "english" :{
@@ -119,3 +85,49 @@ const indTourData = {
     "value" : "Proceder"
   }
 }
+
+function updateIndTourContent(selectedLanguage, selectedFlag){
+  main.textContent = indTourData[selectedLanguage].main;
+  small.textContent = indTourData[selectedLanguage].small;
+  descr.textContent = indTourData[selectedLanguage].descr;
+  nextDates.textContent = indTourData[selectedLanguage].nextDates;
+  itinerary.textContent = indTourData[selectedLanguage].itinerary;
+  paragraph.textContent = indTourData[selectedLanguage].paragraph;
+  bookTour.textContent = indTourData[selectedLanguage].bookTour;
+  date.textContent = indTourData[selectedLanguage].date;
+  numOfPeople.textContent = indTourData[selectedLanguage].numOfPeople;
+  rating.textContent = indTourData[selectedLanguage].rating;
+  avg.textContent = indTourData[selectedLanguage].avg;
+  value.value = indTourData[selectedLanguage].value
+
+  localStorage.setItem('selectedLanguage', selectedLanguage);
+  localStorage.setItem('selectedFlag', selectedFlag);
+}
+
+document.querySelector('.selected-langg').style.backgroundImage = storedLanguage;
+updateIndTourContent(storedLanguage, storedFlag);
+
+buttons.forEach(button =>{
+  button.addEventListener('click', (event)=>{
+    event.preventDefault();
+    langMenu.querySelector('.active').classList.remove('active');
+    button.classList.add('active');
+
+    const selectedLanguage = button.getAttribute('language');
+  console.log(selectedLanguage);
+  if(selectedLanguage == "german"){
+    selectedFlag = "url('https://flagsapi.com/BE/flat/32.png')";
+  }else if(selectedLanguage=="italian"){
+    selectedFlag = "url(https://flagsapi.com/IT/flat/32.png)";
+  }else if(selectedLanguage=="french"){
+    selectedFlag = "url(https://flagsapi.com/FR/flat/32.png)";
+  }else if(selectedLanguage=="espanol"){
+    selectedFlag = "url(https://flagsapi.com/ES/flat/32.png)";
+  }else{
+    selectedFlag = "url(https://flagsapi.com/US/flat/32.png)";
+  }
+
+  document.querySelector('.selected-langg').style.backgroundImage = selectedFlag;
+  updateIndTourContent(selectedLanguage, selectedFlag);
+  });
+})

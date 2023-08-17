@@ -39,71 +39,6 @@ const main = document.querySelector('#main-p');
 const browse = document.querySelector('#browse-p');
 
 
-buttons.forEach(button =>{
-  button.addEventListener('click', (event)=>{
-    event.preventDefault();
-    langMenu.querySelector('.active').classList.remove('active');
-    button.classList.add('active');
-
-    const attr = button.getAttribute('language');
-  console.log(attr);
-  if(attr == "german"){
-    document.querySelector(".selected-langg").style.backgroundImage = "url('https://flagsapi.com/BE/flat/32.png')";
-  }else if(attr=="italian"){
-    document.querySelector(".selected-langg").style.backgroundImage = "url(https://flagsapi.com/IT/flat/32.png)";
-  }else if(attr=="french"){
-    document.querySelector(".selected-langg").style.backgroundImage = "url(https://flagsapi.com/FR/flat/32.png)";
-  }else if(attr=="espanol"){
-    document.querySelector(".selected-langg").style.backgroundImage = "url(https://flagsapi.com/ES/flat/32.png)";
-  }else{
-    document.querySelector(".selected-langg").style.backgroundImage = "url(https://flagsapi.com/US/flat/32.png)";
-  }
-
-  filter.textContent = toursData[attr].filter;
-  filterLabel.textContent = toursData[attr].filterLabel;
-  numOfDays.textContent = toursData[attr].numOfDays;
-  maxPrice.textContent = toursData[attr].maxPrice;
-  numDayss.textContent = toursData[attr].numDayss;
-  slide.textContent = toursData[attr].slide;
-  selectt.textContent = toursData[attr].selectt;
-  option1.textContent = toursData[attr].option1;
-  option2.textContent = toursData[attr].option2;
-  option3.textContent = toursData[attr].option3;
-  option4.textContent = toursData[attr].option4;
-  option5.textContent = toursData[attr].option5;
-  option6.textContent = toursData[attr].option6;
-  dhermi.textContent = toursData[attr].dhermi;
-  fiveDays.textContent = toursData[attr].fiveDays;
-  tapMore.forEach(more =>{
-    more.textContent = toursData[attr].tapMore;
-  });
-  ksamil.textContent = toursData[attr].ksamil;
-  borsh.textContent = toursData[attr].borsh;
-  threeDays.textContent = toursData[attr].threeDays;
-  gjipe.textContent = toursData[attr].gjipe;
-  twoDays.textContent = toursData[attr].twoDays;
-  rana.textContent = toursData[attr].rana;
-  oneDay.textContent = toursData[attr].oneDay;
-  Jale.textContent = toursData[attr].Jale;
-  Livadhi.textContent = toursData[attr].Livadhi;
-  fourDays.textContent = toursData[attr].fourDays;
-  zvernec.textContent = toursData[attr].zvernec;
-  saranda.textContent = toursData[attr].saranda;
-  dhermiTour.textContent = toursData[attr].dhermiTour;
-  ksamilTour.textContent = toursData[attr].ksamilTour;
-  borshTour.textContent = toursData[attr].borshTour;
-  gjipeTour.textContent = toursData[attr].gjipeTour;
-  ranaTour.textContent = toursData[attr].ranaTour;
-  jaleTour.textContent = toursData[attr].jaleTour;
-  livadhiTour.textContent = toursData[attr].livadhiTour;
-  zvernecTour.textContent = toursData[attr].zvernecTour;
-  sarandaTour.textContent = toursData[attr].sarandaTour;
-  main.textContent = toursData[attr].main;
-  browse.textContent = toursData[attr].browse;
-  });
-})
-
-
 const toursData = {
   "english" :{
     "filter" : "Filter by :",
@@ -311,5 +246,81 @@ const toursData = {
     "browse": "Explora la colección de tours que ofrecemos"
   }
 }
+
+function updateToursContent(selectedLanguage, selectedFlag){
+  filter.textContent = toursData[selectedLanguage].filter;
+  filterLabel.textContent = toursData[selectedLanguage].filterLabel;
+  numOfDays.textContent = toursData[selectedLanguage].numOfDays;
+  maxPrice.textContent = toursData[selectedLanguage].maxPrice;
+  numDayss.textContent = toursData[selectedLanguage].numDayss;
+  slide.textContent = toursData[selectedLanguage].slide;
+  selectt.textContent = toursData[selectedLanguage].selectt;
+  option1.textContent = toursData[selectedLanguage].option1;
+  option2.textContent = toursData[selectedLanguage].option2;
+  option3.textContent = toursData[selectedLanguage].option3;
+  option4.textContent = toursData[selectedLanguage].option4;
+  option5.textContent = toursData[selectedLanguage].option5;
+  option6.textContent = toursData[selectedLanguage].option6;
+  dhermi.textContent = toursData[selectedLanguage].dhermi;
+  fiveDays.textContent = toursData[selectedLanguage].fiveDays;
+  tapMore.forEach(more =>{
+    more.textContent = toursData[selectedLanguage].tapMore;
+  });
+  ksamil.textContent = toursData[selectedLanguage].ksamil;
+  borsh.textContent = toursData[selectedLanguage].borsh;
+  threeDays.textContent = toursData[selectedLanguage].threeDays;
+  gjipe.textContent = toursData[selectedLanguage].gjipe;
+  twoDays.textContent = toursData[selectedLanguage].twoDays;
+  rana.textContent = toursData[selectedLanguage].rana;
+  oneDay.textContent = toursData[selectedLanguage].oneDay;
+  Jale.textContent = toursData[selectedLanguage].Jale;
+  Livadhi.textContent = toursData[selectedLanguage].Livadhi;
+  fourDays.textContent = toursData[selectedLanguage].fourDays;
+  zvernec.textContent = toursData[selectedLanguage].zvernec;
+  saranda.textContent = toursData[selectedLanguage].saranda;
+  dhermiTour.textContent = toursData[selectedLanguage].dhermiTour;
+  ksamilTour.textContent = toursData[selectedLanguage].ksamilTour;
+  borshTour.textContent = toursData[selectedLanguage].borshTour;
+  gjipeTour.textContent = toursData[selectedLanguage].gjipeTour;
+  ranaTour.textContent = toursData[selectedLanguage].ranaTour;
+  jaleTour.textContent = toursData[selectedLanguage].jaleTour;
+  livadhiTour.textContent = toursData[selectedLanguage].livadhiTour;
+  zvernecTour.textContent = toursData[selectedLanguage].zvernecTour;
+  sarandaTour.textContent = toursData[selectedLanguage].sarandaTour;
+  main.textContent = toursData[selectedLanguage].main;
+  browse.textContent = toursData[selectedLanguage].browse;
+
+  localStorage.setItem('selectedLanguage', selectedLanguage);
+  localStorage.setItem('selectedFlag', selectedFlag);
+}
+
+document.querySelector('.selected-langg').style.backgroundImage = storedFlag;
+updateToursContent(storedLanguage, storedFlag);
+
+buttons.forEach(button =>{
+  button.addEventListener('click', (event)=>{
+    event.preventDefault();
+    langMenu.querySelector('.active').classList.remove('active');
+    button.classList.add('active');
+
+    const selectedLanguage = button.getAttribute('language');
+  console.log(selectedLanguage);
+  if(selectedLanguage == "german"){
+    selectedFlag = "url('https://flagsapi.com/BE/flat/32.png')";
+  }else if(selectedLanguage=="italian"){
+    selectedFlag = "url(https://flagsapi.com/IT/flat/32.png)";
+  }else if(selectedLanguage=="french"){
+    selectedFlag = "url(https://flagsapi.com/FR/flat/32.png)";
+  }else if(selectedLanguage=="espanol"){
+    selectedFlag = "url(https://flagsapi.com/ES/flat/32.png)";
+  }else{
+    selectedFlag = "url(https://flagsapi.com/US/flat/32.png)";
+  }
+
+  document.querySelector('.selected-langg').style.backgroundImage = selectedFlag;
+  updateToursContent(selectedLanguage, selectedFlag);
+  });
+})
+
 
 

@@ -14,45 +14,6 @@ const seasonal_vacation_heading = document.querySelector('.seasonal_vacation_hea
 const seasonal_vacation_heading_winter = document.getElementById('w');
 const btnMore = document.querySelectorAll('.more-btn');
 
-buttons.forEach(button =>{
-  button.addEventListener("click", (event)=>{
-    event.preventDefault();
-    langMenu.querySelector('.active').classList.remove('active');
-    button.classList.add('active');
-
-    const attr = button.getAttribute('language');
-    console.log(attr);
-    if(attr == "german"){
-      document.querySelector(".selected-langg").style.backgroundImage = "url('https://flagsapi.com/BE/flat/32.png')";
-    }else if(attr=="italian"){
-      document.querySelector(".selected-langg").style.backgroundImage = "url(https://flagsapi.com/IT/flat/32.png)";
-    }else if(attr=="french"){
-      document.querySelector(".selected-langg").style.backgroundImage = "url(https://flagsapi.com/FR/flat/32.png)";
-    }else if(attr=="espanol"){
-      document.querySelector(".selected-langg").style.backgroundImage = "url(https://flagsapi.com/ES/flat/32.png)";
-    }else{
-      document.querySelector(".selected-langg").style.backgroundImage = "url(https://flagsapi.com/US/flat/32.png)";
-    }
-    al.textContent = indexData[attr].al;
-    sum.textContent = indexData[attr].sum;
-    card1.textContent = indexData[attr].card1title;
-    card2.textContent = indexData[attr].card2title;
-    card3.textContent = indexData[attr].card3title;
-    card4.textContent = indexData[attr].card4title;
-    card5.textContent = indexData[attr].card5title;
-    card1Italic.textContent = indexData[attr].card1ItalicTitle;
-    imgT.textContent = indexData[attr].card1Date;
-    card2Text.textContent = indexData[attr].card2Text;
-    card4Text.textContent = indexData[attr].card4Text;
-    more.textContent = indexData[attr].card5More;
-    seasonal_vacation_heading.textContent = indexData[attr].cardCarousselSummer;
-    seasonal_vacation_heading_winter.textContent = indexData[attr].cardCarousselWinter;
-    btnMore.forEach(btn=>{
-      btn.textContent = indexData[attr].btnMore;
-    });
-  });
-});
-
 const indexData = {
   "english" :{
     "al": "Albanian",
@@ -141,3 +102,55 @@ const indexData = {
     "btnMore": "Más"
   }
 }
+
+function updateIndexContent(selectedLanguage, selectedFlag){
+  al.textContent = indexData[selectedLanguage].al;
+  sum.textContent = indexData[selectedLanguage].sum;
+  card1.textContent = indexData[selectedLanguage].card1title;
+  card2.textContent = indexData[selectedLanguage].card2title;
+  card3.textContent = indexData[selectedLanguage].card3title;
+  card4.textContent = indexData[selectedLanguage].card4title;
+  card5.textContent = indexData[selectedLanguage].card5title;
+  card1Italic.textContent = indexData[selectedLanguage].card1ItalicTitle;
+  imgT.textContent = indexData[selectedLanguage].card1Date;
+  card2Text.textContent = indexData[selectedLanguage].card2Text;
+  card4Text.textContent = indexData[selectedLanguage].card4Text;
+  more.textContent = indexData[selectedLanguage].card5More;
+  seasonal_vacation_heading.textContent = indexData[selectedLanguage].cardCarousselSummer;
+  seasonal_vacation_heading_winter.textContent = indexData[selectedLanguage].cardCarousselWinter;
+  btnMore.forEach(btn=>{
+    btn.textContent = indexData[selectedLanguage].btnMore;
+  });
+
+  localStorage.setItem('selectedLanguage', selectedLanguage);
+  localStorage.setItem('selectedFlag', selectedFlag);
+}
+
+document.querySelector('.selected-langg').style.backgroundImage = storedFlag;
+updateIndexContent(storedLanguage, storedFlag);
+
+buttons.forEach(button =>{
+  button.addEventListener("click", (event)=>{
+    event.preventDefault();
+    langMenu.querySelector('.active').classList.remove('active');
+    button.classList.add('active');
+
+    const selectedLanguage = button.getAttribute('language');
+    console.log(selectedLanguage);
+    if(selectedLanguage == "german"){
+      selectedFlag = "url('https://flagsapi.com/BE/flat/32.png')";
+    }else if(selectedLanguage=="italian"){
+      selectedFlag = "url(https://flagsapi.com/IT/flat/32.png)";
+    }else if(selectedLanguage=="french"){
+      selectedFlag = "url(https://flagsapi.com/FR/flat/32.png)";
+    }else if(selectedLanguage=="espanol"){
+      selectedFlag = "url(https://flagsapi.com/ES/flat/32.png)";
+    }else{
+      selectedFlag = "url(https://flagsapi.com/US/flat/32.png)";
+    }
+
+    document.querySelector('.selected-langg').style.backgroundImage = selectedFlag;
+    updateIndexContent(selectedLanguage, selectedFlag);
+    
+  });
+});

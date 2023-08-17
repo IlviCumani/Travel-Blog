@@ -11,43 +11,6 @@ const p2 = document.querySelector('#p2');
 const p3 = document.querySelector('#p3');
 const p4 = document.querySelector('#p4');
 
-
-buttons.forEach(button =>{
-  button.addEventListener('click', (event)=>{
-    event.preventDefault();
-    langMenu.querySelector('.active').classList.remove('active');
-    button.classList.add('active');
-
-    const attr = button.getAttribute('language');
-  console.log(attr);
-  if(attr == "german"){
-    document.querySelector(".selected-langg").style.backgroundImage = "url('https://flagsapi.com/BE/flat/32.png')";
-  }else if(attr=="italian"){
-    document.querySelector(".selected-langg").style.backgroundImage = "url(https://flagsapi.com/IT/flat/32.png)";
-  }else if(attr=="french"){
-    document.querySelector(".selected-langg").style.backgroundImage = "url(https://flagsapi.com/FR/flat/32.png)";
-  }else if(attr=="espanol"){
-    document.querySelector(".selected-langg").style.backgroundImage = "url(https://flagsapi.com/ES/flat/32.png)";
-  }else{
-    document.querySelector(".selected-langg").style.backgroundImage = "url(https://flagsapi.com/US/flat/32.png)";
-  }
-
-  introTitle.textContent = ourWorkData[attr].introTitle;
-  safety.textContent = ourWorkData[attr].safety;
-  paragraph.textContent = ourWorkData[attr].paragraph;
-  question.textContent = ourWorkData[attr].querySelector;
-  middleA.textContent = ourWorkData[attr].middleA;
-  experience.textContent = ourWorkData[attr].experience;
-  paragraph1.textContent = ourWorkData[attr].paragraph1;
-  viewP.textContent = ourWorkData[attr].viewP;
-  p1.textContent = ourWorkData[attr].p1;
-  p2.textContent = ourWorkData[attr].p2;
-  p3.textContent = ourWorkData[attr].p3;
-  p4.textContent = ourWorkData[attr].p4;
-  });
-})
-
-
 const ourWorkData = {
   "english" :{
     "introTitle" : "Why choose TravAl?",
@@ -121,3 +84,48 @@ const ourWorkData = {
     "p4": "Recuerdo del viaje a Kruje <br> 17/05/2020"
   }
 }
+
+
+function updateWorkContent(selectedLanguage, selectedFlag){
+  introTitle.textContent = ourWorkData[selectedLanguage].introTitle;
+  safety.textContent = ourWorkData[selectedLanguage].safety;
+  paragraph.textContent = ourWorkData[selectedLanguage].paragraph;
+  question.textContent = ourWorkData[selectedLanguage].querySelector;
+  middleA.textContent = ourWorkData[selectedLanguage].middleA;
+  experience.textContent = ourWorkData[selectedLanguage].experience;
+  paragraph1.textContent = ourWorkData[selectedLanguage].paragraph1;
+  viewP.textContent = ourWorkData[selectedLanguage].viewP;
+  p1.textContent = ourWorkData[selectedLanguage].p1;
+  p2.textContent = ourWorkData[selectedLanguage].p2;
+  p3.textContent = ourWorkData[selectedLanguage].p3;
+  p4.textContent = ourWorkData[selectedLanguage].p4;
+
+  localStorage.setItem('selectedLanguage',selectedLanguage);
+  localStorage.setItem('selectedFlag', selectedFlag);
+}
+
+document.querySelector('.selected-langg').style.backgroundImage = storedFlag;
+updateWorkContent(storedLanguage,storedFlag);
+
+
+buttons.forEach(button =>{
+  button.addEventListener('click', (event)=>{
+    event.preventDefault();
+    langMenu.querySelector('.active').classList.remove('active');
+    button.classList.add('active');
+    const selectedLanguage = button.getAttribute('language');
+  console.log(selectedLanguage);
+  
+  if(selectedLanguage == "german"){
+    selectedFlag = "url('https://flagsapi.com/BE/flat/32.png')";
+  }else if(selectedLanguage=="italian"){
+    selectedFlag = "url(https://flagsapi.com/IT/flat/32.png)";
+  }else if(selectedLanguage=="french"){
+    selectedFlag = "url(https://flagsapi.com/FR/flat/32.png)";
+  }else if(selectedLanguage=="espanol"){
+    selectedFlag = "url(https://flagsapi.com/ES/flat/32.png)";
+  }
+  document.querySelector('.selected-langg').style.backgroundImage = selectedFlag;
+  updateWorkContent(selectedLanguage, selectedFlag);
+  });
+})

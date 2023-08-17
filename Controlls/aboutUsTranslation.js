@@ -8,47 +8,6 @@ const ourCompany = document.querySelector('.ourCompany1');
 const ourGoal = document.querySelector('.ourGoal1');
 const text = document.querySelector('.text')
 
-buttons.forEach(button =>{
-    button.addEventListener('click', (event)=>{
-      event.preventDefault();
-      langMenu.querySelector('.active').classList.remove('active');
-      button.classList.add('active');
-
-      const attr = button.getAttribute('language');
-    console.log(attr);
-    if(attr == "german"){
-      document.querySelector(".selected-langg").style.backgroundImage = "url('https://flagsapi.com/BE/flat/32.png')";
-      document.querySelector("#t1").src = "../Images/germanTitle1.png";
-      document.querySelector('#t2').src = "../Images/germanTitle2.png";
-    }else if(attr=="italian"){
-      document.querySelector(".selected-langg").style.backgroundImage = "url(https://flagsapi.com/IT/flat/32.png)";
-      document.querySelector("#t1").src = "../Images/italianTitle1.png";
-      document.querySelector('#t2').src = "../Images/italianTitle2.png";
-    }else if(attr=="french"){
-      document.querySelector(".selected-langg").style.backgroundImage = "url(https://flagsapi.com/FR/flat/32.png)";
-      document.querySelector("#t1").src = "../Images/frenchTitle1.png";
-      document.querySelector('#t2').src = "../Images/frenchTitle2.png";
-    }else if(attr=="espanol"){
-      document.querySelector(".selected-langg").style.backgroundImage = "url(https://flagsapi.com/ES/flat/32.png)";
-      document.querySelector("#t1").src = "../Images/spanishTitle1.png";
-      document.querySelector('#t2').src = "../Images/spanishTitle2.png";
-    }else{
-      document.querySelector(".selected-langg").style.backgroundImage = "url(https://flagsapi.com/US/flat/32.png)";
-      document.querySelector('#t1').src = "../Images/title.png";
-      document.querySelector('#t2').src = "../Images/title2.png";
-    }
-    paragraph.textContent = aboutUsData[attr].paragraph;
-    title.textContent = aboutUsData[attr].title;
-    content.textContent = aboutUsData[attr].content;
-    staff.textContent = aboutUsData[attr].staff;
-    work.textContent = aboutUsData[attr].work;
-    join.textContent = aboutUsData[attr].join;
-    ourCompany.textContent = aboutUsData[attr].ourCompany;
-    ourGoal.textContent = aboutUsData[attr].ourGoal;
-    text.textContent = aboutUsData[attr].text;
-    });
-
-});
 
 const aboutUsData = {
   "english" :{
@@ -81,7 +40,7 @@ const aboutUsData = {
     "work": "Il nostro Lavoro",
     "join": "Unisciti a Noi",
     "ourCompany": "TravAl è una piattaforma di viaggio facile da usare dove puoi prenotare e gestire viaggi gratuitamente. Goditi tariffe esclusive, accumula punti fedeltà e beneficia del supporto gratuito 24/7 dalla principale società di gestione dei viaggi CWT.",
-    "ourGoal": "Presso TravAl è tutto incentrato sul viaggio, ti aiutiamo a esplorare nuove sfide in un luogo dove puoi essere il tuo miglior sé. Siamo sempre stati pionieri, con la visione di plasmare il futuro dei viaggi attraverso tecnologie all'avanguardia, per rendere più facile per tutti godere di esperienze straordinarie ovunque vadano.",
+    "ourGoal": "Presso TravAl è tutto incentrato sul viaggio, ti aiutiamo a esplorare nuove sfide in un luogo dove puoi essere il tuo miglior sé. Siamo sempre stati pionieri, con la visione di plasmare il futuro dei viaggi selectedLanguageaverso tecnologie all'avanguardia, per rendere più facile per tutti godere di esperienze straordinarie ovunque vadano.",
     "text": "Scegli TravAl per vacanze indimenticabili in Albania."
   },
   "french": {
@@ -108,3 +67,65 @@ const aboutUsData = {
     "text": "Elige TravAl para unas vacaciones inolvidables en Albania."
   }
 }
+
+const storedFig1 = localStorage.getItem('fig1') || "../Images/title.png";
+const storedFig2 = localStorage.getItem('fig2') || "../Images/title2.png";
+
+function updateaboutUsContent(selectedLanguage, selectedFlag, fig1, fig2){
+  paragraph.textContent = aboutUsData[selectedLanguage].paragraph;
+  title.textContent = aboutUsData[selectedLanguage].title;
+  content.textContent = aboutUsData[selectedLanguage].content;
+  staff.textContent = aboutUsData[selectedLanguage].staff;
+  work.textContent = aboutUsData[selectedLanguage].work;
+  join.textContent = aboutUsData[selectedLanguage].join;
+  ourCompany.textContent = aboutUsData[selectedLanguage].ourCompany;
+  ourGoal.textContent = aboutUsData[selectedLanguage].ourGoal;
+  text.textContent = aboutUsData[selectedLanguage].text;
+
+  localStorage.setItem('selectedLanguage', selectedLanguage);
+  localStorage.setItem('selectedFlag', selectedFlag);
+  localStorage.setItem('fig1', fig1);
+  localStorage.setItem('fig2', fig2);
+}
+
+document.querySelector('.selected-langg').style.backgroundImage = storedFlag;
+document.querySelector('#t1').src = storedFig1;
+document.querySelector('#t2').src = storedFig2;
+
+updateaboutUsContent(storedLanguage, storedFlag, storedFig1, storedFig2);
+
+buttons.forEach(button =>{
+    button.addEventListener('click', (event)=>{
+      event.preventDefault();
+      langMenu.querySelector('.active').classList.remove('active');
+      button.classList.add('active');
+
+      const selectedLanguage = button.getAttribute('language');
+      let fig1 = "";
+      let fig2 = "";
+    console.log(selectedLanguage);
+    if(selectedLanguage == "german"){
+      selectedFlag = "url('https://flagsapi.com/BE/flat/32.png')";
+      fig1 = "../Images/germanTitle1.png";
+      fig2 = "../Images/germanTitle2.png";
+    }else if(selectedLanguage=="italian"){
+      selectedFlag = "url(https://flagsapi.com/IT/flat/32.png)";
+      fig1 = "../Images/italianTitle1.png";
+      fig2 = "../Images/italianTitle2.png";
+    }else if(selectedLanguage=="french"){
+      selectedFlag = "url(https://flagsapi.com/FR/flat/32.png)";
+      fig1 = "../Images/frenchTitle1.png";
+      fig2 = "../Images/frenchTitle2.png";
+    }else if(selectedLanguage=="espanol"){
+      selectedFlag = "url(https://flagsapi.com/ES/flat/32.png)";
+      fig1 = "../Images/spanishTitle1.png";
+      fig2 = "../Images/spanishTitle2.png";
+    }else{
+      selectedFlag = "url(https://flagsapi.com/US/flat/32.png)";
+    }
+    document.querySelector('.selected-langg').style.backgroundImage = selectedFlag;
+    document.querySelector('#t1').src = fig1;
+    document.querySelector('#t2').src = fig2;
+    updateaboutUsContent(selectedLanguage, selectedFlag, fig1, fig2);
+    });
+});

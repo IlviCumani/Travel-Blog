@@ -8,40 +8,6 @@ const travelManager = document.querySelector('#manager');
 const info = document.querySelectorAll('.info');
 
 
-buttons.forEach(button =>{
-  button.addEventListener('click', (event)=>{
-    event.preventDefault();
-    langMenu.querySelector('.active').classList.remove('active');
-    button.classList.add('active');
-
-    const attr = button.getAttribute('language');
-  console.log(attr);
-  if(attr == "german"){
-    document.querySelector(".selected-langg").style.backgroundImage = "url('https://flagsapi.com/BE/flat/32.png')";
-  }else if(attr=="italian"){
-    document.querySelector(".selected-langg").style.backgroundImage = "url(https://flagsapi.com/IT/flat/32.png)";
-  }else if(attr=="french"){
-    document.querySelector(".selected-langg").style.backgroundImage = "url(https://flagsapi.com/FR/flat/32.png)";
-  }else if(attr=="espanol"){
-    document.querySelector(".selected-langg").style.backgroundImage = "url(https://flagsapi.com/ES/flat/32.png)";
-  }else{
-    document.querySelector(".selected-langg").style.backgroundImage = "url(https://flagsapi.com/US/flat/32.png)";
-  }
-  StaffTitleP.textContent = ourStaffData[attr].StaffTitleP;
-  meetAndGreet.textContent = ourStaffData[attr].meetAndGreet;
-  travelConsultant.forEach(tv=>{
-    tv.textContent = ourStaffData[attr].travelConsultant;
-  })
-  travelCoordinator.textContent = ourStaffData[attr].travelCoordinator;
-  travelGuide.textContent = ourStaffData[attr].travelGuide;
-  travelBooker.textContent = ourStaffData[attr].travelBooker;
-  travelManager.textContent = ourStaffData[attr].travelManager;
-  info.forEach(i=>{
-    i.textContent = ourStaffData[attr].info;
-  })
-  });
-
-});
 const ourStaffData = {
   "english" :{
     "StaffTitleP": "Our Staff",
@@ -96,3 +62,51 @@ const ourStaffData = {
     "info": "Lorem Ipsum es simplemente el texto de relleno de la industria de la impresión y composición tipográfica."
   }
 }
+
+function updateStaffContent(selectedLanguage, selectedFlag){
+  StaffTitleP.textContent = ourStaffData[selectedLanguage].StaffTitleP;
+  meetAndGreet.textContent = ourStaffData[selectedLanguage].meetAndGreet;
+  travelConsultant.forEach(tv=>{
+    tv.textContent = ourStaffData[selectedLanguage].travelConsultant;
+  });
+  travelCoordinator.textContent = ourStaffData[selectedLanguage].travelCoordinator;
+  travelGuide.textContent = ourStaffData[selectedLanguage].travelGuide;
+  travelBooker.textContent = ourStaffData[selectedLanguage].travelBooker;
+  travelManager.textContent = ourStaffData[selectedLanguage].travelManager;
+  info.forEach(i=>{
+    i.textContent = ourStaffData[selectedLanguage].info;
+  });
+
+  localStorage.setItem('selectedLanguage', selectedLanguage);
+  localStorage.setItem('selectedFlag', selectedFlag);
+}
+
+document.querySelector('.selected-langg').style.backgroundImage = storedFlag;
+updateStaffContent(storedLanguage, storedFlag);
+
+
+buttons.forEach(button =>{
+  button.addEventListener('click', (event)=>{
+    event.preventDefault();
+    langMenu.querySelector('.active').classList.remove('active');
+    button.classList.add('active');
+
+    const selectedLanguage = button.getAttribute('language');
+  console.log(selectedLanguage);
+  if(selectedLanguage == "german"){
+   selectedFlag = "url('https://flagsapi.com/BE/flat/32.png')";
+  }else if(selectedLanguage=="italian"){
+    selectedFlag = "url(https://flagsapi.com/IT/flat/32.png)";
+  }else if(selectedLanguage=="french"){
+    selectedFlag = "url(https://flagsapi.com/FR/flat/32.png)";
+  }else if(selectedLanguage=="espanol"){
+    selectedFlag = "url(https://flagsapi.com/ES/flat/32.png)";
+  }else{
+    selectedFlag = "url(https://flagsapi.com/US/flat/32.png)";
+  }
+
+  document.querySelector(".selected-langg").style.backgroundImage = selectedFlag;
+  updateStaffContent(selectedLanguage, selectedFlag);
+  });
+
+});
