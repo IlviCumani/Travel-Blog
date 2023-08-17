@@ -1,10 +1,3 @@
-// if(window.location.href == "http://127.0.0.1:5501/Travel-Blog/Views/index.html"){
-const langMenu = document.querySelector('.lang-menuu');
-const buttons = document.querySelectorAll('.lang-btn');
-const headLink1A = document.getElementById('l1');
-const headLink2A = document.getElementById('l2');
-const headLink3A = document.getElementById('l3');
-const bookingButtonA = document.querySelector('.booking');
 const sum = document.getElementById('sum');
 const al = document.getElementById('al');
 const card1 = document.getElementById('card1');
@@ -19,14 +12,7 @@ const card4Text = document.getElementById('card4Text');
 const more = document.getElementById('more');
 const seasonal_vacation_heading = document.querySelector('.seasonal_vacation_heading');
 const seasonal_vacation_heading_winter = document.getElementById('w');
-const btnMore = document.querySelectorAll('.btn-primary');
-const subscribe = document.getElementById('subscribe');
-const subscribeText = document.getElementById('subscribeText');
-const subscribeBtn = document.getElementById('btnn');
-const faqs = document.getElementById('f1');
-const termsOfService = document.getElementById('f2');
-const privacyPolicy = document.getElementById('f3');
-const copyrights = document.querySelector('.cop');
+const btnMore = document.querySelectorAll('.more-btn');
 
 buttons.forEach(button =>{
   button.addEventListener("click", (event)=>{
@@ -47,43 +33,28 @@ buttons.forEach(button =>{
     }else{
       document.querySelector(".selected-langg").style.backgroundImage = "url(https://flagsapi.com/US/flat/32.png)";
     }
-    headLink1A.textContent = data[attr].headLink1;
-    headLink2A.textContent = data[attr].headLink2;
-    headLink3A.textContent = data[attr].headLink3;
-    bookingButtonA.textContent = data[attr].bookingButton;
-    al.textContent = data[attr].al;
-    sum.textContent = data[attr].sum;
-    card1.textContent = data[attr].card1title;
-    card2.textContent = data[attr].card2title;
-    card3.textContent = data[attr].card3title;
-    card4.textContent = data[attr].card4title;
-    card5.textContent = data[attr].card5title;
-    card1Italic.textContent = data[attr].card1ItalicTitle;
-    imgT.textContent = data[attr].card1Date;
-    card2Text.textContent = data[attr].card2Text;
-    card4Text.textContent = data[attr].card4Text;
-    more.textContent = data[attr].card5More;
-    seasonal_vacation_heading.textContent = data[attr].cardCarousselSummer;
-    seasonal_vacation_heading_winter.textContent = data[attr].cardCarousselWinter;
+    al.textContent = indexData[attr].al;
+    sum.textContent = indexData[attr].sum;
+    card1.textContent = indexData[attr].card1title;
+    card2.textContent = indexData[attr].card2title;
+    card3.textContent = indexData[attr].card3title;
+    card4.textContent = indexData[attr].card4title;
+    card5.textContent = indexData[attr].card5title;
+    card1Italic.textContent = indexData[attr].card1ItalicTitle;
+    imgT.textContent = indexData[attr].card1Date;
+    card2Text.textContent = indexData[attr].card2Text;
+    card4Text.textContent = indexData[attr].card4Text;
+    more.textContent = indexData[attr].card5More;
+    seasonal_vacation_heading.textContent = indexData[attr].cardCarousselSummer;
+    seasonal_vacation_heading_winter.textContent = indexData[attr].cardCarousselWinter;
     btnMore.forEach(btn=>{
-      btn.textContent = data[attr].btnMore;
+      btn.textContent = indexData[attr].btnMore;
     });
-    subscribe.textContent = data[attr].subscribe;
-    subscribeText.textContent = data[attr].subscribeText;
-    subscribeBtn.textContent = data[attr].subscribe;
-    faqs.textContent = data[attr].faqs;
-    termsOfService.textContent = data[attr].termsOfService;
-    privacyPolicy.textContent = data[attr].privacyPolicy;
-    copyrights.textContent = data[attr].copyrights;
   });
 });
 
-const data = {
+const indexData = {
   "english" :{
-    "headLink1": "Tours",
-    "headLink2": "About Us",
-    "headLink3": "Contacts",
-    "bookingButton": "Book a Tour",
     "al": "Albanian",
     "sum": "Summer",
     "card1title":" Saranda Tours",
@@ -98,19 +69,9 @@ const data = {
     "card5More" : "More destinations...",
     "cardCarousselSummer" : "Summer Vacation",
     "cardCarousselWinter" : "Winter Cacation",
-    "btnMore" : "More",
-    "subscribe" : "Subscribe",
-    "subscribeText" : "be the first who knows",
-    "faqs" : "FAQs",
-    "termsOfService" : "Terms Of Service",
-    "privacyPolicy" : "Privacy Policy",
-    "copyrights" : "@copyright2023"
+    "btnMore" : "More"
   },
   "german" :{
-    "headLink1": "Touren",
-    "headLink2": "Über Uns",
-    "headLink3": "Kontakte",
-    "bookingButton": "Eine Reise buchen",
     "al" :"Albanischer",
     "sum": "Sommer",
     "card1title":"Saranda Touren",
@@ -125,19 +86,9 @@ const data = {
     "card5More" : "Andere Ziele…",
     "cardCarousselSummer" : "Sommerurlaub",
     "cardCarousselWinter" : "Winterurlaub",
-    "btnMore" : "Mehr",
-    "subscribe" : "Abonnieren",
-    "subscribeText" : "sei der Erste, der es weiß",
-    "faqs" : "FAQs",
-    "termsOfService" : "Nutzungsbedingungen",
-    "privacyPolicy" : "Datenschutzrichtlinie", 
-    "copyrights" : "@Urheberrecht2023"
+    "btnMore" : "Mehr"
   },
   "italian":{
-    "headLink1": "Tour",
-    "headLink2": "Chi Siamo",
-    "headLink3": "Contatti",
-    "bookingButton": "Prenota un tour",
     "al": "Albanese",
     "sum": "Estate ",
     "card1title":"Saranda Tour",
@@ -152,19 +103,9 @@ const data = {
     "card5More" : "Altre destinazioni...",
     "cardCarousselSummer" : "Vacanze Estive",
     "cardCarousselWinter" : "Vacanze Invernali",
-    "btnMore" : "Più di",
-    "subscribe" : "Sottoscrivi",
-    "subscribeText" : "puoi essere il primo a saperlo",
-    "faqs" : "FAQs",
-    "termsOfService" : "Termini di servizio",
-    "privacyPolicy" : "Politica sulla riservatezza",
-    "copyrights" : "@diritto d'autore2023"
+    "btnMore" : "Più di"
   },
   "french": {
-    "headLink1": "Tours",
-    "headLink2": "À Propos",
-    "headLink3": "Contacts",
-    "bookingButton": "Réserver un Tour",
     "al": "Albanais",
     "sum": "Été",
     "card1title": "Tours à Saranda",
@@ -179,20 +120,10 @@ const data = {
     "card5More": "Plus de destinations...",
     "cardCarousselSummer": "Vacances d'Été",
     "cardCarousselWinter": "Vacances d'Hiver",
-    "btnMore": "Plus",
-    "subscribe": "S'Abonner",
-    "subscribeText": "soyez le premier à savoir",
-    "faqs": "FAQ",
-    "termsOfService": "Conditions d'utilisation",
-    "privacyPolicy": "Politique de confidentialité",
-    "copyrights": "@droits d'auteur2023"
+    "btnMore": "Plus"
   },
   
   "espanol": {
-    "headLink1": "Tours",
-    "headLink2": "Sobre Nosotros",
-    "headLink3": "Contactos",
-    "bookingButton": "Reservar un Tour",
     "al": "Albanés",
     "sum": "Verano",
     "card1title": "Tours en Saranda",
@@ -207,14 +138,6 @@ const data = {
     "card5More": "Más destinos...",
     "cardCarousselSummer": "Vacaciones de Verano",
     "cardCarousselWinter": "Vacaciones de Invierno",
-    "btnMore": "Más",
-    "subscribe": "Suscribirse",
-    "subscribeText": "sé el primero en saberlo",
-    "faqs": "Preguntas Frecuentes",
-    "termsOfService": "Términos de Servicio",
-    "privacyPolicy": "Política de Privacidad",
-    "copyrights": "@derechos de autor2023"
+    "btnMore": "Más"
   }
 }
-
-// }

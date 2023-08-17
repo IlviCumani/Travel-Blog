@@ -1396,12 +1396,12 @@ body{
 
   .btn {
     margin-right: 30px;
-    color: black;
+    color: #5a432c;
     background-color: #E8E8E8;
     border: 1px white solid;
     opacity: 0.9;
     text-align: center;
-    width: 100px;
+    width: 140px;
     height: 50px;
     font-size: medium;
     border-radius: 10px;
@@ -1427,6 +1427,9 @@ body{
   }
   .others{
     margin: 0;
+  }
+  hr{
+    margin-top: 40px;
   }
 }
 @media screen and (max-width:500px){
