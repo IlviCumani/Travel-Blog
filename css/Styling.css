@@ -1442,15 +1442,15 @@ body{
   }
 }
 /* ---------------------------------MAP-------------------------------- */
-.circle{
+/* .circle{ */
   /* border-radius: 50%; */
-  background-color: transparent;
+  /* background-color: transparent; */
   /* width: 56px;
   height: 56px; */
   /* margin-left: 200px;
   margin-top: 140px; */
-  position: absolute;
+  /* position: absolute;
 }
 .map{
   display: flex;
-}
+} */
