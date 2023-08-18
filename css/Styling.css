@@ -116,7 +116,7 @@ header{
 }
 
 .lang-menuu ul li a {
-  width: 100px;
+  width: 120px;
   display: block;
   padding: 5px;
 }
@@ -519,6 +519,9 @@ body{
   right: 0; 
   margin-left: auto; 
   margin-right: auto; 
+}
+#join-us{
+  font-weight: 650;
 }
 .ourMission{
   padding: 30px;
@@ -1116,13 +1119,14 @@ body{
 	border: none;
 	background: #828184aa;
 	padding: 6px 15px;
-	margin-top: 5px;
-    color: #fff;
+	margin-top: 25px;
+  color: #fff;
     
 }
 
 .carousel .carousel-item .more-btn:hover {
 	background: #8c5bff;
+  
 }
 
 .carousel .carousel-item .more-btn i {
