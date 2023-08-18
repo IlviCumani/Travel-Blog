@@ -35,7 +35,7 @@ const jaleTour = document.querySelector('#jaleTour');
 const livadhiTour = document.querySelector('#livadhiTour');
 const zvernecTour = document.querySelector('#zvernecTour');
 const sarandaTour = document.querySelector('#sarandaTour');
-const main = document.querySelector('#main-p');
+const main = document.querySelector('#main-p-tours');
 const browse = document.querySelector('#browse-p');
 
 
