@@ -18,6 +18,7 @@ const indexData = {
   "english" :{
     "al": "Albanian",
     "sum": "Summer",
+    "winter" : "Winter",
     "card1title":" Saranda Tours",
     "card2title": "Ksamil Tours",
     "card3title": "Berat Tours",
@@ -35,6 +36,7 @@ const indexData = {
   "german" :{
     "al" :"Albanischer",
     "sum": "Sommer",
+    "winter" : "Winter",
     "card1title":"Saranda Touren",
     "card2title": "Ksamil Touren",
     "card3title": "Berat Touren",
@@ -52,6 +54,7 @@ const indexData = {
   "italian":{
     "al": "Albanese",
     "sum": "Estate ",
+    "winter" : "Inverno",
     "card1title":"Saranda Tour",
     "card2title": "Ksamil Tour",
     "card3title": "Berat Tour",
@@ -69,6 +72,7 @@ const indexData = {
   "french": {
     "al": "Albanais",
     "sum": "Été",
+    "winter" : "Hiver",
     "card1title": "Tours à Saranda",
     "card2title": "Tours à Ksamil",
     "card3title": "Tours à Berat",
@@ -87,6 +91,7 @@ const indexData = {
   "espanol": {
     "al": "Albanés",
     "sum": "Verano",
+    "winter" : "Invierno",
     "card1title": "Tours en Saranda",
     "card2title": "Tours en Ksamil",
     "card3title": "Tours en Berat",
@@ -105,7 +110,13 @@ const indexData = {
 
 function updateIndexContent(selectedLanguage, selectedFlag){
   al.textContent = indexData[selectedLanguage].al;
-  sum.textContent = indexData[selectedLanguage].sum;
+  if(document.querySelector('#sum').classList.contains('winter-mode')){
+    console.log('winter-mode found');
+    sum.textContent = indexData[selectedLanguage].winter;
+  }else{
+    console.log('winter-mode not found');
+    sum.textContent = indexData[selectedLanguage].sum;
+  }
   card1.textContent = indexData[selectedLanguage].card1title;
   card2.textContent = indexData[selectedLanguage].card2title;
   card3.textContent = indexData[selectedLanguage].card3title;

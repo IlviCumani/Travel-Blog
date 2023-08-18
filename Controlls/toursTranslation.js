@@ -35,7 +35,7 @@ const jaleTour = document.querySelector('#jaleTour');
 const livadhiTour = document.querySelector('#livadhiTour');
 const zvernecTour = document.querySelector('#zvernecTour');
 const sarandaTour = document.querySelector('#sarandaTour');
-const main = document.querySelector('#main-p');
+const main = document.querySelector('#main-p-tours');
 const browse = document.querySelector('#browse-p');
 
 
@@ -79,6 +79,7 @@ const toursData = {
     "zvernecTour" : "Zvernec Tour",
     "sarandaTour" : "Saranda Tour",
     "main" : "Spend an unforgettable summer with TravAl!",
+    "mainWinter" : "Spend an unforgettable winter with TravAl!",
     "browse" : "Browse the collection of tours that we offer"
   },
   "german": {
@@ -120,6 +121,7 @@ const toursData = {
     "zvernecTour": "Zvernec Tour",
     "sarandaTour": "Saranda Tour",
     "main": "Verbringen Sie einen unvergesslichen Sommer mit TravAl!",
+    "mainWinter" : "Verbringen Sie einen unvergesslichen Winter mit TravAl!",
     "browse": "Durchstöbern Sie die Sammlung von Touren, die wir anbieten"
   },
   "italian":{
@@ -161,6 +163,7 @@ const toursData = {
     "zvernecTour": "Tour di Zvernec",
     "sarandaTour": "Tour di Saranda",
     "main": "Trascorri un'estate indimenticabile con TravAl!",
+    "mainWinter" : "Trascorri un inverno indimenticabile con TravAl!",
     "browse": "Sfoglia la collezione di tour che offriamo"
   },
   "french": {
@@ -202,6 +205,7 @@ const toursData = {
     "zvernecTour": "Tour de Zvernec",
     "sarandaTour": "Tour de Saranda",
     "main": "Passez un été inoubliable avec TravAl !",
+    "mainWinter" : "Passez un hiver inoubliable avec TravAl !",
     "browse": "Parcourez la collection de tours que nous proposons"
   },
   "espanol": {
@@ -243,6 +247,7 @@ const toursData = {
     "zvernecTour": "Tour de Zvernec",
     "sarandaTour": "Tour de Saranda",
     "main": "¡Pasa un verano inolvidable con TravAl!",
+    "mainWinter" : "¡Pasa un invierno inolvidable con TravAl!",
     "browse": "Explora la colección de tours que ofrecemos"
   }
 }
@@ -287,7 +292,11 @@ function updateToursContent(selectedLanguage, selectedFlag){
   livadhiTour.textContent = toursData[selectedLanguage].livadhiTour;
   zvernecTour.textContent = toursData[selectedLanguage].zvernecTour;
   sarandaTour.textContent = toursData[selectedLanguage].sarandaTour;
-  main.textContent = toursData[selectedLanguage].main;
+  if(document.querySelector('#main-p-tours').classList.contains('winter-mode')){
+    main.textContent = toursData[selectedLanguage].mainWinter;
+  }else{
+    main.textContent = toursData[selectedLanguage].main;
+  }
   browse.textContent = toursData[selectedLanguage].browse;
 
   localStorage.setItem('selectedLanguage', selectedLanguage);
