@@ -30,7 +30,7 @@ const indexData = {
     "card4Text" : "Northern tours",
     "card5More" : "More destinations...",
     "cardCarousselSummer" : "Summer Vacation",
-    "cardCarousselWinter" : "Winter Cacation",
+    "cardCarousselWinter" : "Winter Vacation",
     "btnMore" : "More"
   },
   "german" :{

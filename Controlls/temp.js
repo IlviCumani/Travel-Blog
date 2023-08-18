@@ -1,6 +1,16 @@
 const elementsToChange = document.querySelectorAll('.summer-mode');
 const summerWinterTogglebtn = document.querySelector('.btnn');
 const icon = document.querySelector('.btnn__icon');
+const booking = document.querySelector(".booking");
+
+
+
+//--------------------------------booking that takes you to the tours page-------------------------------------
+booking.addEventListener("click",function(){
+  window.location = "./tours.html";
+});
+
+
 
 function changeMode() {
   elementsToChange.forEach(element => {
