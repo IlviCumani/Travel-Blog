@@ -90,7 +90,7 @@ function updateWorkContent(selectedLanguage, selectedFlag){
   introTitle.textContent = ourWorkData[selectedLanguage].introTitle;
   safety.textContent = ourWorkData[selectedLanguage].safety;
   paragraph.textContent = ourWorkData[selectedLanguage].paragraph;
-  question.textContent = ourWorkData[selectedLanguage].querySelector;
+  question.textContent = ourWorkData[selectedLanguage].question;
   middleA.textContent = ourWorkData[selectedLanguage].middleA;
   experience.textContent = ourWorkData[selectedLanguage].experience;
   paragraph1.textContent = ourWorkData[selectedLanguage].paragraph1;
