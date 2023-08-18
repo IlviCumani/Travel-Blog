@@ -3,14 +3,14 @@ body{
     margin: 0px;
     background-image: none!important;
 }
-#main-img{
+#main-img-tours{
     height:600px;
     width:100%;
     filter: brightness(65%);
     margin: 0;
 }
 
-#main-p{
+#main-p-tours{
     font-family: 'Lobster', cursive;
     position: absolute;
     color: rgba(255, 255, 255, 45%);
