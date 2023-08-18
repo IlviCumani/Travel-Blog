@@ -1116,13 +1116,14 @@ body{
 	border: none;
 	background: #828184aa;
 	padding: 6px 15px;
-	margin-top: 5px;
-    color: #fff;
+	margin-top: 25px;
+  color: #fff;
     
 }
 
 .carousel .carousel-item .more-btn:hover {
 	background: #8c5bff;
+  
 }
 
 .carousel .carousel-item .more-btn i {
