@@ -83,6 +83,10 @@
     &&.horizontal-text-div{
       background-color: #b7bfe6;
     }
+
+    &&#more-div{
+      background-color: #b7bfe6;
+    }
     /*------------------------TOURS PAGE------------------------*/
     &&.tours-bg{
       background-color:rgb(192 206 218);
