@@ -914,13 +914,13 @@ body{
 }
 
 .visit{
-  position: absolute; 
+  position: absolute;
   top: 70px;
-  right: 23%; 
-  color: aliceblue; 
-  font-family: 'Lobster', cursive; 
+  color: aliceblue;
+  font-family: 'Lobster', cursive;
   font-size: 40px;
   text-align: center;
+  width: 100%;
 }
 
 .cards:hover .text-div
@@ -1591,13 +1591,11 @@ body{
   margin-bottom: 1px;
 }
 
-hr{
+.hr-tours{
   width: 60%;
+    margin-top: 0;
 }
-.titlee{
-  margin-top: 0!important;
-  margin-bottom: 0!important;
-}
+
 
 .price{
   font-family: 'ABeeZee',sans-serif;
@@ -1623,23 +1621,12 @@ hr{
   cursor: pointer;
 }
 .price-div{
-  /* width: 120px;
-  height: 70px;
-  bottom: 0px;
-  position: relative; */
   
   width: 120px;
   height: 57px;
   bottom: 0px;
   position: relative;
-  /* display: flex;
-  height: 38px;
-  width: 53px;
-  background-color: aliceblue;
- 
-  border-radius: 50%;
-  flex-direction: row;
-  margin-right: 0; */
+
 
 }
 #closing-x
@@ -1673,12 +1660,6 @@ transition: left 0.7s ease;
    display: none;
    flex-direction: column;
    color: #F0E1BA;
-  /*flex-direction: row;
-  background-color: #115f223f; 
-  box-shadow: 5px 5px 5px #527c527d;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  margin-left: 10px; */
 }
 .filter-p{
  font-family: 'ABeeZee', sans-serif;
@@ -1695,11 +1676,6 @@ transition: left 0.7s ease;
 #categories-form{
   padding: 5px;
 }
-/* 
-
-#filter-categories{
-  margin: 16px;
-}*/
 
 .days-form{
 display: none;
@@ -1915,6 +1891,8 @@ transition: transform .1s cubic-bezier(0, 0, .2, 1);
 
   #nextDates, #itinerary{
     display: inline ;
+    
+    margin-left: 20px;
   }
 
   h5{
@@ -2052,6 +2030,15 @@ transition: transform .1s cubic-bezier(0, 0, .2, 1);
     }
   }
 
+
+  @media screen and (max-width:500px)
+  {
+
+    #small-descr{
+      font-size: 20px;
+      top: 50%;
+    }
+  }
 
 
 
