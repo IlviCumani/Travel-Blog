@@ -1460,7 +1460,7 @@ body{
 
 
 /*------------------------------------------TOURS--------------------------------*/
-body{
+.tours-bg{
   background-color: #F0E1BA;
   margin: 0px;
   background-image: none!important;
@@ -2054,6 +2054,4 @@ input[type="submit"]
     fill: var(--fill);
   }
 }
-
-} */
 
