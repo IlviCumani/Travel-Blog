@@ -2,7 +2,7 @@ var simplemaps_countrymap_mapdata={
   main_settings: {
    //General settings
     width: "responsive", //'700' or 'responsive'
-    background_color: "#000",
+    background_color: "#000",//F0E1BA
     background_transparent: "no",
     border_color: "#fff",
     state_description: "",
@@ -11,7 +11,7 @@ var simplemaps_countrymap_mapdata={
     state_url: "",
     border_size: 1.5,
     all_states_inactive: "no",
-    all_states_zoomable: "no",
+    all_states_zoomable: "yes",
     
     //Location defaults
     location_description: "Location description",
@@ -143,7 +143,7 @@ var simplemaps_countrymap_mapdata={
       lng: 19.453,
       name: "Durres",
       description: "<img src=\"https://static.wixstatic.com/media/7fda7d_c0b59ee096f74eabbd20cb75512823a0~mv2.jpg/v1/fill/w_612,h_370,al_c,q_80,enc_auto/7fda7d_c0b59ee096f74eabbd20cb75512823a0~mv2.jpg\" alt=\"\" style=\"height: 200px; width: 250px;\">",
-      url: "./individualTour.html"
+      url: "https://www.google.com/maps/search/Restorante/@41.3315071,19.4251577,13z/data=!3m1!4b1?entry=ttu"
     },
     "5": {
       lat: 41.322,
@@ -230,6 +230,13 @@ var simplemaps_countrymap_mapdata={
       lng: 19.79,
       name: "Kruje",
       description: "<img src=\"https://cms.pine.al/media/images/2022/07/27/62e147ec30274-qafe6.jpg\" alt=\"\" style=\"height: 200px; width: 250px;\">",
+      url: "./individualTour.html"
+    },
+    "17": {
+      lat: 42.402,
+      lng: 20.167,
+      name: "Tropoje",
+      description: "<img src=\"https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/4d/5f/13/viaggio-in-albania.jpg?w=600&h=400&s=1\" alt=\"\" style=\"height: 200px; width: 250px;\">",
       url: "./individualTour.html"
     }
   },
@@ -352,6 +359,13 @@ var simplemaps_countrymap_mapdata={
       y: 867.7,
       parent_type: "location",
       parent_id: "16"
+    },
+    "17": {
+      name: "Tropoje",
+      x: 510.2,
+      y: 194.2,
+      parent_type: "location",
+      parent_id: "17"
     }
   },
   legend: {
