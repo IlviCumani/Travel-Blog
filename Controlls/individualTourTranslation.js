@@ -1,4 +1,4 @@
-const main = document.querySelector('#main-p');
+const main = document.querySelector('#main-p-individual');
 const small = document.querySelector('#small-descr');
 const descr = document.querySelector('#descr');
 const nextDates = document.querySelector('#nextDates');
