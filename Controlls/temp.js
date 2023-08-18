@@ -12,10 +12,20 @@ function changeMode() {
 }
 
 function updateIcon(wintermode) {
+  console.log('wintermode:', wintermode);
   if (wintermode) {
     icon.classList.remove('fa-sun');
     icon.classList.add('fa-snowflake');
+      // ----------------------------------CHANGE TITLE IN HOMEPAGE-----------------------
+    if(window.location.href.includes("/Views/index.html")){
+      document.querySelector('#sum').innerText = "Winter";
+      document.querySelector('#Wicon').src = "../Images/winterIcon.png";
+    }
   } else {
+    if(window.location.href.includes("/Views/index.html")){
+      document.querySelector('#sum').innerText = "Summer";
+      document.querySelector('#Wicon').src = "../Images/beach.png";
+    }
     icon.classList.remove('fa-snowflake');
     icon.classList.add('fa-sun');
   }
@@ -39,8 +49,8 @@ function load() {
   elementsToChange.forEach(element => {
     element.classList.toggle('winter-mode', wintermode === 'true');
   });
-  updateIcon(wintermode === 'true');
   changeInTours();
+  updateIcon(wintermode === 'true'); 
 }
 load();
 
@@ -96,3 +106,5 @@ function changeInTours()
     }
   }
 }
+  
+
