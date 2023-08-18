@@ -75,8 +75,19 @@
     }
 
 
+    /*------------------------INDEX PAGE CARDS------------------------*/
+    &&.text-div{
+      background-color: #b7bfe6;
+    }
 
-
+    &&.horizontal-text-div{
+      background-color: #b7bfe6;
+    }
     /*------------------------TOURS PAGE------------------------*/
+    &&.tours-bg{
+      background-color:rgb(192 206 218);
+    
+    }
+
     
 }
