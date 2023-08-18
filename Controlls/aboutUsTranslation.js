@@ -122,6 +122,8 @@ buttons.forEach(button =>{
       fig2 = "../Images/spanishTitle2.png";
     }else{
       selectedFlag = "url(https://flagsapi.com/US/flat/32.png)";
+      fig1 = "../Images/title.png";
+      fig2 = "../Images/title2.png";
     }
     document.querySelector('.selected-langg').style.backgroundImage = selectedFlag;
     document.querySelector('#t1').src = fig1;
