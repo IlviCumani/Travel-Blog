@@ -38,6 +38,8 @@ summerWinterTogglebtn.addEventListener('click', () => {
   setTimeout(() => {
     icon.classList.remove('animated');
   }, 500);
+  
+  changeInTours();  
 });
 
 // Initial load
@@ -47,6 +49,7 @@ function load() {
   elementsToChange.forEach(element => {
     element.classList.toggle('winter-mode', wintermode === 'true');
   });
+  changeInTours();
   updateIcon(wintermode === 'true'); 
 }
 load();
@@ -84,4 +87,24 @@ if(window.location.href == "http://127.0.0.1:5500/Views/ourStaff1.html"){
   summerWinterTogglebtn.classList.add('disabled');
 }
 
+
+
+//-------------------------change of image and text in the tours page-----------------
+function changeInTours()
+{
+  if(document.getElementById("main-img-tours"))
+  {
+    if(document.getElementById("main-img-tours").classList.contains("winter-mode"))
+    {
+    document.getElementById("main-img-tours").src = "../Images/albanianWinter.jpg";
+    document.getElementById("main-p-tours").innerText = "Spend an unforgettable winter with TravAl!";
+  }
   
+    else{
+      document.getElementById("main-p-tours").innerText = "Spend an unforgettable summer with TravAl!";
+      document.getElementById("main-img-tours").src="../Images/summer-tours.jpg";
+    }
+  }
+}
+  
+
