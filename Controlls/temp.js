@@ -110,7 +110,7 @@ window.addEventListener('scroll', ()=>{
 
 
 // --------------------------DISABLE BUTTON------------------
-if(window.location.href.includes("/Views/ourStaff1.html")){
+if(window.location.href.includes("/Views/ourStaff1.html") || window.location.href.includes("/Views/mapSelect.html")){
   summerWinterTogglebtn.classList.add('disabled');
 }
 
@@ -134,3 +134,8 @@ function changeInTours()
   }
 }
 
+// -------------------mapBtn----------------------------
+// const mapBtn = document.querySelector('#mapBtn');
+// mapBtn.addEventListener('click', ()=>{
+//   window.location = "../Views/mapSelect.html";
+// });
