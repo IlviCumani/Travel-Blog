@@ -2,7 +2,7 @@ const elementsToChange = document.querySelectorAll('.summer-mode');
 const summerWinterTogglebtn = document.querySelector('.btnn');
 const icon = document.querySelector('.btnn__icon');
 const booking = document.querySelector(".booking");
-
+const langLinks = document.querySelectorAll('.lang-btn');
 
 //--------------------------------booking that takes you to the tours page-------------------------------------
 booking.addEventListener("click",function(){
@@ -46,7 +46,7 @@ function changeMode() {
   const wintermode = elementsToChange[0].classList.contains('winter-mode');
   localStorage.setItem('wintermode', wintermode);
   console.log('stored lang is ', storedLanguage);
-  updateModeAndTranslation(wintermode, selectedLanguage);
+  window.location.href.includes('/Views/index.html') ? updateModeAndTranslation(wintermode, selectedLanguage) :  updateIcon(wintermode);
 }
 
 // Event listener for the toggle button
@@ -57,10 +57,17 @@ summerWinterTogglebtn.addEventListener('click', (event) => {
   setTimeout(() => {
     icon.classList.remove('animated');
   }, 500);
-  // updateModeAndTranslation(elementsToChange[0].classList.contains('winter-mode'), storedLanguage);
   changeInTours();  
 });
 
+langLinks.forEach(lang=>{
+  lang.addEventListener('click',(event)=>{
+    event.preventDefault();
+    console.log('here')
+    if( window.location.href.includes('/Views/index.html'))
+      updateModeAndTranslation(elementsToChange[0].classList.contains('winter-mode'), selectedLanguage);
+  })
+})
 // Initial load
 function load() {
   const wintermode = localStorage.getItem('wintermode');
@@ -68,8 +75,9 @@ function load() {
   elementsToChange.forEach(element => {
     element.classList.toggle('winter-mode', wintermode === 'true');
   });
-  changeInTours();
-  updateIcon(wintermode === 'true'); 
+
+  window.location.href.includes('/Views/index.html') ? updateModeAndTranslation(elementsToChange[0].classList.contains('winter-mode'), selectedLanguage) : updateIcon(wintermode === 'true');
+  changeInTours(); 
 }
 load();
 

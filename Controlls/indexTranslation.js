@@ -110,13 +110,6 @@ const indexData = {
 
 function updateIndexContent(selectedLanguage, selectedFlag){
   al.textContent = indexData[selectedLanguage].al;
-  if(document.querySelector('#sum').classList.contains('winter-mode')){
-    console.log('winter-mode found');
-    sum.textContent = indexData[selectedLanguage].winter;
-  }else{
-    console.log('winter-mode not found');
-    sum.textContent = indexData[selectedLanguage].sum;
-  }
   card1.textContent = indexData[selectedLanguage].card1title;
   card2.textContent = indexData[selectedLanguage].card2title;
   card3.textContent = indexData[selectedLanguage].card3title;

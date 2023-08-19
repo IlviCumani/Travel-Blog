@@ -75,13 +75,16 @@ function updateJoinContent(selectedLanguage){
   localStorage.setItem('selectedLanguage', selectedLanguage);
 }
 
+updateJoinContent(storedLanguage);
+
+
 buttons.forEach(button =>{
   button.addEventListener("click", (event)=>{
     event.preventDefault();
     langMenu.querySelector('.active').classList.remove('active');
     button.classList.add('active');
 
-    const selectedLanguage = button.getAttribute('language');
+    selectedLanguage = button.getAttribute('language');
     console.log(selectedLanguage);
     updateJoinContent(selectedLanguage);
   });
