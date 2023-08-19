@@ -146,8 +146,9 @@ buttons.forEach(button =>{
     langMenu.querySelector('.active').classList.remove('active');
     button.classList.add('active');
 
-    const selectedLanguage = button.getAttribute('language');
-    console.log(selectedLanguage);
+    selectedLanguage = button.getAttribute('language');
+    // console.log(selectedLanguage);
+    // console.log('stored language at indexTranslation is ',storedLanguage)
     if(selectedLanguage == "german"){
       selectedFlag = "url('https://flagsapi.com/BE/flat/32.png')";
     }else if(selectedLanguage=="italian"){
