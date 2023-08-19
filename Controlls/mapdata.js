@@ -63,7 +63,7 @@ var simplemaps_countrymap_mapdata={
     url_new_tab: "yes",
     images_directory: "default",
     fade_time: 0.1,
-    link_text: "View Website",
+    link_text: "Book Now",
     popups: "on_click",
     state_image_url: "",
     state_image_position: "",
@@ -207,7 +207,7 @@ var simplemaps_countrymap_mapdata={
       lat: 40.477,
       lng: 19.488,
       name: "Vlore",
-      description: "<img src=\"https://eis.epoka.edu.al/uploads/profilepic/img_15025_1608027118.jpg\" alt=\"\" style=\"height: 200px; width: 250px;\"><br><span>Gjith ai burre e shtypi<br> makina e beri fertele</span>",
+      description: "<img src=\"https://storage.googleapis.com/albania-travel-guide/2022/07/Vlore-Albania-Travel-Guide-44-960x540.jpg\" alt=\"\" style=\"height: 200px; width: 250px;\">",
       url: "./individualTour.html"
     },
     "14": {
