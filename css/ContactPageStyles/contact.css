@@ -189,8 +189,6 @@
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    /* position: relative; */
-    /* z-index: -1; */
     padding-top: 85px;
     padding-bottom: 85px;
 }
@@ -205,12 +203,12 @@
     
 }
 
-.form-input-field{
+.contact-form-input-field{
     margin: 65px 0;
     padding: px 0;
 }
 
-.form-input-field .form-control{
+.contact-form-input-field .form-control{
     margin-top: 30px;
     padding: 15px 15px;
     font-size: 25px;
@@ -218,22 +216,19 @@
     border-radius: 10px;
 }
 
-.form-input-field .form-control:focus{
+.contact-form-input-field .form-control:focus{
     border: 2px solid #c3810e;
     box-shadow: 0 0 4px orange;
 }
 
 .center-button button{
     width: 100%;
-    /* background-color: rgba(217, 217, 217, 0.48); */
-    /* background-color: orange */
     border: none;
     color: white;
     font-size: 35px;
     font-family: "ABeeZee", sans-serif;
     border-radius: 10px;
     padding: 15px 0;
-    /* cursor: pointer; */
     margin-bottom: 30px;
 }
 
@@ -275,10 +270,6 @@
         margin-top: -135px;
     }
 
-    /* .form-input-field .form-control{
-        margin-top: 20px;
-    } */
-
     .form-input-field{
         margin: 25px 0;
         padding: px 0;
@@ -286,7 +277,7 @@
 }
 
 /* -------------------------join us form ------------------*/
-/* .join-us-popup-container{
+.join-us-popup-container{
     background-color: rgba(216, 216, 216, 1);
     padding: 50px;
     text-align: center;
@@ -406,4 +397,4 @@
     &&:hover{
         background-color: #ccc;
     }
-} */
+}
