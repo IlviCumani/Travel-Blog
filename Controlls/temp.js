@@ -4,22 +4,10 @@ const icon = document.querySelector('.btnn__icon');
 const booking = document.querySelector(".booking");
 
 
-
 //--------------------------------booking that takes you to the tours page-------------------------------------
 booking.addEventListener("click",function(){
   window.location = "./tours.html";
 });
-
-
-
-function changeMode() {
-  elementsToChange.forEach(element => {
-    element.classList.toggle('winter-mode');
-  });
-  const wintermode = elementsToChange[0].classList.contains('winter-mode');
-  localStorage.setItem('wintermode', wintermode);
-  updateIcon(wintermode);
-}
 
 function updateIcon(wintermode) {
   console.log('wintermode:', wintermode);
@@ -28,12 +16,10 @@ function updateIcon(wintermode) {
     icon.classList.add('fa-snowflake');
       // ----------------------------------CHANGE TITLE IN HOMEPAGE-----------------------
     if(window.location.href.includes("/Views/index.html")){
-      document.querySelector('#sum').innerText = "Winter";
       document.querySelector('#Wicon').src = "../Images/winterIcon.png";
     }
   } else {
     if(window.location.href.includes("/Views/index.html")){
-      document.querySelector('#sum').innerText = "Summer";
       document.querySelector('#Wicon').src = "../Images/beach.png";
     }
     icon.classList.remove('fa-snowflake');
@@ -41,14 +27,37 @@ function updateIcon(wintermode) {
   }
 }
 
+function updateModeAndTranslation(wintermode, selectedLanguage) {
+  if (wintermode) {
+    sum.textContent = indexData[selectedLanguage].winter;
+    console.log('winter: ', sum.textContent);
+  } else {
+    sum.textContent = indexData[selectedLanguage].sum;
+    console.log('Summer: ', sum.textContent);
+  }
+  updateIcon(wintermode);
+}
+
+
+function changeMode() {
+  elementsToChange.forEach(element => {
+    element.classList.toggle('winter-mode');
+  });
+  const wintermode = elementsToChange[0].classList.contains('winter-mode');
+  localStorage.setItem('wintermode', wintermode);
+  console.log('stored lang is ', storedLanguage);
+  updateModeAndTranslation(wintermode, selectedLanguage);
+}
+
 // Event listener for the toggle button
-summerWinterTogglebtn.addEventListener('click', () => {
+summerWinterTogglebtn.addEventListener('click', (event) => {
+  event.preventDefault();
   icon.classList.add('animated');
   changeMode();
   setTimeout(() => {
     icon.classList.remove('animated');
   }, 500);
-  
+  // updateModeAndTranslation(elementsToChange[0].classList.contains('winter-mode'), storedLanguage);
   changeInTours();  
 });
 
@@ -116,5 +125,4 @@ function changeInTours()
     }
   }
 }
-  
 
