@@ -2,24 +2,12 @@ const elementsToChange = document.querySelectorAll('.summer-mode');
 const summerWinterTogglebtn = document.querySelector('.btnn');
 const icon = document.querySelector('.btnn__icon');
 const booking = document.querySelector(".booking");
-
-
+const langLinks = document.querySelectorAll('.lang-btn');
 
 //--------------------------------booking that takes you to the tours page-------------------------------------
 booking.addEventListener("click",function(){
   window.location = "./tours.html";
 });
-
-
-
-function changeMode() {
-  elementsToChange.forEach(element => {
-    element.classList.toggle('winter-mode');
-  });
-  const wintermode = elementsToChange[0].classList.contains('winter-mode');
-  localStorage.setItem('wintermode', wintermode);
-  updateIcon(wintermode);
-}
 
 function updateIcon(wintermode) {
   console.log('wintermode:', wintermode);
@@ -28,12 +16,10 @@ function updateIcon(wintermode) {
     icon.classList.add('fa-snowflake');
       // ----------------------------------CHANGE TITLE IN HOMEPAGE-----------------------
     if(window.location.href.includes("/Views/index.html")){
-      document.querySelector('#sum').innerText = "Winter";
       document.querySelector('#Wicon').src = "../Images/winterIcon.png";
     }
   } else {
     if(window.location.href.includes("/Views/index.html")){
-      document.querySelector('#sum').innerText = "Summer";
       document.querySelector('#Wicon').src = "../Images/beach.png";
     }
     icon.classList.remove('fa-snowflake');
@@ -41,17 +27,47 @@ function updateIcon(wintermode) {
   }
 }
 
+function updateModeAndTranslation(wintermode, selectedLanguage) {
+  if (wintermode) {
+    sum.textContent = indexData[selectedLanguage].winter;
+    console.log('winter: ', sum.textContent);
+  } else {
+    sum.textContent = indexData[selectedLanguage].sum;
+    console.log('Summer: ', sum.textContent);
+  }
+  updateIcon(wintermode);
+}
+
+
+function changeMode() {
+  elementsToChange.forEach(element => {
+    element.classList.toggle('winter-mode');
+  });
+  const wintermode = elementsToChange[0].classList.contains('winter-mode');
+  localStorage.setItem('wintermode', wintermode);
+  console.log('stored lang is ', storedLanguage);
+  window.location.href.includes('/Views/index.html') ? updateModeAndTranslation(wintermode, selectedLanguage) :  updateIcon(wintermode);
+}
+
 // Event listener for the toggle button
-summerWinterTogglebtn.addEventListener('click', () => {
+summerWinterTogglebtn.addEventListener('click', (event) => {
+  event.preventDefault();
   icon.classList.add('animated');
   changeMode();
   setTimeout(() => {
     icon.classList.remove('animated');
   }, 500);
-  
   changeInTours();  
 });
 
+langLinks.forEach(lang=>{
+  lang.addEventListener('click',(event)=>{
+    event.preventDefault();
+    console.log('here')
+    if( window.location.href.includes('/Views/index.html'))
+      updateModeAndTranslation(elementsToChange[0].classList.contains('winter-mode'), selectedLanguage);
+  })
+})
 // Initial load
 function load() {
   const wintermode = localStorage.getItem('wintermode');
@@ -59,8 +75,9 @@ function load() {
   elementsToChange.forEach(element => {
     element.classList.toggle('winter-mode', wintermode === 'true');
   });
-  changeInTours();
-  updateIcon(wintermode === 'true'); 
+
+  window.location.href.includes('/Views/index.html') ? updateModeAndTranslation(elementsToChange[0].classList.contains('winter-mode'), selectedLanguage) : updateIcon(wintermode === 'true');
+  changeInTours(); 
 }
 load();
 
@@ -93,7 +110,7 @@ window.addEventListener('scroll', ()=>{
 
 
 // --------------------------DISABLE BUTTON------------------
-if(window.location.href.includes("/Views/ourStaff1.html")){
+if(window.location.href.includes("/Views/ourStaff1.html") || window.location.href.includes("/Views/mapSelect.html")){
   summerWinterTogglebtn.classList.add('disabled');
 }
 
@@ -116,5 +133,9 @@ function changeInTours()
     }
   }
 }
-  
 
+// -------------------mapBtn----------------------------
+// const mapBtn = document.querySelector('#mapBtn');
+// mapBtn.addEventListener('click', ()=>{
+//   window.location = "../Views/mapSelect.html";
+// });

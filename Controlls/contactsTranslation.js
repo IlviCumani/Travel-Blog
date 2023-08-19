@@ -149,7 +149,7 @@ buttons.forEach(button =>{
     langMenu.querySelector('.active').classList.remove('active');
     button.classList.add('active');
 
-    const selectedLanguage = button.getAttribute('language');
+    selectedLanguage = button.getAttribute('language');
   console.log(selectedLanguage);
   if(selectedLanguage == "german"){
     selectedFlag = "url('https://flagsapi.com/BE/flat/32.png')";
