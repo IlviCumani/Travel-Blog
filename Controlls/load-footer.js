@@ -1,4 +1,3 @@
-const button = document.querySelectorAll('.lang-btn');
 function loadFooter() {
   fetch('../Views/footer.html') 
       .then(response => response.text())

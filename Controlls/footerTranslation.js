@@ -1,5 +1,5 @@
 console.log('heloooooo')
-const btns = document.querySelectorAll('.lang-btn');
+// const btns = document.querySelectorAll('.lang-btn');
 const subscribeBtn = document.getElementById('btnn');
 const faqs = document.getElementById('f1');
 const termsOfService = document.getElementById('f2');
@@ -8,7 +8,7 @@ const copyrights = document.querySelector('.cop');
 const subscribe = document.querySelector('#subscribe');
 const subscribeText = document.querySelector('#subscribeText');
 
-const storedLanguage = localStorage.getItem('selectedLanguage') || 'english';
+// const storedLanguage = localStorage.getItem('selectedLanguage') || 'english';
 const footerData = {
   "english" :{
     "subscribe" : "Subscribe",
@@ -65,8 +65,8 @@ function updateFooterContent(selectedLanguage){
 
 updateFooterContent(storedLanguage);
 
-let selectedLanguage = storedLanguage;
-btns.forEach(button =>{
+// let selectedLanguage = storedLanguage;
+buttons.forEach(button =>{
   button.addEventListener("click", (event)=>{
     event.preventDefault();
     console.log('hello again')
