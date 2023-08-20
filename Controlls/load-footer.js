@@ -1,5 +1,6 @@
+const button = document.querySelectorAll('.lang-btn');
 function loadFooter() {
-  fetch('/Views/footer.html') 
+  fetch('../Views/footer.html') 
       .then(response => response.text())
       .then(content => {
         console.log('done')
@@ -9,3 +10,4 @@ function loadFooter() {
           console.error('Error loading page:', error);
       });
 }
+loadFooter();
