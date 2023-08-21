@@ -1348,7 +1348,8 @@ body{
   font-size:30px ;
   margin: 10px;
 }
-.others a:link{
+.others span{
+  cursor:pointer;
   text-decoration: none;
   color: rgb(78 27 27);
   font-weight: 600;
@@ -1356,10 +1357,10 @@ body{
   font-size: 20px;
   font-family: 'Lato';
 }
-.others a:visited{
+/* .others a:visited{
   color:rgb(78, 27, 27);
-}
-.others a:hover{
+} */
+.others span:hover{
   background-color: rgb(128, 100, 66);
   border-radius: 10px;
   padding: 7px;
@@ -1420,15 +1421,16 @@ body{
     background-position: center; */
   }
   
-  .others a{
+  .others span{
     display: list-item;
     list-style: none;
     text-align: center;
     row-gap: 10px;
-  }
-  .others a:link{
     font-size: 18px;
   }
+  /* .others span:link{
+    font-size: 18px;
+  } */
   .others{
     margin: 0;
   }
