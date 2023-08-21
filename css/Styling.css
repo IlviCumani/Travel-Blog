@@ -2691,12 +2691,12 @@ opacity: 1;
 }
 
 .join-us-form input[type="file"]{
-  font-size: 15px;
+  /* font-size: 15px;
   border-radius: 19px;
-  margin-bottom: 40px;
-  display: inline-flex;
+  margin-bottom: 40px; */
+  display: none;
 
-  &&::-webkit-file-upload-button{
+  /* &&::-webkit-file-upload-button{
       background-color: #296C81;
       color: #E8E8E8;
       padding: 10px 21px;
@@ -2707,10 +2707,23 @@ opacity: 1;
           background-color: rgba(26, 81, 100, 1);
           transition: 0.5s;
       }
-  }
-
-  
+  } */
 }
+
+#join-us-file-label{
+  background-color: #fff;
+  color: rgba(141, 141, 141, 1);
+  padding: 10px 21px;
+  cursor: pointer;
+  font-size: 20px;
+  height: 70px;
+  border-radius: 19px;
+  margin-bottom: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+} 
 
 #join-submit-button{
   color: #E8E8E8;
