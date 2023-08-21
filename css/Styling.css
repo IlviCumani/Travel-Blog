@@ -2920,3 +2920,20 @@ opacity: 1;
   color: #555555;
   font-family: 'Lato';
 }
+
+/* --------------map--------------- */
+#map-body{
+  background-color: #000000;
+  color: #fff;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+#map-section{
+  margin-top: 80px;
+}
