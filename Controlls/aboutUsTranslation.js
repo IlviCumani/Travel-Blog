@@ -100,7 +100,7 @@ buttons.forEach(button =>{
       langMenu.querySelector('.active').classList.remove('active');
       button.classList.add('active');
 
-      const selectedLanguage = button.getAttribute('language');
+      selectedLanguage = button.getAttribute('language');
       let fig1 = "";
       let fig2 = "";
     console.log(selectedLanguage);

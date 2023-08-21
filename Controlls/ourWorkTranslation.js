@@ -113,7 +113,7 @@ buttons.forEach(button =>{
     event.preventDefault();
     langMenu.querySelector('.active').classList.remove('active');
     button.classList.add('active');
-    const selectedLanguage = button.getAttribute('language');
+    selectedLanguage = button.getAttribute('language');
   console.log(selectedLanguage);
   
   if(selectedLanguage == "german"){

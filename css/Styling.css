@@ -3,7 +3,7 @@
 @import url("https://fonts.googleapis.com/css2?family=ABeeZee&family=Lobster&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lobster+Two&family=Montserrat:wght@400;600&family=Roboto:wght@100;400&family=Ubuntu&display=swap");
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css");
-@import url("https://fonts.googleapis.com");
+/* @import url("https://fonts.googleapis.com"); */
 
 /* -----------------------HEADER--------------------- */
 #location{
@@ -2869,3 +2869,41 @@ opacity: 1;
   }
 }
 
+/* ----------------------------ThreeInOnePage---------------------- */
+.co{
+  background-color: rgba(216, 216, 216, 1);
+    padding: 50px;
+    text-align:left;
+    border-radius: 30px;
+    border: 3px solid #296C81;
+    max-width: 800px;
+    margin: auto;
+    margin-top: 50px;
+}
+.choseTrip{
+  margin-top: 8px;
+  padding: 15px;
+  color: #296C81;
+  font-family: 'Lato';
+  background-color: #3a829e56;
+}
+#faqp1{
+  /* text-align: center; */
+  font-family: 'Lato';
+  font-size: 18px;
+  color: #296C81;
+  font-weight: 600;
+}
+.serviceTitle, .policyTitle{
+  text-align: center;
+  font-family: 'Lato';
+  margin-top: 25px;
+  color: #265a6e;
+  background-color: rgba(176, 181, 106, 0.573);
+  border-radius: 10px;
+  padding: 20px;
+}
+.cookies, .security, .qAnda{
+  color: #555555;
+  font-family: 'Lato';
+}
