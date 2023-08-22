@@ -2933,3 +2933,7 @@ opacity: 1;
   overflow: auto;
   background-color: rgba(0, 0, 0, 0.584);
 }
+
+.accordion-button{
+  font-weight: bold;
+}
