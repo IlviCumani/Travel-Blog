@@ -2054,6 +2054,13 @@ transition: transform .1s cubic-bezier(0, 0, .2, 1);
   background-color: rgba(67, 68, 72, 1);
 }
 
+.our-work-container2{
+  background-color: #999999;
+  background-image: none;
+  position: relative;
+  top: 300px;
+}
+
 #main-img-ourWork{
   height: 600px;
   width: 100%;
