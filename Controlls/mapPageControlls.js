@@ -358,6 +358,31 @@ function addCartForEachCity(){
   }
 }
 
+function displayCityLocationOnMap(){
+  const map = document.getElementById("map-svg");
+  const circle = document.querySelector("circle");
+  const text = document.querySelector("text");
+  console.log(map);
+  console.log(circle);
+  map.removeChild(circle);
+  map.removeChild(text);
+  console.log(map.contains(circle));
+  
+  for(let city in albaniaMap.cities){
+      let newCircle = circle.cloneNode(true);
+      let newText = text.cloneNode(true);
+      newCircle.id = city;
+      newText.id = city;
+      newCircle.setAttribute("cx", albaniaMap.cities[city].centre_x);
+      newText.setAttribute("x", (parseFloat(albaniaMap.cities[city].centre_x) - 50));
+      newCircle.setAttribute("cy", albaniaMap.cities[city].centre_y);
+      newText.setAttribute("y", (parseFloat(albaniaMap.cities[city].centre_y) + 60));
+      newText.textContent = albaniaMap.cities[city].name;
+      map.appendChild(newCircle);
+      map.appendChild(newText);
+  }
+}
+
 allCities.forEach(city => {
     city.addEventListener("click", () => {
         // console.log(albaniaMap.cities[city.id].name);
@@ -370,18 +395,6 @@ allCities.forEach(city => {
 addCartForEachCity();
 
 
-function displayCityLocationOnMap(){
-    const map = document.getElementById("map-svg");
-    const circle = document.querySelector("circle");
-    map.removeChild(circle);
-    
-    for(let city in albaniaMap.cities){
-        let newCircle = circle.cloneNode(true);
-        newCircle.id = city;
-        newCircle.setAttribute("cx", albaniaMap.cities[city].centre_x);
-        newCircle.setAttribute("cy", albaniaMap.cities[city].centre_y);
-        map.appendChild(newCircle);
-    }
-}
+
 
 displayCityLocationOnMap();
