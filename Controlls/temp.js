@@ -110,9 +110,10 @@ window.addEventListener('scroll', ()=>{
 
 
 // --------------------------DISABLE BUTTON------------------
-if(window.location.href.includes("/Views/ourStaff1.html") || window.location.href.includes("/Views/mapSelect.html")){
+if(window.location.href.includes("/Views/ourStaff1.html") || window.location.href.includes("/Views/mapSelect.html") || window.location.href.includes("ourWork.html")){
   summerWinterTogglebtn.classList.add('disabled');
 }
+
 
 
 
