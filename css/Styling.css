@@ -3094,6 +3094,13 @@ circle{
   transition: all 0.3s ease-in-out;
 }
 
+.map-location-text{
+  font-size: 2.2rem;
+  fill: black;
+  font-weight: bold;
+
+}
+
 
 @media screen and (max-width: 300px) {
   .map-location-card{
