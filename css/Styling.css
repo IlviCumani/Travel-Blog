@@ -3087,6 +3087,13 @@ opacity: 1;
   }
 }
 
+circle{
+  fill: red;
+  stroke: white;
+  stroke-width: 5px;
+  transition: all 0.3s ease-in-out;
+}
+
 
 @media screen and (max-width: 300px) {
   .map-location-card{

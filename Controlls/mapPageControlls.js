@@ -5,6 +5,8 @@ const albaniaMap = {
       image_url: "https://wallpapercave.com/wp/wp2281648.jpg",
       idescription: "The land of Xhensil",
       star_rating: "5",
+      centre_x: "341.3275",
+      centre_y: "1019.8187",
       points_of_interest: {
         SheshiSkenderbej: {
           name: "Sheshi Skënderbej",
@@ -33,6 +35,8 @@ const albaniaMap = {
       image_url: "https://t4.ftcdn.net/jpg/04/75/03/21/360_F_475032122_0yUvBrPd318xEJJ5g2rqsEM83c0p6mnJ.jpg",
       description: "The land of Xhensil",
       star_rating: "5",
+      centre_x: "121.3275",
+      centre_y: "979.8187",
       points_of_interest:{
         Amfiteatri: {
           name: "Amfiteatri",
@@ -57,6 +61,8 @@ const albaniaMap = {
       image_url: "https://cdn.albanianews.al/wp-content/uploads/2018/05/centro-di-fier.jpg",
       description: "The land of Xhensil",
       star_rating: "1",
+      centre_x: "181.3275",
+      centre_y: "1419.8187",
       points_of_interest:{
         Apollonia: {
           name: "Apollonia",
@@ -69,6 +75,8 @@ const albaniaMap = {
       image_url: "https://cdn.getyourguide.com/img/tour/62b1c2ccb4df6.jpeg/146.jpg",
       description: "The land of Xhensil",
       star_rating: "5",
+      centre_x: "167.3275",
+      centre_y: "419.8187",
       points_of_interest:{
         Kalaja_e_Rozafes: {
           name: "Kalaja e Rozafës",
@@ -97,6 +105,8 @@ const albaniaMap = {
       image_url: "https://www.imalbania.com/kosova/wp-content/uploads/2022/05/1653546360_kukes-1.png",
       description: "The land of Xhensil",
       star_rating: "2",
+      centre_x: "661.3275",
+      centre_y: "434.8187",
       points_of_interest:{
         Liqeni_i_Fierzes: {
           name: "Liqeni i Fierzës",
@@ -109,6 +119,8 @@ const albaniaMap = {
       image_url: "https://storage.googleapis.com/albania-travel-guide/2022/07/Vlore-Albania-Travel-Guide-44-960x540.jpg",
       description: "The land of Xhensil",
       star_rating: "4",
+      centre_x: "141.3275",
+      centre_y: "1609.8187",
       points_of_interest:{
         Monumenti_i_Pavarësisë: {
           name: "Monumenti i Pavarësisë",
@@ -141,6 +153,8 @@ const albaniaMap = {
       image_url: "https://media.gettyimages.com/id/454325829/photo/albania-korca.jpg?s=612x612&w=gi&k=20&c=zgk-E395dyWKbzzMDHroPQwTiFT-nz2zXiOQcp4S-jM=",
       description: "The land of Xhensil",
       star_rating: "5",
+      centre_x: "841.3275",
+      centre_y: "1509.8187",
       points_of_interest:{
         PAzari_i_Vjeter:{
           name: "Pazari i Vjetër",
@@ -169,6 +183,8 @@ const albaniaMap = {
       image_url: "https://i.pinimg.com/originals/18/34/05/1834052556450b32926b0ca6614f04af.jpg",
       description: "The land of Xhensil",
       star_rating: "4",
+      centre_x: "371.3275",
+      centre_y: "1459.8187",
       points_of_interest:{
         Kalaja_e_Beratit:{
           name: "Kalaja e Beratit",
@@ -193,6 +209,8 @@ const albaniaMap = {
       image_url: "https://thumbs.dreamstime.com/b/walls-elbasan-castle-albania-illuminated-mighty-tower-th-century-evening-photo-249458336.jpg",
       description: "The land of Xhensil",
       star_rating: "3",
+      centre_x: "451.3275",
+      centre_y: "1149.8187",
       points_of_interest:{
         Kalaja_e_Elbasanit:{
           name: "Kalaja e Elbasanit",
@@ -213,6 +231,8 @@ const albaniaMap = {
       image_url: "https://t3.ftcdn.net/jpg/03/19/53/18/360_F_319531833_H55XhmuCdi6HGekkO7JhW95W1R8Yg3an.jpg",
       description: "The land of Xhensil",
       star_rating: "5",
+      centre_x: "491.3275",
+      centre_y: "1899.8187",
       points_of_interest:{
         Kalaja_e_Gjirokastres:{
           name: "Kalaja e Gjirokastrës",
@@ -233,6 +253,8 @@ const albaniaMap = {
       image_url: "https://albanianpost.com/wp-content/uploads/2021/07/DIBER-COVER.jpg",
       description: "The land of Xhensil",
       star_rating: "2",
+      centre_x: "651.3275",
+      centre_y: "689.8187",
       points_of_interest:{
         Parku_Kombetar_i_Lurës:{
           name: "Parku Kombëtar i Lurës",
@@ -253,6 +275,8 @@ const albaniaMap = {
       image_url: "https://t3.ftcdn.net/jpg/04/91/03/74/360_F_491037469_e5dLNiL9Ufq2R4Al5CQuH7wBVmzRRq27.jpg",
       description: "The land of Xhensil",
       star_rating: "4",
+      centre_x: "231.3275",
+      centre_y: "639.8187",
       points_of_interest:{
         Kalaja_e_Lezhes:{
           name: "Kalaja e Lezhës",
@@ -344,3 +368,20 @@ allCities.forEach(city => {
 });
 
 addCartForEachCity();
+
+
+function displayCityLocationOnMap(){
+    const map = document.getElementById("map-svg");
+    const circle = document.querySelector("circle");
+    map.removeChild(circle);
+    
+    for(let city in albaniaMap.cities){
+        let newCircle = circle.cloneNode(true);
+        newCircle.id = city;
+        newCircle.setAttribute("cx", albaniaMap.cities[city].centre_x);
+        newCircle.setAttribute("cy", albaniaMap.cities[city].centre_y);
+        map.appendChild(newCircle);
+    }
+}
+
+displayCityLocationOnMap();
