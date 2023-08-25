@@ -43,9 +43,9 @@ const policyContent = document.querySelector('.policyContent');
 const cookies = document.querySelector('.cookies');
 const security = document.querySelector('.security');
 const qAnda = document.querySelector('.qAnda');
-const p1 = document.querySelector('#p1');
-const p2 = document.querySelector('#p2');
-const p3 = document.querySelector('#p3');
+const p1Second = document.querySelector('#p1');
+const p2Second = document.querySelector('#p2');
+const p3Second = document.querySelector('#p3');
 const link = document.querySelector('#link');
 
 const threeInOneData = {
@@ -327,9 +327,9 @@ function updateThreeInOneContent(selectedLanguage){
   cookies.textContent = threeInOneData[selectedLanguage].cookies;
   security.textContent = threeInOneData[selectedLanguage].security;
   qAnda.textContent = threeInOneData[selectedLanguage].qAnda;
-  p1.textContent = threeInOneData[selectedLanguage].p1;
-  p2.textContent = threeInOneData[selectedLanguage].p2;
-  p3.textContent = threeInOneData[selectedLanguage].p3;
+  p1Second.textContent = threeInOneData[selectedLanguage].p1;
+  p2Second.textContent = threeInOneData[selectedLanguage].p2;
+  p3Second.textContent = threeInOneData[selectedLanguage].p3;
   link.textContent = threeInOneData[selectedLanguage].link;
 
   localStorage.setItem('selectedLanguage', selectedLanguage);

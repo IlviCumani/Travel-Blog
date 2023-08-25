@@ -1,3 +1,4 @@
+const l0 = document.querySelector('#l0');
 const introTitle = document.querySelector('.intro-title');
 const safety = document.querySelector('#safety');
 const paragraph = document.querySelector('#paragraph');
@@ -13,6 +14,7 @@ const p4 = document.querySelector('#p4');
 
 const ourWorkData = {
   "english" :{
+    "l0" : "Home",
     "introTitle" : "Why choose TravAl?",
     "safety" : "Safety",
     "paragraph" : "Experience a safe trip, thanks to our rigorous maintenance and experienced drivers.",
@@ -27,6 +29,7 @@ const ourWorkData = {
     "p4" : "Memory from Trip to Kruje \n 17/05/2020"
   },
   "german" :{
+    "l0" : "Heim",
     "introTitle": "Warum TravAl wählen?",
     "safety": "Sicherheit",
     "paragraph": "Erleben Sie eine sichere Reise dank unserer strengen Wartung und erfahrenen Fahrer.",
@@ -41,6 +44,7 @@ const ourWorkData = {
     "p4": "Erinnerung an die Reise nach Kruje \n 17/05/2020"
   },
   "italian":{
+    "l0" : "Casa",
     "introTitle": "Perché scegliere TravAl?",
     "safety": "Sicurezza",
     "paragraph": "Vivi un viaggio sicuro grazie alla nostra rigorosa manutenzione e agli autisti esperti.",
@@ -55,6 +59,7 @@ const ourWorkData = {
     "p4": "Ricordo del viaggio a Kruje \n 17/05/2020"
   },
   "french": {
+    "l0" : "Maison",
     "introTitle": "Pourquoi choisir TravAl ?",
     "safety": "Sécurité",
     "paragraph": "Vivez un voyage en toute sécurité grâce à notre entretien rigoureux et à nos conducteurs expérimentés.",
@@ -70,6 +75,7 @@ const ourWorkData = {
   },
   
   "espanol": {
+    "l0" : "Hogar",
     "introTitle": "¿Por qué elegir TravAl?",
     "safety": "Seguridad",
     "paragraph": "Experimenta un viaje seguro gracias a nuestro riguroso mantenimiento y a nuestros conductores experimentados.",
@@ -87,6 +93,7 @@ const ourWorkData = {
 
 
 function updateWorkContent(selectedLanguage, selectedFlag){
+  l0.textContent = ourWorkData[selectedLanguage].l0;
   introTitle.textContent = ourWorkData[selectedLanguage].introTitle;
   safety.textContent = ourWorkData[selectedLanguage].safety;
   paragraph.textContent = ourWorkData[selectedLanguage].paragraph;
@@ -124,6 +131,8 @@ buttons.forEach(button =>{
     selectedFlag = "url(https://flagsapi.com/FR/flat/32.png)";
   }else if(selectedLanguage=="espanol"){
     selectedFlag = "url(https://flagsapi.com/ES/flat/32.png)";
+  }else{
+    selectedFlag = "url(https://flagsapi.com/US/flat/32.png)";
   }
   document.querySelector('.selected-langg').style.backgroundImage = selectedFlag;
   updateWorkContent(selectedLanguage, selectedFlag);
