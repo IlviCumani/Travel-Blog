@@ -3024,6 +3024,9 @@ opacity: 1;
       margin-bottom: 45px;
   }
 
+  #map-section{
+      height: 100%;
+  }
 }
 
 /* --------------------- Map styles ---------------------  */
