@@ -110,7 +110,7 @@ window.addEventListener('scroll', ()=>{
 
 
 // --------------------------DISABLE BUTTON------------------
-if(window.location.href.includes("/Views/ourStaff1.html") || window.location.href.includes("/Views/mapSelect.html") || window.location.href.includes("ourWork.html") || window.location.href.includes("individualTour.html")){
+if(window.location.href.includes("/Views/ourStaff1.html") || window.location.href.includes("/Views/mapSelect.html") || window.location.href.includes("ourWork.html") || window.location.href.includes("individualTour.html") || window.location.href.includes("mapPage.html")){
   summerWinterTogglebtn.classList.add('disabled');
 }
 
