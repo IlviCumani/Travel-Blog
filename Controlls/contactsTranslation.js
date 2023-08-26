@@ -2,7 +2,7 @@ const l0 = document.querySelector('#l0');
 const h1 = document.querySelector('#h1');
 const span = document.querySelector('#span');
 const text1 = document.querySelector('.text1');
-const locationn = document.querySelector('.location')
+// const locationn = document.querySelector('.location')
 const text2 = document.querySelector('.text2');
 const call = document.querySelector('.call');
 const text3 = document.querySelector('.text3');
@@ -127,7 +127,7 @@ function updateContactsContent(selectedLanguage, selectedFlag){
   h1.textContent = contactsData[selectedLanguage].h1;
   span.textContent = contactsData[selectedLanguage].span;
   text1.textContent = contactsData[selectedLanguage].text1;
-  locationn.textContent = contactsData[selectedLanguage].locationn;
+  // locationn.textContent = contactsData[selectedLanguage].locationn;
   text2.textContent = contactsData[selectedLanguage].text2;
   call.textContent = contactsData[selectedLanguage].call;
   text3.textContent = contactsData[selectedLanguage].text3;
