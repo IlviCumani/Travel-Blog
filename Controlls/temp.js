@@ -140,3 +140,16 @@ function changeInTours()
 // mapBtn.addEventListener('click', ()=>{
 //   window.location = "../Views/mapSelect.html";
 // });
+
+
+
+//--------------tapping the plus button in the tours in the index page
+let pluses = document.getElementsByClassName("plus");
+
+for(let plus of pluses)
+{
+  plus.addEventListener("click",function()
+  {
+    window.location.href="./individualTour.html";
+  });
+}
