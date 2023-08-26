@@ -1831,6 +1831,9 @@ transition: transform .1s cubic-bezier(0, 0, .2, 1);
     background-color: bisque;
   }
 
+  #value{
+    cursor: pointer;
+  }
 
   #main-img-individual{
     width: 100%;
@@ -2319,6 +2322,14 @@ opacity: 1;
 }
 
 
+@media screen and (max-width:880px) {
+  @keyframes pointer-anim{
+    0%{bottom: -10px;}
+    100%{bottom: 100px;}
+    
+  }
+  
+}
 @media screen and (max-width:814px) {
   .div-main{
       bottom: -150px;
@@ -2366,6 +2377,12 @@ opacity: 1;
   .containerS{
       top:320px;
   }
+
+  @keyframes pointer-anim{
+    0%{bottom: 100px;}
+    100%{bottom: 100px;}
+    
+  }
 }
 
 @media screen and (max-width:490px) {
@@ -2374,6 +2391,29 @@ opacity: 1;
   }
 
 }
+
+@media screen and (max-width:1100px)
+{
+  @keyframes pointer-anim{
+    0%{bottom: -20px;}
+    100%{bottom: -5px;}
+    
+  }
+
+}
+
+@media screen and (max-width:740px)
+{
+  @keyframes pointer-anim{
+    0%{bottom: 0px;}
+    100%{bottom: 25px;}
+    
+  }
+}
+
+
+
+
 /* ------------------ CONTACT PAGE ------------------ */
 /*------------------- contact hero section -----------------------*/
 .contact-msg-container{
