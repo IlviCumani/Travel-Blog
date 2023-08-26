@@ -1831,6 +1831,9 @@ transition: transform .1s cubic-bezier(0, 0, .2, 1);
     background-color: bisque;
   }
 
+  #value{
+    cursor: pointer;
+  }
 
   #main-img-individual{
     width: 100%;
