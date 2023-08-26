@@ -2977,7 +2977,7 @@ opacity: 1;
   display: flex;
   justify-content: center;
   align-items: center;
-  
+  height: 101vh;
 }
 
 .map{
@@ -3006,7 +3006,7 @@ opacity: 1;
 
 .location-cards-container{
   width: 100%;
-  max-height: 100vh;
+  max-height: 101vh;
   overflow-y: scroll;
   display: flex;
   flex-wrap: wrap;
@@ -3024,6 +3024,9 @@ opacity: 1;
       margin-bottom: 45px;
   }
 
+  #map-section{
+      height: 100%;
+  }
 }
 
 /* --------------------- Map styles ---------------------  */
