@@ -3098,7 +3098,7 @@ opacity: 1;
 
 }
 
-.material-symbols-outlined{
+.map-location-card-place-rating .material-symbols-outlined{
   font-variation-settings:
   'FILL' 1,
   'wght' 400,
@@ -3164,6 +3164,21 @@ circle{
           }
       }
   }
+}
+
+@media screen and (max-width: 1200px) and (min-width: 992px){
+  .map-location-card-information-container{
+
+    && .map-location-card-place-ancor{
+        && a{
+            font-size: 10px;
+            padding: 10px 12px;
+            width: 45%;
+            margin: 5px;
+        }
+    }
+  }
+  
 }
 
 
