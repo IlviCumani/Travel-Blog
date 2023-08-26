@@ -60,7 +60,7 @@ const albaniaMap = {
       name: "Fier",
       image_url: "https://cdn.albanianews.al/wp-content/uploads/2018/05/centro-di-fier.jpg",
       description: "The land of Xhensil",
-      star_rating: "1",
+      star_rating: "4",
       centre_x: "181.3275",
       centre_y: "1419.8187",
       points_of_interest:{
@@ -182,7 +182,7 @@ const albaniaMap = {
       name: "Berat",
       image_url: "https://i.pinimg.com/originals/18/34/05/1834052556450b32926b0ca6614f04af.jpg",
       description: "The land of Xhensil",
-      star_rating: "4",
+      star_rating: "1",
       centre_x: "371.3275",
       centre_y: "1459.8187",
       points_of_interest:{
@@ -319,6 +319,11 @@ function displayPointsOfInterest(city){
       newCard.id = point;
       newCard.querySelector(".map-location-card-name").textContent = albaniaMap.cities[city].points_of_interest[point].name;
       newCard.querySelector(".map-location-card-image").src = albaniaMap.cities[city].points_of_interest[point].image_url;
+      
+      let placeAnkor = newCard.querySelector(".map-location-card-place-ancor");
+      console.log(placeAnkor);
+      placeAnkor.innerHTML = "";
+
       
       cardsContainer.appendChild(newCard);
   }
