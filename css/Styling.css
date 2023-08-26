@@ -3054,6 +3054,7 @@ opacity: 1;
   &&:hover{
       && .map-location-card-place-ancor{
           display: flex;
+          /* flex-direction: column; */
       }
   }
 }
@@ -3164,6 +3165,7 @@ circle{
               font-size: 10px;
               padding: 5px 6px;
               width: 80px;
+              /* width: 100%; */
               margin: 5px;
           }
       }
@@ -3178,20 +3180,22 @@ circle{
               font-size: 10px;
               padding: 5px 6px;
               width: 80px;
+              /* width: 100%; */
               margin: 5px;
           }
       }
   }
 }
 
-@media screen and (min-width: 992px){
+@media screen and (min-width: 1000px){
   .map-location-card-information-container{
 
     && .map-location-card-place-ancor{
         && a{
-            font-size: 10px;
+            font-size: 12px;
             padding: 10px 12px;
             width: 45%;
+            /* width: 100%; */
             margin: 5px;
         }
     }
