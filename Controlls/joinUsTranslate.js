@@ -5,7 +5,7 @@ const surnamee = document.querySelector('#surname');
 const email = document.querySelector('#email');
 const phone = document.querySelector('#phone');
 const address = document.querySelector('#address');
-const sub = document.querySelector('#sub');
+const submitJoinUsButton = document.querySelector('#join-submit-button');
 const fileInputField = document.querySelector('#join-us-file-label');
 console.log("file here " + fileInputField);
 console.log("phone here " + phone);
@@ -78,8 +78,7 @@ function updateJoinContent(selectedLanguage){
   phone.placeholder = joinUsData[selectedLanguage].phone;
   address.placeholder = joinUsData[selectedLanguage].address;
   fileInputField.textContent = joinUsData[selectedLanguage].file;
-  sub.textContent = joinUsData[selectedLanguage].sub;
-
+  submitJoinUsButton.textContent = joinUsData[selectedLanguage].sub;
   localStorage.setItem('selectedLanguage', selectedLanguage);
 }
 
