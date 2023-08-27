@@ -337,26 +337,6 @@ function changeColorOfCity(city){
     city.classList.toggle("clicked-city");
 }
 
-function zoomInCity(city){
-    let cityId = city.id;
-    let cityElement = document.querySelector(`#${cityId}`);
-    let cityElementPosition = cityElement.getBoundingClientRect();
-    let cityElementCenterX = cityElementPosition.x + cityElementPosition.width/2;
-    let cityElementCenterY = cityElementPosition.y + cityElementPosition.height/2;
-    let mapContainer = document.querySelector(".map-container");
-    let mapContainerPosition = mapContainer.getBoundingClientRect();
-    let mapContainerCenterX = mapContainerPosition.x + mapContainerPosition.width/2;
-    let mapContainerCenterY = mapContainerPosition.y + mapContainerPosition.height/2;
-    let mapContainerCenterXOffset = mapContainerCenterX - cityElementCenterX;
-    let mapContainerCenterYOffset = mapContainerCenterY - cityElementCenterY;
-    mapContainer.style.transform = `translate(${mapContainerCenterXOffset}px, ${mapContainerCenterYOffset}px) scale(3)`;
-}
-
-function zoomOutCity(){
-    let mapContainer = document.querySelector(".map-container");
-    mapContainer.style.transform = `translate(0px, 0px) scale(1)`;
-}
-
 function addCartForEachCity(){
   for(let city in albaniaMap.cities){
       cardsContainer.appendChild(cloneCityCard(city));
@@ -398,8 +378,4 @@ allCities.forEach(city => {
 });
 
 addCartForEachCity();
-
-
-
-
 displayCityLocationOnMap();
