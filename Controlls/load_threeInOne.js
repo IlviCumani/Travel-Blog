@@ -1,11 +1,11 @@
 $(document).ready(function() {
-  const popUpContainer = $('#threeInOne-popup-container');
-  console.log(popUpContainer);
+  const popupContainer3in1 = $('#threeInOne-popup-container');
+  console.log(popupContainer3in1);
   let popupShown = false;
   $('.popup-button').click(function(){
     if(!popupShown){
       $.get('../Views/threeInOnePage.html', function(data){
-        popUpContainer.html(data);
+        popupContainer3in1.html(data);
         popupShown = true;
         $('#threeinone').removeClass('inactive-popup');
       })
@@ -15,13 +15,13 @@ $(document).ready(function() {
   })
 });
 // $(document).ready(function() {
-//   const popUpContainer = $('#threeInOne-popup-container');
+//   const popupContainer3in1 = $('#threeInOne-popup-container');
 //   let popupShown = false;
 
 //   $('.popup-button').click(function(){
 //     if(!popupShown){
 //       $.get('../Views/threeInOnePage.html', function(data){
-//         popUpContainer.html(data);
+//         popupContainer3in1.html(data);
 //         popupShown = true;
 //         $('#threeinone').removeClass('inactive-popup');
 
@@ -35,7 +35,7 @@ $(document).ready(function() {
 //   });
 
 //   function scrollToSection(sectionId) {
-//     const scrollTopPosition = $(`#${sectionId}`).offset().top - popUpContainer.offset().top;
+//     const scrollTopPosition = $(`#${sectionId}`).offset().top - popupContainer3in1.offset().top;
 //     console.log(scrollTopPosition);
 //     console.log($(`#${sectionId}`).offset().top);
 //     console.log($('#threeInOne-popup-container'))

@@ -92,8 +92,8 @@ function updateContent(selectedLanguage, selectedFlag){
   // termsOfService.textContent = data[selectedLanguage].termsOfService;
   // privacyPolicy.textContent = data[selectedLanguage].privacyPolicy;
   // copyrights.textContent = data[selectedLanguage].copyrights;
-  // localStorage.setItem('selectedLanguage', selectedLanguage);
-  // localStorage.setItem('selectedFlag', selectedFlag);
+  localStorage.setItem('selectedLanguage', selectedLanguage);
+  localStorage.setItem('selectedFlag', selectedFlag);
 }
 
 document.querySelector(".selected-langg").style.backgroundImage = storedFlag;
