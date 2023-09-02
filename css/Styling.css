@@ -1494,12 +1494,12 @@ body{
 
 #browse-p{
   font-family: 'Lobster', cursive;
-  position: absolute;
+  /* position: absolute; */
   color: white;
   font-size: 24px;
   text-align: center;
   margin: 0%;
-  top: 80%;
+  /* top: 80%; */
   width: 100%;
   animation-name: fly-up;
   animation-duration:1.4s;
