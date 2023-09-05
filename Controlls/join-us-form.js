@@ -20,6 +20,10 @@ const JoinUsSubmitButton = document.getElementById("join-submit-button");
 const requiredInputs = joinUsForm.querySelectorAll("[required]");
 let hasSubmitedOnce = false;
 
+const fileInput = document.getElementById('join-us-file');
+const fileInputLabel = document.querySelector('#join-us-file-label');
+let previousFileLabelText = fileInputLabel.textContent;
+
 console.log(joinUsForm);
 console.log(JoinUsSubmitButton);
 console.log(requiredInputs);
@@ -68,20 +72,16 @@ function validateInputs() {
     return formIsValid;
 }
 
-const fileInput = document.getElementById('join-us-file');
-const fileInputLabel = document.querySelector('#join-us-file-label');
-let previousFileLabelText = fileInputLabel.textContent;
-
 function updateFileInputLabel() {
     if (fileInput.files.length > 0) {
+        previousFileLabelText = fileInputLabel.textContent;
         fileInputLabel.textContent = fileInput.files[0].name;
     } else {
-        fileInputLabel.textContent = "...";
+        fileInputLabel.textContent = previousFileLabelText;
     }
 }
 
 function handleInputChange() {
-    updateFileInputLabel();
 
     if (validateInputs()) {
       enableSubmitButton();
@@ -90,7 +90,7 @@ function handleInputChange() {
             disableSubmitButton();
         }
     }
-  }
+}
 
   joinUsForm.addEventListener("submit", function (event) {
     event.preventDefault();
